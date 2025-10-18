@@ -1,0 +1,268 @@
+/* Design tokens and palettes */
+:root {
+    /* Primary palette - Joyful Yellow */
+    --joy-500: #FFDA03;
+    /* accent */
+    --joy-400: #FFE885;
+    --joy-300: #FFF6D2;
+
+    /* Neutrals */
+    --white-000: #FFFFFF;
+    --white-100: #F4F4F4;
+    --black-900: #1A1A1A;
+    --black-700: #333333;
+
+    /* Secondary palettes (use sparingly) */
+    --blue-700: #4069AA;
+    --blue-400: #A9C6F0;
+    --blue-300: #D0DEF2;
+
+    --green-600: #6FC35F;
+    --green-300: #B0D4AC;
+    --green-200: #D7EBD5;
+
+    --red-700: #CA532D;
+    --red-300: #F0B7A4;
+    --red-200: #F6DDD4;
+
+    /* Layout tokens */
+    --container-max: 1200px;
+    --radius-lg: 36px;
+    --radius-md: 18px;
+}
+
+/* Font stacks */
+:root {
+    --font-display: 'Platypi', 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--black-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 20px
+}
+
+/* Header - mobile first */
+.site-header {
+    background: var(--white-000);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 120px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%
+}
+
+.logo {
+  width: 24px;   /* ajuste o tamanho conforme necessário */
+  height: 24px;
+  background-size: contain; /* mantém proporção */
+  display: flex;
+}
+
+.logo img {
+    max-width:100%;
+    max-height:100%;
+    height:auto;
+    display:block;
+}
+
+.main-nav {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.main-nav a {
+    color: var(--black-700);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px
+}
+
+/* Hero - mobile first (single column) */
+.hero {
+    padding: 0px 0px 36px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start
+}
+
+.hero-media {
+    display: flex;
+    justify-content: left;
+}
+
+.card-image {
+    width: 260px;
+    height: 260px;
+    background: var(--joy-400);
+    border-radius: 24px;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.02);
+}
+
+.hero-content {
+    max-width: 100%
+}
+
+.display {
+    font-family: var(--font-display);
+    font-size: 36px;
+    line-height: 1.02;
+    margin: 0 0 8px 0;
+    color: var(--black-900);
+    white-space: pre-line;
+    margin-bottom: 2rem;
+}
+
+.lead {
+    color: var(--black-700);
+    max-width: 100%;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 14px
+}
+
+.btn.primary {
+    background: var(--joy-500);
+    color: var(--black-900);
+}
+
+/* Utility: visually hidden */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0
+}
+
+/* Tablet breakpoint */
+@media (min-width:640px) {
+    .site-header {
+        padding: 20px 0px 0px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 60px;
+        font-size: 32px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 0px 48px;
+    }
+
+    .hero-grid {
+        gap: 28px
+    }
+
+    .card-image {
+        width: 420px;
+        height: 420px;
+        border-radius: 28px
+    }
+
+    .display {
+        font-size: 48px
+    }
+
+    .btn {
+        padding: 13px 24px;
+        font-size: 15px
+    }
+}
+
+/* Desktop breakpoint */
+@media (min-width:1024px) {
+    .container {
+        padding: 0 24px
+    }
+
+    .site-header {
+        padding: 28px 0px 0px;
+        border-bottom-left-radius: 48px;
+        border-bottom-right-radius: 48px
+    }
+
+    .header-inner {
+        align-items: center
+    }
+
+    .main-nav a {
+        margin-left: 20px
+    }
+
+    .hero {
+        padding: 20px 0
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center
+    }
+
+    .card-image {
+        width: 520px;
+        height: 520px;
+        border-radius: 36px
+    }
+
+    .display {
+        font-size: 84px;
+        line-height: 0.92
+    }
+
+    .hero-content {
+        max-width: 540px
+    }
+
+    .lead {
+        max-width: 420px
+    }
+}
