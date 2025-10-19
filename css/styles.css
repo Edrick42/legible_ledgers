@@ -131,7 +131,6 @@ body {
     height: 260px;
     background: var(--joy-400);
     border-radius: 24px;
-    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.02);
     padding: 4rem;
 }
 
@@ -233,18 +232,11 @@ body {
 }
 
 .about-title {
-    font-family: var(--font-body);
-    font-size: 2.4rem;
-    font-weight: 400;
-    color: var(--black-900);
-    margin: 0 0 12px 0;
-}
-
-.about-em {
     font-family: var(--font-display);
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     color: var(--black-900);
     font-weight: 700;
+    margin: 0 0 12px 0;
 }
 
 .about-desc {
@@ -261,6 +253,81 @@ body {
     display: block;
 }
 
+.services {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.services-content {
+    flex: 1;
+    text-align: left;
+    padding: 48px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.services-content-card {
+    flex: 1;
+    background: var(--white-100);
+    border-radius: 24px;
+    height: auto;
+    padding: 2rem;
+}
+
+.services-content-card.premium {
+    background: var(--green-200);
+}
+
+.services-content-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--black-900);
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    text-align: left;
+}
+
+.services-content-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.services-content h1 {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--black-900);
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+}
+
+.services-content h2 {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    color: var(--black-700);
+    font-weight: 500;
+    margin: 16px 0 0 0;
+    text-align: left;
+}
+
+.services-content-content p {
+    font-family: var(--font-body);
+    width: 70%;
+}
+
+.services .card-image {
+    flex: 1;
+    background-color: var(--white-100);
+}
+
 /* Tablet breakpoint */
 @media (min-width:640px) {
     .site-header {
@@ -268,7 +335,7 @@ body {
     }
 
     .logo {
-        width: 200px;
+        width: 300px;
         height: 60px;
         font-size: 32px;
         justify-content: center;
@@ -336,6 +403,10 @@ body {
         border-radius: 36px;
     }
 
+    .services .card-image {
+        flex: 1;
+    }
+
     .display {
         font-size: 84px;
         line-height: 0.92;
@@ -358,9 +429,8 @@ body {
         border-radius: 24px;
     }
 
-    .about-title,
-    .about-em {
-        font-size: 3.2rem;
+    .about-title{
+        font-size: 4rem;
     }
 
     .about-desc {
