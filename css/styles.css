@@ -3,8 +3,9 @@
     /* Primary palette - Joyful Yellow */
     --joy-500: #FFDA03;
     /* accent */
-    --joy-400: #FFE885;
-    --joy-300: #FFF6D2;
+    --joy-400: #ffe05f;
+    --joy-300: #ffeda1;
+    --joy-200: #fff6d2;
 
     /* Neutrals */
     --white-000: #FFFFFF;
@@ -56,7 +57,7 @@ body {
 
 .container {
     max-width: var(--container-max);
-    margin: 0 auto;
+    margin: 0rem auto 2rem auto;
     padding: 0 20px
 }
 
@@ -171,6 +172,31 @@ body {
     max-width: 100%
 }
 
+.hero-card {
+    flex: 1;
+    background: var(--joy-500);
+    border-radius: 24px;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 10rem;
+}
+
+.hero-card .logo {
+    width: 12rem;
+    height: auto;
+}
+
+.hero-card h1 {
+    font-family: var(--font-display);
+    font-size: 2.75rem;
+    color: var(--black-900);
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+}
+
 .display {
     font-family: var(--font-display);
     font-size: 36px;
@@ -220,7 +246,7 @@ body {
 
 .cta {
     text-align: center;
-    padding: 2rem 16rem;
+    padding: 0rem 10rem;
     display: flex;
     flex-direction: column;
     gap: 6rem;
@@ -241,7 +267,7 @@ body {
     font-size: 2rem;
     color: var(--black-700);
     margin-block-end: 0;
-    margin-top: 8rem;
+    margin-top: 4rem;
     margin-bottom: -6rem;
 }
 
@@ -336,6 +362,7 @@ body {
 .cta-last-bottom {
     flex: 1;
     width: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -352,7 +379,22 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    height: 500px;
+    min-height: 550px;
+}
+
+.cta-last-bottom-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--black-900);
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.cta-last-bottom-card p {
+    font-family: var(--font-body);
+    color: var(--black-700);
+    font-size: 1rem;
+    display: block;
 }
 
 .cta-last-bottom-card-image {
@@ -363,7 +405,7 @@ body {
 
 /* About Section */
 .about {
-    padding: 4rem;
+    padding: 4rem 10rem;
 }
 
 .about-content {
@@ -371,30 +413,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.about-card {
-    flex: 1;
-    background: var(--joy-500);
-    border-radius: 24px;
-    height: auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: row;
-}
-
-.about-card .logo {
-    width: 12rem;
-    height: auto;
-}
-
-.about-card h1 {
-    font-family: var(--font-display);
-    font-size: 2.75rem;
-    color: var(--black-900);
-    font-weight: 600;
-    margin: 0;
-    text-align: left;
+    gap: 2rem;
 }
 
 .about-content {
@@ -409,7 +428,6 @@ body {
 
 .about-title {
     font-family: var(--font-display);
-    font-size: 2.8rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 0 0 12px 0;
@@ -473,12 +491,11 @@ body {
     flex: 2;
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
 }
 
 .services-content h1 {
     font-family: var(--font-display);
-    font-size: 4rem;
+    font-size: 2rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0;
@@ -487,9 +504,9 @@ body {
 
 .services-content h2 {
     font-family: var(--font-body);
-    font-size: 2rem;
-    color: var(--black-700);
-    font-weight: 500;
+    font-size: 2.2rem;
+    color: var(--black-900);
+    font-weight: 700;
     margin: 16px 0 0 0;
     text-align: left;
 }
@@ -502,6 +519,59 @@ body {
 .services .card-image {
     flex: 1;
     background-color: var(--white-100);
+}
+
+.who-we-help {
+    padding: 4rem 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.who-we-help-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.who-we-help-left h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--black-900);
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    text-align: left;
+}
+
+.who-we-help-card-img {
+    position: relative;
+    width: 450px;
+    height: auto;
+    margin-top: 2rem;
+}
+
+.who-we-help-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.who-we-help-content {
+    border-radius: 32px;
+    padding: 1rem 2rem 4rem 2rem;
+    margin-top: -3rem;
+}
+
+.who-we-help-content h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--black-900);
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    text-align: left;
 }
 
 /* Tablet breakpoint */
@@ -550,7 +620,7 @@ body {
     }
 
     .site-header {
-        padding: 2rem;
+        padding: 2rem 2rem 0rem;
     }
 
     .header-inner {
@@ -569,16 +639,51 @@ body {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
         align-items: center;
+        margin-bottom: 6rem;
     }
 
     .card-image {
-        width: 520px;
-        height: 520px;
+        width: 620px;
+        height: 620px;
         border-radius: 36px;
     }
 
     .services .card-image {
         flex: 1;
+        width: 90%;
+        height: auto;
+        padding: 4rem;
+    }
+
+    .services-bottom {
+        padding: 4rem;
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .services-bottom h1 {
+        font-family: var(--font-body);
+        font-size: 2.5rem;
+        color: var(--black-900);
+        font-weight: 700;
+        margin: 16px 0 0 0;
+    }
+
+    .services-bottom h2 {
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        color: var(--black-900);
+        font-weight: 600;
+        margin: 0;
+        font-style: italic;
+    }
+
+    .services-bottom p {
+        font-family: var(--font-body);
+        font-size: 1.2rem;
+        color: var(--black-700);
+        max-width: 600px;
+        margin: 2rem auto 2rem;
     }
 
     .display {
@@ -601,14 +706,8 @@ body {
 }
 
 @media (min-width: 900px) {
-    .about-card {
-        width: 100%;
-        height: 180px;
-        border-radius: 24px;
-    }
-
     .about-title{
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .about-desc {
