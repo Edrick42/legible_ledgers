@@ -352,6 +352,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
+    height: 500px;
 }
 
 .cta-last-bottom-card-image {
@@ -362,21 +363,14 @@ body {
 
 /* About Section */
 .about {
-    padding: 48px 0;
+    padding: 4rem;
 }
 
-.about .container {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: 1fr;
-    gap: 32px;
-    width: 100%;
-}
-
-.about-row {
+.about-content {
     flex: 1;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 .about-card {
