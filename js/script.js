@@ -1,5 +1,19 @@
 // Small enhancements: smooth scroll for internal links and focus-visible class polyfill
 (function(){
+  // Header fixed on scroll
+  const header = document.querySelector('.site-header');
+  const scrollThreshold = 100; // pixels scrolled before header becomes fixed
+  
+  function checkScroll() {
+    if (window.scrollY > scrollThreshold) {
+      header.classList.add('fixed');
+    } else {
+      header.classList.remove('fixed');
+    }
+  }
+  
+  window.addEventListener('scroll', checkScroll);
+  checkScroll(); // Check initial scroll position
   // Smooth scroll for anchor links
   document.addEventListener('click', function(e){
     const a = e.target.closest('a[href^="#"]');
