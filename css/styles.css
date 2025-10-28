@@ -58,7 +58,6 @@ body {
 .container {
     max-width: var(--container-max);
     margin: 0rem auto 2rem auto;
-    padding: 0 20px
 }
 
 /* Header - mobile first */
@@ -104,12 +103,15 @@ body {
 }
 
 .logo {
-    width: 24px;
+    width: 15rem;
     /* ajuste o tamanho conforme necessário */
-    height: 24px;
+    height: 3rem;
     background-size: contain;
     /* mantém proporção */
     display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .logo img {
@@ -132,9 +134,13 @@ body {
     font-size: 14px
 }
 
+.main-nav {
+    display: none
+}
+
 /* Mobile menu toggle (hidden on desktop) */
 .menu-toggle {
-    display: none;
+    display: flex;
     background: transparent;
     border: 0;
     width: 48px;
@@ -218,7 +224,7 @@ body {
 
 /* Hero - mobile first (single column) */
 .hero {
-    padding: 0px 0px 36px;
+    padding: 2rem 4rem;
 }
 
 .hero-grid {
@@ -240,13 +246,14 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 360px;
+    height: 560px;
     background: var(--joy-400);
     border-radius: 24px;
 }
 
 .hero-content {
-    max-width: 80%
+    margin-top: 5rem;
+    max-width: 100%
 }
 
 .card-image img {
@@ -261,16 +268,16 @@ body {
     background: var(--joy-500);
     border-radius: 24px;
     height: auto;
-    padding: 2rem;
+    margin-top: 8rem;
+    padding: 4rem 2rem;
     display: flex;
     flex-direction: column;
-    margin: 2rem 2rem;
     align-items: center;
     justify-content: center;
 }
 
 .hero-card .logo {
-    width: 12rem;
+    width: 8rem;
     height: auto;
     margin: auto;
 }
@@ -287,7 +294,7 @@ body {
 
 .display {
     font-family: var(--font-display);
-    font-size: 36px;
+    font-size: 4rem;
     line-height: 1.02;
     margin: 0 0 8px 0;
     color: var(--black-900);
@@ -299,15 +306,16 @@ body {
     color: var(--black-700);
     max-width: 100%;
     margin-bottom: 2rem;
+    font-size: 2rem;
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 22px;
+    padding: 1rem 1.5rem;
     border-radius: 16px;
     text-decoration: none;
-    font-weight: 800;
-    font-size: 14px
+    font-weight: 700;
+    font-size: 2rem;
 }
 
 .btn.primary {
@@ -917,53 +925,6 @@ body {
     margin-top: 8px
 }
 
-
-/* Tablet breakpoint */
-@media (min-width:640px) {
-    .logo {
-        width: 300px;
-        height: 60px;
-        font-size: 32px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero {
-        padding: 0px 48px;
-    }
-
-    .hero-grid {
-        gap: 28px
-    }
-
-    .card-image {
-        width: 420px;
-        height: 420px;
-        border-radius: 28px
-    }
-
-    .display {
-        font-size: 48px
-    }
-
-    .btn {
-        padding: 13px 24px;
-        font-size: 15px
-    }
-}
-
-/* Mobile behavior: hide desktop nav, show toggle */
-@media (max-width:900px) {
-    .main-nav {
-        display: none
-    }
-
-    .menu-toggle {
-        display: flex
-    }
-}
-
 /* Desktop breakpoint */
 @media (min-width:1024px) {
     .site-header {
@@ -980,6 +941,14 @@ body {
 
     .header-inner {
         align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 
     .main-nav a {
@@ -1007,6 +976,10 @@ body {
         border-radius: 36px;
     }
 
+    .lead {
+        font-size: 1rem;
+    }
+
     .hero-card {
         flex: 1;
         height: auto;
@@ -1030,6 +1003,12 @@ body {
 
     .hero-media .card-image {
         height: 600px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-weight: 800;
+        font-size: 14px
     }
 
     .services .card-image {
