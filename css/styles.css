@@ -56,10 +56,13 @@ body {
 }
 
 section {
-  width: 100%;        /* ocupa toda a largura do pai (normalmente a tela) */
-  max-width: 100vw;   /* nunca ultrapassa a largura da viewport */
-  overflow-x: hidden; /* impede filhos de “vazar” lateralmente */
-  box-sizing: border-box; /* padding não aumenta a largura total */
+    width: 100%;        /* ocupa toda a largura do pai (normalmente a tela) */
+    /* use percentuais em vez de 100vw para evitar overflow causado pela barra de rolagem */
+    max-width: 100%;
+    /* permitir que a section expanda verticalmente com o conteúdo */
+    overflow-x: hidden; /* impede filhos de “vazar” lateralmente */
+    overflow-y: visible; /* garante que não apareça scroll interno vertical */
+    box-sizing: border-box; /* padding não aumenta a largura total */
 }
 
 section * {
@@ -115,9 +118,9 @@ section * {
 }
 
 .logo {
-    width: 15rem;
+    width: 20rem;
     /* ajuste o tamanho conforme necessário */
-    height: 2rem;
+    height: 3rem;
     background-size: contain;
     /* mantém proporção */
     display: flex;
@@ -259,7 +262,9 @@ section * {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 360px;
+    height: 100%;
+    /* permitir que o bloco expanda verticalmente; usar min-height para preservar presença visual */
+    min-height: 320px;
     background: var(--joy-400);
     border-radius: 24px;
 }
@@ -271,6 +276,7 @@ section * {
 .card-image img {
     width: 100%;
     height: 100%;
+    max-height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -280,7 +286,7 @@ section * {
     background: var(--joy-500);
     border-radius: 24px;
     height: auto;
-    margin-top: 2rem;
+    margin: 3rem 0rem 3rem;
     padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
@@ -289,14 +295,14 @@ section * {
 }
 
 .hero-card .logo {
-    width: 4rem;
+    width: 8rem;
     height: auto;
     margin: 1rem auto;
 }
 
 .hero-card h1 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0;
@@ -305,19 +311,19 @@ section * {
 
 .display {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1.02;
     margin: 0 0 8px 0;
     color: var(--black-900);
     white-space: pre-line;
-    margin-bottom: 1rem;
+    margin: 3rem 0rem 1rem;
 }
 
 .lead {
     color: var(--black-700);
     max-width: 100%;
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
 }
 
 .btn {
@@ -326,7 +332,7 @@ section * {
     border-radius: 16px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 .btn.primary {
@@ -338,6 +344,7 @@ section * {
 .btn.secondary {
     background: var(--blue-700);
     color: var(--white-100);
+    margin-bottom: 3rem;
 }
 
 /* Utility: visually hidden */
@@ -364,7 +371,7 @@ section * {
 .cta-title {
     margin-top: 1rem;
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--black-900);
 }
 
@@ -404,19 +411,20 @@ section * {
     font-family: var(--font-display);
     font-size: 2rem;
     color: var(--black-900);
+    margin-bottom: 0rem;
 }
 
 .cta-last-content {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     gap: 2rem;
 }
 
 .cta-card-desc {
     font-family: var(--font-body);
-    font-size: 1.2rem;
+    font-size: 1.75rem;
     color: var(--black-700);
     width: 90%;
 }
@@ -439,27 +447,27 @@ section * {
 .cta-last {
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     width: 100%;
 }
 
 .cta-last-title {
     font-family: var(--font-display);
-    font-size: 4rem;
+    font-size: 6rem;
     color: var(--black-900);
     font-weight: 700;
-    margin: 0 0 12px 0;
-    text-align: left;
+    margin: 2rem 0 2rem 0;
+    text-align: center;
 }
 
 .cta-last-body {
     font-family: var(--font-body);
     color: var(--black-700);
-    font-size: 1.4rem;
+    font-size: 2rem;
     display: block;
     max-width: 600px;
-    text-align: left;
+    text-align: center;
 }
 
 .cta-last-bottom {
@@ -467,6 +475,7 @@ section * {
     width: 100%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
@@ -487,7 +496,7 @@ section * {
 
 .cta-last-bottom-card h4 {
     font-family: var(--font-display);
-    font-size: 1.3rem;
+    font-size: 3rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0 0 12px 0;
@@ -496,19 +505,20 @@ section * {
 .cta-last-bottom-card p {
     font-family: var(--font-body);
     color: var(--black-700);
-    font-size: 1rem;
+    font-size: 2rem;
     display: block;
 }
 
 .cta-last-bottom-card-image {
     position: relative;
     width: auto;
-    height: 250px;
+    height: auto;
 }
 
 /* About Section */
 .about {
-    padding: 4rem 10rem;
+    margin: 3rem 0rem 3rem 0rem;
+    padding: 1rem;
 }
 
 .about-content {
@@ -530,6 +540,7 @@ section * {
 }
 
 .about-title {
+    font-size: 3rem;
     font-family: var(--font-display);
     color: var(--black-900);
     font-weight: 700;
@@ -1128,6 +1139,14 @@ section * {
         padding: 2rem 6rem 0rem 6rem;
     }
 
+    .cta-last-content {
+        align-items: start;
+    }
+
+    .cta-last-body {
+        text-align: left;
+    }
+
     .cta-last-title {
         font-family: var(--font-display);
         font-size: 4rem;
@@ -1135,5 +1154,22 @@ section * {
         font-weight: 700;
         margin: 0 0 12px 0;
         text-align: left;
+    }
+
+    .cta-last-bottom {
+        flex-direction: row;
+    }
+    
+    .cta-last-bottom-card h4 {
+        font-size: 2rem;
+    }
+
+    .cta-last-bottom-card p {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .about {
+        padding: 4rem 10rem;
     }
 }
