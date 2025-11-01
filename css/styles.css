@@ -75,6 +75,10 @@ section * {
     margin: 0rem auto 1rem auto;
 }
 
+.card-image {
+    border-radius: 36px;
+}
+
 /* Header - mobile first */
 /* Header */
 .site-header {
@@ -93,14 +97,6 @@ section * {
     background: var(--joy-500);
     border-radius: 0 0 45px 45px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-}
-
-.site-header.fixed .main-nav a {
-    color: var(--black-900);
-}
-
-.site-header.fixed+main {
-    margin-top: 80px;
 }
 
 .header-inner {
@@ -521,12 +517,27 @@ section * {
     padding: 1rem;
 }
 
+.about-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-items: stretch;
+}
+
+.about-row .btn {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .about-content {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .about-content {
@@ -568,7 +579,7 @@ section * {
     gap: 32px;
     width: 100%;
     max-width: var(--container-max);
-    margin: 0 auto;
+    padding: 1rem;
 }
 
 .services-content {
@@ -576,7 +587,7 @@ section * {
     text-align: left;
     padding: 48px 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 32px;
 }
 
@@ -609,7 +620,7 @@ section * {
 
 .services-content h1 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0;
@@ -618,21 +629,68 @@ section * {
 
 .services-content h2 {
     font-family: var(--font-body);
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: var(--black-900);
     font-weight: 700;
-    margin: 16px 0 0 0;
+    margin: 0;
     text-align: left;
+}
+
+.services-content-content div {
+    margin-top: 1.5rem;
+    max-width: 100% !important;
+    width: 100% !important;
 }
 
 .services-content-content p {
     font-family: var(--font-body);
-    width: 70%;
+    font-size: 1.5rem;
 }
 
 .services .card-image {
     flex: 1;
     background-color: var(--white-100);
+}
+
+.services-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 4rem 0rem;
+}
+
+.services-bottom h1 {
+    font-family: var(--font-body);
+    font-size: 4rem;
+    color: var(--black-900);
+    font-weight: 700;
+    margin: 16px 0 0 0;
+    text-align: center;
+}
+
+.services-bottom h2 {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--black-900);
+    font-weight: 600;
+    margin: 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.services-bottom p {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    color: var(--black-700);
+    max-width: 600px;
+    text-align: center;
+}
+
+.services-bottom .btn {
+    margin: auto;
+    max-width: 600px;
 }
 
 .who-we-help {
@@ -1034,38 +1092,15 @@ section * {
         flex: 1;
         width: 90%;
         height: auto;
-        padding: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .services-bottom {
-        padding: 4rem;
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-
-    .services-bottom h1 {
-        font-family: var(--font-body);
-        font-size: 2.5rem;
-        color: var(--black-900);
-        font-weight: 700;
-        margin: 16px 0 0 0;
-    }
-
-    .services-bottom h2 {
-        font-family: var(--font-display);
-        font-size: 2.5rem;
-        color: var(--black-900);
-        font-weight: 600;
-        margin: 0;
-        font-style: italic;
-    }
-
-    .services-bottom p {
-        font-family: var(--font-body);
-        font-size: 1.2rem;
-        color: var(--black-700);
-        max-width: 600px;
-        margin: 2rem auto 2rem;
+    .services .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 
     .display {
@@ -1172,4 +1207,36 @@ section * {
     .about {
         padding: 4rem 10rem;
     }
+
+    .about-row {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .about-row .btn {
+        height: 3rem;
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        width: 100%;
+        max-width: var(--container-max);
+        margin: 0 auto;
+    }
+
+    .services-content {
+        flex: 1;
+        text-align: left;
+        padding: 48px 0;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    .services-content-content p {
+        font-size: 1.1rem;
+    }
+
 }
