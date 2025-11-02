@@ -114,7 +114,7 @@ section * {
 }
 
 .logo {
-    width: 20rem;
+    width: 15rem;
     /* ajuste o tamanho conforme necessário */
     height: 3rem;
     background-size: contain;
@@ -196,7 +196,7 @@ section * {
     height: 100vh;
     width: 320px;
     max-width: 90%;
-    background: var(--white-000);
+    background: var(--joy-500);
     box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
     transform: translateX(110%);
     transition: transform 320ms ease;
@@ -216,7 +216,9 @@ section * {
     padding: 12px 0;
     color: var(--black-900);
     text-decoration: none;
-    font-weight: 700
+    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
 }
 
 .mobile-nav-overlay {
@@ -255,14 +257,18 @@ section * {
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
     width: 100%;
-    height: 100%;
-    /* permitir que o bloco expanda verticalmente; usar min-height para preservar presença visual */
-    min-height: 320px;
+    height: 100vh;
+    max-height: 460px;
     background: var(--joy-400);
     border-radius: 24px;
+}
+
+.hero-media .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hero-content {
@@ -282,7 +288,7 @@ section * {
     background: var(--joy-500);
     border-radius: 24px;
     height: auto;
-    margin: 3rem 0rem 3rem;
+    margin: 2rem 0rem 1rem;
     padding: 1rem 1rem;
     display: flex;
     flex-direction: column;
@@ -291,14 +297,14 @@ section * {
 }
 
 .hero-card .logo {
-    width: 8rem;
+    width: 5rem;
     height: auto;
     margin: 1rem auto;
 }
 
 .hero-card h1 {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0;
@@ -312,13 +318,13 @@ section * {
     margin: 0 0 8px 0;
     color: var(--black-900);
     white-space: pre-line;
-    margin: 3rem 0rem 1rem;
+    margin: 1rem 0rem 1rem;
 }
 
 .lead {
     color: var(--black-700);
     max-width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-size: 1.6rem;
 }
 
@@ -328,7 +334,7 @@ section * {
     border-radius: 16px;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
 }
 
 .btn.primary {
@@ -365,13 +371,14 @@ section * {
 }
 
 .cta-title {
-    margin-top: 1rem;
+    margin-top: 0rem;
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--black-900);
 }
 
 .cta-sub-title {
+    margin-top: 0rem;
     font-family: var(--font-body);
     font-size: 2.5rem;
     color: var(--black-700);
@@ -387,7 +394,6 @@ section * {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 950px;
     margin: 1rem 0rem;
 }
 
@@ -422,7 +428,6 @@ section * {
     font-family: var(--font-body);
     font-size: 1.75rem;
     color: var(--black-700);
-    width: 90%;
 }
 
 .cta-card-image {
@@ -450,7 +455,7 @@ section * {
 
 .cta-last-title {
     font-family: var(--font-display);
-    font-size: 6rem;
+    font-size: 4rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 2rem 0 2rem 0;
@@ -460,10 +465,11 @@ section * {
 .cta-last-body {
     font-family: var(--font-body);
     color: var(--black-700);
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
     max-width: 600px;
     text-align: center;
+    margin-top: 0;
 }
 
 .cta-last-bottom {
@@ -492,7 +498,7 @@ section * {
 
 .cta-last-bottom-card h4 {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0 0 12px 0;
@@ -501,8 +507,9 @@ section * {
 .cta-last-bottom-card p {
     font-family: var(--font-body);
     color: var(--black-700);
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
+    margin-top: 0rem;
 }
 
 .cta-last-bottom-card-image {
@@ -513,7 +520,7 @@ section * {
 
 /* About Section */
 .about {
-    margin: 3rem 0rem 3rem 0rem;
+    margin: 1rem 0rem 1rem 0rem;
     padding: 1rem;
 }
 
@@ -551,7 +558,7 @@ section * {
 }
 
 .about-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: var(--font-display);
     color: var(--black-900);
     font-weight: 700;
@@ -585,7 +592,7 @@ section * {
 .services-content {
     flex: 1;
     text-align: left;
-    padding: 48px 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -663,7 +670,7 @@ section * {
 
 .services-bottom h1 {
     font-family: var(--font-body);
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 16px 0 0 0;
@@ -672,7 +679,7 @@ section * {
 
 .services-bottom h2 {
     font-family: var(--font-display);
-    font-size: 4rem;
+    font-size: 2.75rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0;
@@ -682,7 +689,7 @@ section * {
 
 .services-bottom p {
     font-family: var(--font-body);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--black-700);
     max-width: 600px;
     text-align: center;
@@ -710,7 +717,7 @@ section * {
 
 .who-we-help-left h1 {
     font-family: var(--font-display);
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 0 0 12px 0;
@@ -741,7 +748,7 @@ section * {
 
 .who-we-help-content h4 {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0 0 12px 0;
@@ -751,7 +758,7 @@ section * {
 .who-we-help-content p {
     font-family: var(--font-body);
     color: var(--black-700);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     display: block;
 }
 
@@ -783,22 +790,22 @@ section * {
 
 .testimonials h1 {
     font-family: var(--font-display);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-style: italic;
     text-align: center;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .testimonials p {
     font-family: var(--font-body);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-style: italic;
     text-align: center;
-    margin: 1rem auto 4rem auto;
+    margin: 0rem auto 0rem auto;
 }
 
 .testimonials-card {
-    flex: 0 0 85vw;
+    flex: 0 0 100vw;
     /* ocupa ~90% da largura da tela */
     background: var(--white-100);
     border-radius: 24px;
@@ -829,7 +836,7 @@ section * {
 
 .testimonials-card p {
     font-family: var(--font-body);
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--black-700);
     display: block;
     margin-bottom: 2rem;
@@ -873,7 +880,7 @@ section * {
 
 .contact-us-content h2 {
     font-family: var(--font-body);
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 0 auto;
@@ -882,7 +889,7 @@ section * {
 
 .contact-us-content h1 {
     font-family: var(--font-display);
-    font-size: 3.7rem;
+    font-size: 2.75rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0 auto;
@@ -892,7 +899,7 @@ section * {
 
 .contact-us-content p {
     font-family: var(--font-body);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--black-700);
     max-width: 600px;
     margin: 2rem auto 2rem;
@@ -910,8 +917,9 @@ section * {
 
 .contact-form-title {
     font-family: var(--font-display);
-    font-size: 3rem;
+    font-size: 2rem;
     color: var(--black-900);
+    margin-top: 0rem;
     margin-bottom: 1.5rem;
 }
 
@@ -965,7 +973,7 @@ section * {
 }
 
 .footer-logo {
-    width: 95vw;
+    width: 85vw;
     height: auto;
     display: block
 }
@@ -978,7 +986,7 @@ section * {
 
 .footer-left .footer-tag {
     font-family: var(--font-body);
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: 700;
     color: var(--black-900);
     margin: 0;
@@ -994,7 +1002,7 @@ section * {
 
 .footer-info-title {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-style: italic;
     margin: 0
 }
@@ -1003,7 +1011,7 @@ section * {
     color: var(--black-900);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .footer-copy {
@@ -1057,7 +1065,13 @@ section * {
     }
  
     .hero-content {
-        margin-top: 5rem;
+        margin: auto;
+        height: 75vh;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-content: center;
+        
     }
 
     .card-image {
@@ -1141,7 +1155,7 @@ section * {
         padding: 0rem 10rem;
         display: flex;
         flex-direction: column;
-        gap: 6rem;
+        gap: 3rem;
         justify-content: center;
         align-items: center;
     }
@@ -1149,14 +1163,14 @@ section * {
     .cta-title {
         font-size: 2.5rem;
         margin-block-start: 0;
-        margin-bottom: -3rem;
+        margin-bottom: -1rem;
     }
 
     .cta-sub-title {
         font-size: 2rem;
         margin-block-end: 0;
         margin-top: 4rem;
-        margin-bottom: -6rem;
+        margin-bottom: -2rem;
     }
 
     .cta-card {
