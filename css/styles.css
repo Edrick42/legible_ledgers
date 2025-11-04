@@ -71,7 +71,6 @@ section * {
 }
 
 .container {
-    max-width: var(--container-max);
     margin: 0rem auto 1rem auto;
 }
 
@@ -242,8 +241,6 @@ section * {
 }
 
 .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 20px;
     align-items: start
 }
@@ -488,12 +485,11 @@ section * {
     flex: 1;
     background: var(--blue-300);
     border-radius: 24px;
-    height: auto;
+    height: 550px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     text-align: left;
-    min-height: 550px;
 }
 
 .cta-last-bottom-card h4 {
@@ -525,18 +521,47 @@ section * {
 }
 
 .about-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    justify-items: stretch;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 1rem;
+}
+
+.about-row .marquee {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        white-space: nowrap;
+}
+
+.about-row .marquee > a {
+        flex: 0 0 auto;
 }
 
 .about-row .btn {
-    height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+        height: 6rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+}
+
+/* marquee animations (mobile) */
+@keyframes marquee-left-to-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0%); }
+}
+
+@keyframes marquee-right-to-left {
+    from { transform: translateX(0%); }
+    to   { transform: translateX(-50%); }
+}
+
+.marquee--ltr {
+    animation: marquee-left-to-right 36s linear infinite;
+}
+
+.marquee--rtl {
+    animation: marquee-right-to-left 32s linear infinite;
 }
 
 .about-content {
@@ -1026,15 +1051,12 @@ section * {
     }
 
     .site-header {
-        padding: 1rem 0;
+        padding: 2rem 0;
     }
 
     .container {
-        padding: 0 24px
-    }
-
-    .site-header {
-        padding: 2rem 2rem 0rem;
+        padding: 0;
+        margin: 0rem 6vw;
     }
 
     .header-inner {
@@ -1058,18 +1080,19 @@ section * {
     }
 
     .hero-grid {
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
         gap: 40px;
         align-items: center;
         margin-bottom: 6rem;
     }
  
     .hero-content {
-        margin: auto;
-        height: 75vh;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        max-width: none;
+        width: 50vw;
+        align-items: start;
+        justify-content: start;
+        text-align: start;
         align-content: center;
         
     }
@@ -1080,9 +1103,15 @@ section * {
         border-radius: 36px;
     }
 
+    .display {
+        font-size: 3.5rem;
+        text-align: left;
+    }
+
     .lead {
-        font-size: 1rem;
-        margin: 2rem auto;
+        font-size: 1.25rem;
+        text-align: left;
+        max-width: 85%;
     }
 
     .hero-card {
@@ -1107,7 +1136,9 @@ section * {
     }   
 
     .hero-media .card-image {
-        height: 600px;
+        max-height: none;
+        width: 45vw;
+        height: 45vw;
     }
 
     .btn {
@@ -1140,15 +1171,6 @@ section * {
 
     .display-second {
         font-family: var(--font-body);
-    }
-
-    .hero-content {
-        max-width: 640px;
-    }
-
-    .lead {
-        max-width: 420px;
-        margin-bottom: 2rem;
     }
 
     .cta {
@@ -1192,7 +1214,12 @@ section * {
     .cta-card-image img {
         max-width: 300px;
     }
-    
+
+    .cta-card-desc {
+        font-size: 1.5rem;
+        width: 75%;
+    }
+
     .cta-last {
         justify-content: center;
         align-items: start;
@@ -1200,22 +1227,26 @@ section * {
         gap: 6rem;
         width: 100%;
         padding: 2rem 6rem 0rem 6rem;
+        margin: 3rem 0rem;
     }
 
     .cta-last-content {
+        margin: 6rem 0rem;
         align-items: start;
     }
 
     .cta-last-body {
         text-align: left;
+        font-size: 1.25rem;
+        margin-bottom: 0rem;
     }
 
     .cta-last-title {
         font-family: var(--font-display);
-        font-size: 4rem;
+        font-size: 6rem;
         color: var(--black-900);
         font-weight: 700;
-        margin: 0 0 12px 0;
+        margin: 0;
         text-align: left;
     }
 
@@ -1234,11 +1265,11 @@ section * {
     /* About Section */
     .about {
         padding: 4rem 10rem;
+        margin: 3rem 0rem;
     }
 
     .about-row {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
+        display: flex;
     }
 
     .about-row .btn {
@@ -1266,6 +1297,17 @@ section * {
     
     .services-content-content p {
         font-size: 1.1rem;
+    }
+    
+    .comparison-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .comparison-card {
+        flex: 1;
     }
 
     .who-we-help {
