@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Legible Ledgers — Bookkeeping</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Lexend from Google Fonts (body text) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <!-- Platypi is a display font — add locally or via webfont provider. See README for instructions. -->
+  <link rel="stylesheet" href="css/comparison.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">
+          <img src="assets/logo/logo-legible-ledgers-title.svg" alt="Legible Ledgers Title" />
+        </div>
+      </div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#">Home</a>
+        <!--a href="#about">About Us</a-->
+        <a href="#services">Services</a>
+        <!--a href="#process">Our Process</a-->
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <!-- Mobile nav panel (slides from right) -->
+      <div id="mobile-menu" class="mobile-nav" aria-hidden="true">
+        <nav class="mobile-nav-inner" aria-label="Mobile navigation">
+          <a href="#">Home</a>
+          <!--a href="#about">About Us</a-->
+          <a href="#services">Services</a>
+          <!--a href="#process">Our Process</a-->
+          <a href="#testimonials">Testimonials</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+      </div>
+      <div class="mobile-nav-overlay" tabindex="-1" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-media">
+          <div class="card-image" role="img" aria-label="Illustration">
+            <img src="assets/images/legible-ledgers.png" alt="Legible Ledgers Illustration 01" />
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <h1 class="display"><span class="display-second">Make your numbers</span><br><i>worth understanding</i></h1>
+          <p class="lead">
+            For established service-based business owners
+            overwhelmed by chaotic QuickBooks Online
+            files, Legible Ledgers provides specialized
+            cleanup and organization services that transform
+            financial chaos into clear, actionable insights.
+          </p>
+          <a class="btn primary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank" rel="noopener noreferrer">Book a clarity call — it’s free</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="logo">
+          <img src="assets/logo/logo-legible-ledgers.svg" alt="Legible Ledgers Logo" />
+        </div>
+        <h1>We empower our clients by magnifying their results through clarity.</h1>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2 class="cta-sub-title">Legible Ledgers</h2>
+      <h1 class="cta-title"><i>Specialists in QuickBooks Online Cleanup</i></h1>
+
+      <div class="cta-card">
+        <div class="cta-card-content">
+          <div class="cta-card-image">
+            <img src="assets/illustration/legible-ledgers-illustration-03.svg" alt="Legible Ledgers Illustration" />
+          </div>
+
+          <div class="cta-card-text">
+            <h3 class="cta-card-title">“Oh no, my books are a mess!”</h3>
+            <p class="cta-card-desc">
+              <strong>Take a Breath, We've Got It!</strong> <br>
+              Our team will untangle the mess, organize your books, and bring your finances back into focus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-card">
+        <div class="cta-card-content">
+          <div class="cta-card-image">
+            <img src="assets/illustration/legible-ledgers-illustration-04.svg" alt="Legible Ledgers Illustration" />
+          </div>
+
+          <div class="cta-card-text">
+            <h3 class="cta-card-title">“It’s tax time and I can’t handle one more thing."</h3>
+            <p class="cta-card-desc">
+              <strong>Leave the mess to us.</strong> <br>
+              Tax season doesn’t have to be chaos.
+              We’ll get your books cleaned, organized, and CPA-ready without the stress.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-card">
+        <div class="cta-card-content">
+          <div class="cta-card-image">
+            <img src="assets/illustration/legible-ledgers-illustration-05.svg" alt="Legible Ledgers Illustration" />
+          </div>
+
+          <div class="cta-card-text">
+            <h3 class="cta-card-title">“My business is growing and I need a partner I can trust."</h3>
+            <p class="cta-card-desc">
+              <strong>Take a Breath, We've Got It!</strong> <br>
+              Our team will untangle the mess, organize your books,
+              and bring your finances back into focus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-last">
+        <h2 class="cta-last-title">
+          Untangle,<br>
+          Clarify, <br>
+          <i>Empower!</i>
+        </h2>
+        <div class="cta-last-content">
+          <p class="cta-last-body">
+            From big business moves to everyday decisions, clarity in your finances starts with understanding your
+            numbers.
+            Because when your books are clear, your choices and your opportunities become even clearer.
+          </p>
+          <a class="btn secondary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank" rel="noopener noreferrer">Book a clarity call — it’s free</a>
+        </div>
+      </div>
+
+      <div class="cta-last-bottom">
+        <div class="cta-last-bottom-card">
+          <h4>See where your books have been</h4>
+          <p>We’ll review your QuickBooks history, every transaction, account, and category, and turn tangled data
+            into a clear, organized picture of your finances.</p>
+          <div class="cta-last-bottom-card-image">
+            <img src="assets/illustration/legible-ledgers-illustration-10.svg" alt="Legible Ledgers Illustration" />
+          </div>
+        </div>
+        <div class="cta-last-bottom-card">
+          <h4>See where you can improve</h4>
+          <p>We identify misclassifications, duplications, and errors that hold your business back, then guide you
+            toward a cleaner, more reliable system.</p>
+          <div class="cta-last-bottom-card-image">
+            <img src="assets/illustration/legible-ledgers-illustration-08.svg" alt="Legible Ledgers Illustration" />
+          </div>
+        </div>
+        <div class="cta-last-bottom-card">
+          <h4>See your numbers clearly</h4>
+          <p>Understand your income, spending, and cash flow patterns so you can make confident, data-backed decisions
+            that move your business forward.</p>
+          <div class="cta-last-bottom-card-image">
+            <img src="assets/illustration/legible-ledgers-illustration-09.svg" alt="Legible Ledgers Illustration" />
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="about">
+      <div class="about-content">
+        <h2 class="about-title">You can count on <i>Legible Ledgers</i> for...</h2>
+        <div class="about-row">
+          <div class="marquee marquee--ltr" aria-hidden="false">
+            <a class="btn primary">Quickbooks Cleanup</a>
+            <a class="btn primary">Cash Flow Insights</a>
+            <a class="btn primary">Report Optimization</a>
+            <a class="btn primary">Account Reconciliation</a>
+            <!-- duplicated for seamless looping -->
+            <a class="btn primary">Quickbooks Cleanup</a>
+            <a class="btn primary">Cash Flow Insights</a>
+            <a class="btn primary">Report Optimization</a>
+            <a class="btn primary">Account Reconciliation</a>
+          </div>
+        </div>
+        <div class="about-row">
+          <div class="marquee marquee--rtl" aria-hidden="false">
+            <a class="btn primary">CPA Readiness</a>
+            <a class="btn primary">Financial Clarity Sessions</a>
+            <a class="btn primary">Process bills payments</a>
+            <a class="btn primary">Ongoing Support</a>
+            <!-- duplicated for seamless looping -->
+            <a class="btn primary">CPA Readiness</a>
+            <a class="btn primary">Financial Clarity Sessions</a>
+            <a class="btn primary">Process bills payments</a>
+            <a class="btn primary">Ongoing Support</a>
+          </div>
+        </div>
+        <div class="about-row">
+          <div class="marquee marquee--ltr" aria-hidden="false">
+            <a class="btn primary">Monthly journal entries</a>
+            <a class="btn primary">Chart Of Accounts Structuring</a>
+            <a class="btn primary">Payroll</a>
+            <a class="btn primary">Client Profitability Analysis</a>
+            <!-- duplicated for seamless looping -->
+            <a class="btn primary">Monthly journal entries</a>
+            <a class="btn primary">Chart Of Accounts Structuring</a>
+            <a class="btn primary">Payroll</a>
+            <a class="btn primary">Client Profitability Analysis</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="services-content">
+        <div class="services-content-content">
+          <h2>How Legible Ledgers compares</h2>
+          <h1>with traditional bookkeeping?</h1>
+          <div class="comparison-container">
+            <div class="comparison-card" style="background-color: var(--green-200); padding: 2rem; border-radius: 24px; max-width: 90%;">
+              <h3>With Legible Ledgers</h3>
+              <ul class="feature-list">
+                <li><strong>Focus</strong><br>Fixes, cleans, and rebuilds your books with precision.</li>
+                <li><strong>Clarity</strong><br>Clear, accurate, and easy-to-read.</li>
+                <li><strong>Cost-Effectiveness</strong><br>One focused cleanup that saves time and money.</li>
+                <li><strong>Scalability</strong><br>Clean books set for scaling.</li>
+                <li><strong>Time Savings</strong><br>A fast structured for smart books.</li>
+                <li><strong>Real Time Data</strong><br>Fast, organized every time.</li>
+                <li><strong>Support</strong><br>Proactive, transparent support.</li>
+                <li><strong>Integration</strong><br>Connects all systems, syncing data.</li>
+              </ul>
+            </div>
+
+            <div class="comparison-card" style="background-color: var(--red-200); padding: 2rem; border-radius: 24px; max-width: 90%;">
+              <h3>Without Legible Ledgers</h3>
+              <ul class="feature-list">
+                <li><strong>Focus</strong><br>Keeps things as they are, even if they’re wrong.</li>
+                <li><strong>Clarity</strong><br>Confusing, incomplete reports.</li>
+                <li><strong>Cost-Effectiveness</strong><br>Paying forever without solving the problem.</li>
+                <li><strong>Scalability</strong><br>Messy systems block growth.</li>
+                <li><strong>Time Savings</strong><br>Long back and forth to fix errors.</li>
+                <li><strong>Real Time Data</strong><br>Slow, manual updates.</li>
+                <li><strong>Support</strong><br>Only helps when things go wrong.</li>
+                <li><strong>Integration</strong><br>Unlinked systems.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-image" role="img" aria-label="Illustration">
+          <img src="assets/illustration/legible-ledgers-illustration-02.svg" alt="Legible Ledgers Illustration 02" />
+        </div>
+      </div>
+
+      <div class="services-bottom">
+        <h1>Take your financial clarity</h1>
+        <h2>into your hands</h2>
+        <p>All your QuickBooks data cleaned, organized, and explained in one clear view.
+          See what your numbers really mean, uncover insights to strengthen your business decisions, and if something
+          doesn’t add up, our expert team will make it right.</p>
+  <a class="btn primary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank" rel="noopener noreferrer">Book a clarity call — it’s free</a>
+      </div>
+    </section>
+
+    <section class="who-we-help">
+      <div class="who-we-help-left">
+        <h1>Who we help?</h1>
+        <div class="who-we-help-card-img" role="img" aria-label="Illustration">
+          <img src="assets/illustration/legible-ledgers-illustration-12.svg" alt="Legible Ledgers Illustration 02" />
+        </div>
+      </div>
+
+      <div class="who-we-help-right">
+        <div class="who-we-help-content" style="background-color: var(--joy-500);">
+          <h4>Service-Based Business Owners</h4>
+          <p>From marketing agencies to consultants and contractors, if you sell expertise, not products, we help you
+            get your numbers in order.
+            Gain full visibility into your finances so you can make confident decisions that drive growth.</p>
+        </div>
+        <div class="who-we-help-content" style="background-color: var(--joy-400);">
+          <h4>Creative Agencies & Studios</h4>
+          <p>For the visionaries juggling clients, invoices, and projects. We untangle the financial side so you can
+            focus on creativity and results.</p>
+        </div>
+        <div class="who-we-help-content" style="background-color: var(--joy-300);">
+          <h4>Consultants & Coaches</h4>
+          <p>Whether you’re managing retainers or project-based work, we bring structure and clarity to your accounts,
+            turning confusion into confidence.</p>
+        </div>
+        <div class="who-we-help-content" style="background-color: var(--joy-200); padding-bottom: 2rem !important;">
+          <h4>Independent Contractors & Freelancers</h4>
+          <p>You handle the work, we handle the numbers.
+            Stay compliant, organized, and stress-free with clean, accurate books that reflect your hard-earned income.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h1>The Clarity Seekers</h1>
+      <p>Thousands of business owners have already turned their financial chaos into confidence.</p>
+      <div class="testimonials-carousel">
+          <div class="testimonials-card">
+            <h3>Dr J. Bullock</h3>
+          <h4>Commonwealth Counseling <br> Associates, PC</h4>
+          <p>"Our rapidly growing healthcare business urgently required a broadly experienced bookkeeper to assist with
+            complex payroll issues and related tax and bookkeeping duties. Legible Ledgers quickly learned our business
+            protocols and work flow; as a result, They were able to take over many of the core bookkeeping tasks,
+            including the more complex tasks, immediately. This is particularly impressive because the consulting
+            relationship we established relies largely on electronic communication, as our firm is located about 100 miles
+            south of Legible Ledgers offices. I have found Legible Ledgers to be very bright, very knowledgeable,
+            detail-oriented, precise in their work, and proactive in addressing our needs. Moreover, They have been prompt
+            and personable in all of our dealings with They."</p>
+        </div>
+        <div class="testimonials-card">
+          <h3>M. Ringler</h3>
+          <h4>Managing Director <br> Piedmont Fund Services, Inc</h4>
+          <p>“Our books were a mess after changing accountants, and Legible Ledgers team completely turned things around.
+            They reconciled everything quickly, got our invoicing back on track, and brought order where there was
+            confusion. They QuickBooks expertise made our lives so much easier.”</p>
+        </div>
+        <div class="testimonials-card">
+          <h3>B. Parsons</h3>
+          <h4>Owner <br> Paint Guys, Inc.</h4>
+          <p>“I have worked with Legible Ledgers Bookkeeping for about 4 years. They has always been professional, timely,
+            and trustworthy. Besides just being capable, they gave us the attention we needed as small business owners. I
+            give them my highest recommendation.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us" id="contact">
+      <div class="contact-us-card-img" role="img" aria-label="Illustration">
+        <img src="assets/illustration/legible-ledgers-illustration-13.svg" alt="Legible Ledgers Illustration 02" />
+      </div>
+      <div class="contact-us-content">
+        <h2>
+          Join hundreds of business owners who turned their
+        </h2>
+        <h1>
+          financial chaos into clarity
+        </h1>
+        <p>
+          True financial confidence starts with understanding your numbers. By making sense of the details in your
+          ledgers, you can take control of cash flow, reduce errors, and make smarter business decisions.
+        </p>
+        <a class="btn tertiary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank" rel="noopener noreferrer">Book a clarity call — it’s free</a>
+        <!--div class="contact-form">
+          <h3 class="contact-form-title">I want to get my books back in order</h3>
+          <form action="#" method="POST" class="clarity-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="business-email" name="business-email" placeholder="Business Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="company" name="company" placeholder="Company name" required>
+            </div>
+            <a class="btn primary" href="#contact">Talk to us</a>
+          </form>
+        </div>
+      </div-->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <img src="assets/logo/logo-legible-ledgers-title-horizontal.svg" alt="Legible Ledgers" class="footer-logo" />
+        </div>
+        
+        <p class="footer-tag">Specialists in QuickBooks Online Cleanup</p>
+        <p>Legible Ledgers 2025 © All Rights Reserved</p>
+
+        <h4 class="footer-info-title">Information</h4>
+        <a class="footer-email" href="mailto:hello@legibleledgers.biz">hello@legibleledgers.biz</a>
+      </div>
+
+      <div class="footer-certifications">
+        <img src="assets/images/quick-books-legible-ledgers.png" alt="QuickBooks Certified - Legible Ledgers" />
+        <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member - Legible Ledgers"/>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
