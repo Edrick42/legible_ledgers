@@ -67,7 +67,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="content-container" role="main" data-content-field="main-content">
     <section class="hero" id="hero">
       <div class="container hero-grid">
         <div class="hero-media">
