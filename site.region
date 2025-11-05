@@ -1,10 +1,8 @@
-{% extends "default" %}
-
 <!doctype html>
 <html lang="pt-BR">
 
 <head>  
-  {% head %}  
+  {squarespace-headers}
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -30,8 +28,6 @@
 </head>
 
 <body>
-  {{ content }}  {# Região principal de conteúdo do site #}
-
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -417,7 +413,7 @@
   </footer>
 
   <script src="scripts/script.js"></script>
-  {% scripts %}
+  <squarespace:script src="script.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
 </body>
 
 </html>
