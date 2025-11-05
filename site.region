@@ -1,7 +1,11 @@
+{% extends "default" %}
+
 <!doctype html>
 <html lang="pt-BR">
 
-<head>
+<head>  
+  {% head %}  
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Legible Ledgers — Bookkeeping</title>
@@ -26,6 +30,8 @@
 </head>
 
 <body>
+  {{ content }}  {# Região principal de conteúdo do site #}
+
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -411,6 +417,7 @@
   </footer>
 
   <script src="scripts/script.js"></script>
+  {% scripts %}
 </body>
 
 </html>
