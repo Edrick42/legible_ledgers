@@ -420,6 +420,8 @@
     <!-- combo and minify scripts when not logged in -->
     <squarespace:script src="script.js" combo="true" />
 
+    <script src="scripts/script.js"></script>
+
     <!-- other scripts, and footer code injection -->
     {squarespace-footers}
 
