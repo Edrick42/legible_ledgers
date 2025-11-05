@@ -14,17 +14,56 @@
   
   window.addEventListener('scroll', checkScroll);
   checkScroll(); // Check initial scroll position
-  // Smooth scroll for anchor links
-  document.addEventListener('click', function(e){
+  // Smooth scroll for anchor links with header offset and reduced-motion support
+  function scrollToElementWithOffset(target, smooth = true) {
+    if (!target) return;
+    const headerHeight = header ? header.offsetHeight : 0;
+    const gap = 8; // small gap so content isn't flush against header
+    const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - gap;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced) {
+      window.scrollTo(0, Math.round(top));
+    } else {
+      window.scrollTo({ top: Math.round(top), behavior: smooth ? 'smooth' : 'auto' });
+    }
+
+    try {
+      target.focus({ preventScroll: true });
+    } catch (err) {
+      // some elements may not accept focus
+    }
+  }
+
+  document.addEventListener('click', function (e) {
     const a = e.target.closest('a[href^="#"]');
-    if(!a) return;
+    if (!a) return;
     const href = a.getAttribute('href');
-    if(href === '#') return;
+    if (!href || href === '#') return;
+
     const target = document.querySelector(href);
-    if(target){
+    if (target) {
       e.preventDefault();
-      target.scrollIntoView({behavior:'smooth',block:'start'});
-      target.focus({preventScroll:true});
+
+      // close mobile menu if open
+      if (mobileMenu && mobileMenu.classList.contains('open')) closeMobileMenu();
+
+      // perform scroll with header offset
+      scrollToElementWithOffset(target, true);
+
+      // update URL hash without jumping
+      history.replaceState(null, '', href);
+    }
+  });
+
+  // If page loaded with a hash (direct link), scroll to it after initial layout
+  window.addEventListener('load', function () {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      // delay slightly to allow any layout changes
+      setTimeout(function () {
+        scrollToElementWithOffset(target, false);
+      }, 40);
     }
   });
 

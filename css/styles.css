@@ -43,12 +43,14 @@
     box-sizing: border-box
 }
 
-html,
-body {
-    height: 100%
+html {
+    height: 100%;
+    scroll-padding-top: 5rem; /* Compensar a altura do header fixo */
+    scroll-behavior: smooth;
 }
 
 body {
+    height: 100%;
     margin: 0;
     font-family: var(--font-body);
     color: var(--black-900);
@@ -401,6 +403,35 @@ section * {
 }
 
 .btn.secondary:focus-visible {
+    outline: 3px solid rgba(64,105,170,0.18);
+    outline-offset: 4px;
+}
+
+.btn.tertiary {
+    background: var(--white-100);
+    color: var(--black-700);
+    margin-bottom: 3rem;
+    /* subtle interactive transition similar to primary */
+    transition: transform 180ms cubic-bezier(.2,.8,.2,1),
+                box-shadow 180ms cubic-bezier(.2,.8,.2,1),
+                background-color 180ms ease;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+}
+
+.btn.tertiary:hover,
+.btn.tertiary:focus {
+    /* slightly enlarge and brighten */
+    transform: scale(1.04);
+    background-color: var(--white-000);
+}
+
+.btn.tertiary:active {
+    transform: scale(0.985);
+    transition-duration: 120ms;
+}
+
+.btn.tertiary:focus-visible {
     outline: 3px solid rgba(64,105,170,0.18);
     outline-offset: 4px;
 }
@@ -842,24 +873,19 @@ section * {
 }
 
 .testimonials-carousel {
-    display: flex;
-    gap: 2rem;
-    scroll-snap-type: x mandatory;
-    padding: 2rem 0;
-    -webkit-overflow-scrolling: touch;
-    overflow-x: auto;
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-    /* IE/Edge */
-}
+        display: flex;
+        gap: 2rem;
+        scroll-snap-type: x mandatory;
+        padding: 2rem 0;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+    }
 
-.testimonials-carousel::-webkit-scrollbar {
-    display: none;
-    /* Chrome, Safari, Opera */
-}
-
-.testimonials h1 {
+    .testimonials-carousel::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }.testimonials h1 {
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-style: italic;
@@ -1023,8 +1049,10 @@ section * {
 /* Footer */
 .site-footer {
     background: var(--white-100);
-    padding: 40px 1rem;
+    padding: 40px rem;
     border-top: 1px solid rgba(0, 0, 0, 0.03);
+    width: 100%;
+    max-width: 100%;
 }
 
 .footer-inner {
@@ -1033,48 +1061,56 @@ section * {
     justify-content: space-around;
     gap: 2rem;
     max-width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .footer-left {
     flex: 3;
     display: flex;
     flex-direction: column;
-    gap: 12px
+    gap: 12px;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer-certifications { 
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: end;
+}
+
+.footer-certifications img {
+    flex: 1;
+    max-width: 180px;
+    height: 220px;
+    object-fit: contain;
 }
 
 .footer-logo {
-    width: 85vw;
+    width: 90vw;
     height: auto;
     display: block
 }
 
-
 .footer-left p {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .footer-left .footer-tag {
-    font-family: var(--font-body);
-    font-size: 1.25rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--black-900);
     margin: 0;
-}
-
-.footer-right {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    align-items: flex-start
-
+    width: 100%;
 }
 
 .footer-info-title {
     font-family: var(--font-display);
-    font-size: 2rem;
-    font-style: italic;
+    font-size: 1.5rem;
     margin: 0
 }
 
@@ -1082,7 +1118,7 @@ section * {
     color: var(--black-900);
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 .footer-copy {
@@ -1136,6 +1172,10 @@ section * {
 
     .hero {
         padding: 20px 0;
+    }
+
+    .hero-card h1 {
+        margin-left: 2rem;
     }
 
     .hero-grid {
@@ -1532,11 +1572,16 @@ section * {
 
     .footer-inner {
         flex-direction: row;
-        margin-bottom: 0rem;
+        margin: 0rem;
+        padding: 2rem 6rem;
+    }
+    
+    .footer-left .footer-tag {
+        width: 70%;
     }
 
     .footer-logo {
-        width: 320px;
+        width: 25vw;
     }
     
     .footer-tag {
@@ -1549,5 +1594,29 @@ section * {
     
     .footer-email {
         font-size: 1.1rem;  
+    }
+    
+    /* Make tertiary CTA much larger on desktop without affecting other buttons */
+    .btn.tertiary {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.75rem;
+        border-radius: 45px;
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        max-width: 620px;
+        display: inline-block;
+        margin-top: 3rem;
+    }
+    
+    /* Optionally make it full-width in its container on very large screens */
+    @media (min-width:1400px) {
+        .btn.tertiary {
+            display: block;
+            width: 80%;
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
