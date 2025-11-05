@@ -312,45 +312,50 @@
           <p>All your QuickBooks data cleaned, organized, and explained in one clear view.
             See what your numbers really mean, uncover insights to strengthen your business decisions, and if something
             doesn’t add up, our expert team will make it right.</p>
-            <a class="btn primary clarity-call-btn"">
+          <a class="btn primary clarity-call-btn"">
               Book a Clarity Call — it’s free
             </a>
         </div>
       </section>
 
-      <section class="who-we-help">
-        <div class="who-we-help-left">
-          <h1>Who we help?</h1>
-          <div class="who-we-help-card-img" role="img" aria-label="Illustration">
-            <img src="assets/illustration/legible-ledgers-illustration-12.svg" alt="Legible Ledgers Illustration 02" />
-          </div>
-        </div>
+      <section class=" who-we-help">
+            <div class="who-we-help-left">
+              <h1>Who we help?</h1>
+              <div class="who-we-help-card-img" role="img" aria-label="Illustration">
+                <img src="assets/illustration/legible-ledgers-illustration-12.svg"
+                  alt="Legible Ledgers Illustration 02" />
+              </div>
+            </div>
 
-        <div class="who-we-help-right">
-          <div class="who-we-help-content" style="background-color: var(--joy-500);">
-            <h4>Service-Based Business Owners</h4>
-            <p>From marketing agencies to consultants and contractors, if you sell expertise, not products, we help you
-              get your numbers in order.
-              Gain full visibility into your finances so you can make confident decisions that drive growth.</p>
-          </div>
-          <div class="who-we-help-content" style="background-color: var(--joy-400);">
-            <h4>Creative Agencies & Studios</h4>
-            <p>For the visionaries juggling clients, invoices, and projects. We untangle the financial side so you can
-              focus on creativity and results.</p>
-          </div>
-          <div class="who-we-help-content" style="background-color: var(--joy-300);">
-            <h4>Consultants & Coaches</h4>
-            <p>Whether you’re managing retainers or project-based work, we bring structure and clarity to your accounts,
-              turning confusion into confidence.</p>
-          </div>
-          <div class="who-we-help-content" style="background-color: var(--joy-200); padding-bottom: 2rem !important;">
-            <h4>Independent Contractors & Freelancers</h4>
-            <p>You handle the work, we handle the numbers.
-              Stay compliant, organized, and stress-free with clean, accurate books that reflect your hard-earned
-              income.
-            </p>
-          </div>
-        </div>
+            <div class="who-we-help-right">
+              <div class="who-we-help-content" style="background-color: var(--joy-500);">
+                <h4>Service-Based Business Owners</h4>
+                <p>From marketing agencies to consultants and contractors, if you sell expertise, not products, we help
+                  you
+                  get your numbers in order.
+                  Gain full visibility into your finances so you can make confident decisions that drive growth.</p>
+              </div>
+              <div class="who-we-help-content" style="background-color: var(--joy-400);">
+                <h4>Creative Agencies & Studios</h4>
+                <p>For the visionaries juggling clients, invoices, and projects. We untangle the financial side so you
+                  can
+                  focus on creativity and results.</p>
+              </div>
+              <div class="who-we-help-content" style="background-color: var(--joy-300);">
+                <h4>Consultants & Coaches</h4>
+                <p>Whether you’re managing retainers or project-based work, we bring structure and clarity to your
+                  accounts,
+                  turning confusion into confidence.</p>
+              </div>
+              <div class="who-we-help-content"
+                style="background-color: var(--joy-200); padding-bottom: 2rem !important;">
+                <h4>Independent Contractors & Freelancers</h4>
+                <p>You handle the work, we handle the numbers.
+                  Stay compliant, organized, and stress-free with clean, accurate books that reflect your hard-earned
+                  income.
+                </p>
+              </div>
+            </div>
       </section>
 
       <section class="testimonials" id="testimonials">
@@ -408,8 +413,16 @@
             True financial confidence starts with understanding your numbers. By making sense of the details in your
             ledgers, you can take control of cash flow, reduce errors, and make smarter business decisions.
           </p>
-          <a class="btn tertiary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank"
-            rel="noopener noreferrer">Book a clarity call — it’s free</a>
+          <!--a class="btn tertiary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank"
+            rel="noopener noreferrer">Book a clarity call — it’s free</a-->
+
+          <!-- Calendly inline widget begin -->
+          <div class="calendly-inline-widget"
+            data-url="https://calendly.com/legibleledgers/clarity-call?background_color=ffffff&primary_color=1A1A1A"
+            style="min-width:320px;height:700px;"></div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+          <!-- Calendly inline widget end -->
+
           <!--div class="contact-form">
           <h3 class="contact-form-title">I want to get my books back in order</h3>
           <form action="#" method="POST" class="clarity-form">

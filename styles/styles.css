@@ -344,7 +344,7 @@ section * {
 
 
 .btn.primary {
-    max-width: 270px;
+    max-width: 370px;
     text-align: center;
     justify-content: center;
     background: var(--joy-500);
@@ -1141,6 +1141,10 @@ section * {
 
 /* Desktop breakpoint */
 @media (min-width:1024px) {
+    .btn.primary {
+        max-width: 270px
+    }
+    
     .btn {
         font-size: 2rem;
     }
