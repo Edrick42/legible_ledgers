@@ -24,7 +24,7 @@
   <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="assets/favicon/site.webmanifest" />
-
+<link rel="stylesheet" href="@sqs/styles/styles.css" />
     <!-- include system scripts, page meta, and header code injection -->
     {squarespace-headers}
   </head>
