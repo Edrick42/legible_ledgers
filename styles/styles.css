@@ -10,6 +10,7 @@
     /* Neutrals */
     --white-000: #FFFFFF;
     --white-100: #F4F4F4;
+    --black-400: #666666;
     --black-900: #1A1A1A;
     --black-700: #333333;
 
@@ -946,11 +947,12 @@ section * {
 
 .testimonials-card h4 {
     font-family: var(--font-body);
-    font-size: 1.8rem;
-    color: var(--black-700);
-    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--black-400);
+    font-weight: 500;
     margin: 0.5rem 0 1.5rem 0;
     text-align: left;
+    opacity: 0.3;
 }
 
 .testimonials-card p {
@@ -1566,11 +1568,11 @@ section * {
     }
 
     .testimonials-card h3 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .testimonials-card h4 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .testimonials-card p {
