@@ -115,6 +115,15 @@ section * {
     height: 100%
 }
 
+.brand-link {
+  display: inline-block;   /* permite tamanho natural do conteúdo */
+  position: relative;
+  z-index: 10;             /* garante que fique acima de outros elementos */
+  cursor: pointer;
+  text-decoration: none;   /* remove sublinhado (caso padrão de <a>) */
+}
+
+
 .logo {
     width: 15rem;
     /* ajuste o tamanho conforme necessário */
@@ -1144,7 +1153,7 @@ section * {
     .btn.primary {
         max-width: 270px
     }
-    
+
     .btn {
         font-size: 2rem;
     }

@@ -43,7 +43,9 @@
       <div class="container header-inner">
         <div class="brand">
           <div class="logo">
-            <img src="assets/logo/logo-legible-ledgers-title.svg" alt="Legible Ledgers Title" />
+            <a href="#hero" class="brand-link" aria-label="Go to top">
+              <img src="assets/logo/logo-legible-ledgers-title.svg" alt="Legible Ledgers Title" class="logo" />
+            </a>
           </div>
         </div>
         <nav class="main-nav" aria-label="Main navigation">
@@ -218,7 +220,7 @@
 
       </section>
 
-      <section class="about">
+      <section class="about" id="services">
         <div class="about-content">
           <h2 class="about-title">You can count on <i>Legible Ledgers</i> for...</h2>
           <div class="about-row">
@@ -263,7 +265,7 @@
         </div>
       </section>
 
-      <section class="services" id="services">
+      <section class="services">
         <div class="services-content">
           <div class="services-content-content">
             <h2>How Legible Ledgers compares</h2>
@@ -484,6 +486,16 @@
           return false;
         });
       });
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const link = document.createElement("link");
+      link.rel = "icon";
+      link.type = "image/svg+xml";
+      link.href = "assets/favicon/favicon.svg?v=3";
+      document.head.appendChild(link);
     });
   </script>
 
