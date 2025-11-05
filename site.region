@@ -29,6 +29,10 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
   <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+
+  <!-- Calendly embed -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 </head>
 
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
@@ -89,17 +93,24 @@
               cleanup and organization services that transform
               financial chaos into clear, actionable insights.
             </p>
-            <a class="btn primary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank"
-              rel="noopener noreferrer">Book a clarity call — it’s free</a>
+            <div id="calendly-badge-container">
+              <!-- Your badge widget will be injected here -->
+            </div>
+
+            <!-- Seu botão -->
+            <a class="btn primary clarity-call-btn"">
+              Book a Clarity Call — it’s free
+            </a>
+
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="logo">
-            <img src="assets/logo/logo-legible-ledgers.svg" alt="Legible Ledgers Logo" />
+        <div class=" hero-card">
+              <div class="logo">
+                <img src="assets/logo/logo-legible-ledgers.svg" alt="Legible Ledgers Logo" />
+              </div>
+              <h1>We empower our clients by magnifying their results through clarity.</h1>
           </div>
-          <h1>We empower our clients by magnifying their results through clarity.</h1>
-        </div>
       </section>
 
       <section class="cta">
@@ -168,37 +179,42 @@
               numbers.
               Because when your books are clear, your choices and your opportunities become even clearer.
             </p>
-            <a class="btn secondary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank"
-              rel="noopener noreferrer">Book a clarity call — it’s free</a>
+            <a class="btn secondary clarity-call-btn"">
+              Book a Clarity Call — it’s free
+            </a>
           </div>
         </div>
 
-        <div class="cta-last-bottom">
-          <div class="cta-last-bottom-card">
-            <h4>See where your books have been</h4>
-            <p>We’ll review your QuickBooks history, every transaction, account, and category, and turn tangled data
-              into a clear, organized picture of your finances.</p>
-            <div class="cta-last-bottom-card-image">
-              <img src="assets/illustration/legible-ledgers-illustration-10.svg" alt="Legible Ledgers Illustration" />
-            </div>
+        <div class=" cta-last-bottom">
+              <div class="cta-last-bottom-card">
+                <h4>See where your books have been</h4>
+                <p>We’ll review your QuickBooks history, every transaction, account, and category, and turn tangled data
+                  into a clear, organized picture of your finances.</p>
+                <div class="cta-last-bottom-card-image">
+                  <img src="assets/illustration/legible-ledgers-illustration-10.svg"
+                    alt="Legible Ledgers Illustration" />
+                </div>
+              </div>
+              <div class="cta-last-bottom-card">
+                <h4>See where you can improve</h4>
+                <p>We identify misclassifications, duplications, and errors that hold your business back, then guide you
+                  toward a cleaner, more reliable system.</p>
+                <div class="cta-last-bottom-card-image">
+                  <img src="assets/illustration/legible-ledgers-illustration-08.svg"
+                    alt="Legible Ledgers Illustration" />
+                </div>
+              </div>
+              <div class="cta-last-bottom-card">
+                <h4>See your numbers clearly</h4>
+                <p>Understand your income, spending, and cash flow patterns so you can make confident, data-backed
+                  decisions
+                  that move your business forward.</p>
+                <div class="cta-last-bottom-card-image">
+                  <img src="assets/illustration/legible-ledgers-illustration-09.svg"
+                    alt="Legible Ledgers Illustration" />
+                </div>
+              </div>
           </div>
-          <div class="cta-last-bottom-card">
-            <h4>See where you can improve</h4>
-            <p>We identify misclassifications, duplications, and errors that hold your business back, then guide you
-              toward a cleaner, more reliable system.</p>
-            <div class="cta-last-bottom-card-image">
-              <img src="assets/illustration/legible-ledgers-illustration-08.svg" alt="Legible Ledgers Illustration" />
-            </div>
-          </div>
-          <div class="cta-last-bottom-card">
-            <h4>See your numbers clearly</h4>
-            <p>Understand your income, spending, and cash flow patterns so you can make confident, data-backed decisions
-              that move your business forward.</p>
-            <div class="cta-last-bottom-card-image">
-              <img src="assets/illustration/legible-ledgers-illustration-09.svg" alt="Legible Ledgers Illustration" />
-            </div>
-          </div>
-        </div>
 
       </section>
 
@@ -296,8 +312,9 @@
           <p>All your QuickBooks data cleaned, organized, and explained in one clear view.
             See what your numbers really mean, uncover insights to strengthen your business decisions, and if something
             doesn’t add up, our expert team will make it right.</p>
-          <a class="btn primary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank"
-            rel="noopener noreferrer">Book a clarity call — it’s free</a>
+            <a class="btn primary clarity-call-btn"">
+              Book a Clarity Call — it’s free
+            </a>
         </div>
       </section>
 
@@ -440,6 +457,22 @@
 
   <!-- other scripts, and footer code injection -->
   {squarespace-footers}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Seleciona todos os botões com a classe .clarity-call-btn
+      const buttons = document.querySelectorAll(".clarity-call-btn");
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", function () {
+          Calendly.initPopupWidget({
+            url: "https://calendly.com/legibleledgers/clarity-call"
+          });
+          return false;
+        });
+      });
+    });
+  </script>
 
 </body>
 

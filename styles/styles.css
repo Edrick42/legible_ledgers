@@ -311,6 +311,11 @@ section * {
     text-align: center;
 }
 
+.calendly-badge-widget {
+    flex: 1;
+    position: relative !important;
+}
+
 .display {
     font-family: var(--font-display);
     font-size: 3rem;
@@ -329,16 +334,19 @@ section * {
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
     padding: 1rem 1.5rem;
-    border-radius: 16px;
+    border-radius: 35px;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
 }
 
+
 .btn.primary {
+    max-width: 270px;
     text-align: center;
+    justify-content: center;
     background: var(--joy-500);
     color: var(--black-900);
     /* subtle interactive transition */
@@ -349,11 +357,13 @@ section * {
     transform: translateZ(0);
 }
 
+
 .btn.primary:hover,
 .btn.primary:focus {
     background: var(--joy-400);
     /* slightly enlarge for emphasis */
     transform: scale(1.045);
+    cursor: pointer;
 }
 
 .btn.primary:active {
@@ -379,6 +389,8 @@ section * {
 }
 
 .btn.secondary {
+    text-align: center;
+    justify-content: center;
     background: var(--blue-700);
     color: var(--white-100);
     margin-bottom: 3rem;
@@ -395,6 +407,7 @@ section * {
     /* slightly enlarge and brighten */
     transform: scale(1.04);
     background-color: var(--blue-500);
+    cursor: pointer;
 }
 
 .btn.secondary:active {
