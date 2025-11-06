@@ -194,7 +194,7 @@ br {
 }
 
 .main-nav a:hover img {
-  transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .main-nav {
@@ -366,6 +366,8 @@ br {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .hero-card .logo {
@@ -411,6 +413,8 @@ br {
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -432,9 +436,10 @@ br {
 
 .btn.primary:hover,
 .btn.primary:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+    transition: all 0.2s ease;
     background: var(--joy-400);
-    /* slightly enlarge for emphasis */
-    transform: scale(1.045);
+    transform: scale(1.045) translateY(-2px);
     cursor: pointer;
 }
 
@@ -578,6 +583,8 @@ br {
     align-items: center;
     justify-content: center;
     margin: 1rem 0rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .cta-card-content {
@@ -676,6 +683,8 @@ br {
     display: flex;
     flex-direction: column;
     text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .cta-last-bottom-card h4 {
@@ -887,6 +896,16 @@ br {
     max-width: 600px;
 }
 
+.comparison-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.card-image {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
 .who-we-help {
     text-align: center;
     display: flex;
@@ -931,6 +950,8 @@ br {
     border-radius: 32px;
     padding: 1rem 2rem 4rem 2rem;
     margin-top: -3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .who-we-help-content h4 {
@@ -996,6 +1017,8 @@ br {
     scroll-snap-align: center;
     margin: 0 auto;
     height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+                0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .testimonials-card h3 {
