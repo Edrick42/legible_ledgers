@@ -8,6 +8,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Legible Ledgers — Bookkeeping</title>
+  <meta name="description" content="Legible Ledgers helps business owners clean up and organize QuickBooks Online files. Transform financial chaos into clarity and confidence.">
+  <meta name="keywords" content="bookkeeping, QuickBooks cleanup, accounting services, financial clarity, Legible Ledgers">
+  <meta name="author" content="Legible Ledgers Bookkeeping">
+  <meta property="og:title" content="Legible Ledgers — Specialists in QuickBooks Online Cleanup">
+  <meta property="og:description" content="Transform financial chaos into clarity. Bookkeeping cleanup and organization for service-based business owners.">
+  <meta property="og:image" content="https://www.legibleledgers.biz/assets/logo/logo-legible-ledgers-title.svg">
+  <meta property="og:url" content="https://www.legibleledgers.biz/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles/styles.css">
@@ -33,6 +41,30 @@
   <!-- Calendly embed -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
   <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Legible Ledgers Bookkeeping",
+    "url": "https://www.legibleledgers.biz/",
+    "description": "Specialists in QuickBooks Online Cleanup and bookkeeping clarity for service-based businesses.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Legible Ledgers",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.legibleledgers.biz/assets/logo/logo-legible-ledgers-title.svg"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.legibleledgers.biz/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
 </head>
 
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
