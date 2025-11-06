@@ -1,4 +1,6 @@
-/* Design tokens and palettes */
+/* =========================================================
+   DESIGN TOKENS E FONTES
+   ========================================================= */
 :root {
     /* Primary palette - Joyful Yellow */
     --joy-500: #FFDA03;
@@ -40,8 +42,11 @@
     --font-body: 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
+/* =========================================================
+   GLOBALS
+   ========================================================= */
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
 html {
@@ -63,10 +68,10 @@ section {
     width: 100%;        /* ocupa toda a largura do pai (normalmente a tela) */
     /* use percentuais em vez de 100vw para evitar overflow causado pela barra de rolagem */
     max-width: 100%;
-    /* permitir que a section expanda verticalmente com o conteúdo */
-    overflow-x: hidden; /* impede filhos de “vazar” lateralmente */
-    overflow-y: visible; /* garante que não apareça scroll interno vertical */
-    box-sizing: border-box; /* padding não aumenta a largura total */
+    /* permitir que a section expanda verticalmente com o conteÃºdo */
+    overflow-x: hidden; /* impede filhos de â€œvazarâ€ lateralmente */
+    overflow-y: visible; /* garante que nÃ£o apareÃ§a scroll interno vertical */
+    box-sizing: border-box; /* padding nÃ£o aumenta a largura total */
 }
 
 section * {
@@ -82,6 +87,9 @@ section * {
     border-radius: 36px;
 }
 
+/* =========================================================
+   HEADER
+   ========================================================= */
 /* Header - mobile first */
 /* Header */
 .site-header {
@@ -117,20 +125,20 @@ section * {
 }
 
 .brand-link {
-  display: inline-block;   /* permite tamanho natural do conteúdo */
+  display: inline-block;   /* permite tamanho natural do conteÃºdo */
   position: relative;
   z-index: 10;             /* garante que fique acima de outros elementos */
   cursor: pointer;
-  text-decoration: none;   /* remove sublinhado (caso padrão de <a>) */
+  text-decoration: none;   /* remove sublinhado (caso padrÃ£o de <a>) */
 }
 
 
 .logo {
     width: 15rem;
-    /* ajuste o tamanho conforme necessário */
+    /* ajuste o tamanho conforme necessÃ¡rio */
     height: 3rem;
     background-size: contain;
-    /* mantém proporção */
+    /* mantÃ©m proporÃ§Ã£o */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,6 +293,9 @@ section * {
     pointer-events: auto
 }
 
+/* =========================================================
+   HERO
+   ========================================================= */
 /* Hero - mobile first (single column) */
 .hero {
     padding: 1rem 1rem;
@@ -879,7 +890,7 @@ section * {
 
 .who-we-help-left h1 {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 0 0 12px 0;
@@ -1110,7 +1121,7 @@ section * {
 /* Footer */
 .site-footer {
     background: var(--white-100);
-    padding: 40px rem;
+    padding: 40px 0px;
     border-top: 1px solid rgba(0, 0, 0, 0.03);
     width: 100%;
     max-width: 100%;
@@ -1139,7 +1150,7 @@ section * {
     display: flex;
     flex-direction: row;
     gap: 12px;
-    justify-content: end;
+    justify-content: space-between;
 }
 
 .footer-certifications img {
@@ -1558,11 +1569,11 @@ section * {
         flex-direction: row;
         gap: 32px;
     }
-    
+
     .services-content-content p {
         font-size: 1.1rem;
     }
-    
+
     .comparison-container {
         display: flex;
         flex-direction: row;
@@ -1598,15 +1609,15 @@ section * {
     .who-we-help-content p {
         font-size: 1.1rem;
     }
-    
+
     .testimonials {
         padding: 0rem 10rem 4rem;
     }
-    
+
     .testimonials h1 {
         padding: 2rem 10rem 0rem;
     }
-    
+
     .testimonials p {
         width: 50%;
     }
@@ -1654,15 +1665,20 @@ section * {
         margin: 0rem;
         padding: 2rem 6rem;
     }
-    
+
     .footer-left .footer-tag {
         width: 70%;
+    }
+
+    .footer-certifications { 
+        justify-content: end;
+        gap: 32px;
     }
 
     .footer-logo {
         width: 25vw;
     }
-    
+
     .footer-tag {
         font-size: 1.1rem;
     }
@@ -1670,11 +1686,11 @@ section * {
     .footer-info-title {
         font-size: 1.2rem;
     }
-    
+
     .footer-email {
         font-size: 1.1rem;  
     }
-    
+
     /* Make tertiary CTA much larger on desktop without affecting other buttons */
     .btn.tertiary {
         padding: 1.25rem 2.5rem;
@@ -1685,7 +1701,7 @@ section * {
         display: inline-block;
         margin-top: 3rem;
     }
-    
+
     /* Optionally make it full-width in its container on very large screens */
     @media (min-width:1400px) {
         .btn.tertiary {
