@@ -70,7 +70,7 @@ section {
     max-width: 100%;
     /* permitir que a section expanda verticalmente com o conteÃºdo */
     /* overflow-x: hidden;  impede filhos de â€œvazarâ€ lateralmente */
-    overflow-y: visible; /* garante que nÃ£o apareÃ§a scroll interno vertical */
+    /* overflow-y: visible; garante que nÃ£o apareÃ§a scroll interno vertical */
     box-sizing: border-box; /* padding nÃ£o aumenta a largura total */
 }
 
