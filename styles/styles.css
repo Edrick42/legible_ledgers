@@ -51,7 +51,8 @@
 
 html {
     height: 100%;
-    scroll-padding-top: 5rem; /* Compensar a altura do header fixo */
+    scroll-padding-top: 5rem;
+    /* Compensar a altura do header fixo */
     scroll-behavior: smooth;
 }
 
@@ -65,18 +66,20 @@ body {
 }
 
 section {
-    width: 100%;        /* ocupa toda a largura do pai (normalmente a tela) */
+    width: 100%;
+    /* ocupa toda a largura do pai (normalmente a tela) */
     /* use percentuais em vez de 100vw para evitar overflow causado pela barra de rolagem */
     max-width: 100%;
     /* permitir que a section expanda verticalmente com o conteÃºdo */
     /* overflow-x: hidden;  impede filhos de â€œvazarâ€ lateralmente */
     /* overflow-y: visible; garante que nÃ£o apareÃ§a scroll interno vertical */
-    box-sizing: border-box; /* padding nÃ£o aumenta a largura total */
+    box-sizing: border-box;
+    /* padding nÃ£o aumenta a largura total */
 }
 
 section * {
-  max-width: 100%;
-  box-sizing: border-box;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .container {
@@ -87,18 +90,24 @@ section * {
     border-radius: 36px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1.15;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.15;
 }
 
 p {
-  line-height: 1.5;
+    line-height: 1.5;
 }
 
 br {
-  display: block;
-  margin-bottom: 1rem; /* controla o “tamanho” do salto */
-  content: "";
+    display: block;
+    margin-bottom: 1rem;
+    /* controla o “tamanho” do salto */
+    content: "";
 }
 
 /* =========================================================
@@ -139,11 +148,14 @@ br {
 }
 
 .brand-link {
-  display: inline-block;   /* permite tamanho natural do conteÃºdo */
-  position: relative;
-  z-index: 10;             /* garante que fique acima de outros elementos */
-  cursor: pointer;
-  text-decoration: none;   /* remove sublinhado (caso padrÃ£o de <a>) */
+    display: inline-block;
+    /* permite tamanho natural do conteÃºdo */
+    position: relative;
+    z-index: 10;
+    /* garante que fique acima de outros elementos */
+    cursor: pointer;
+    text-decoration: none;
+    /* remove sublinhado (caso padrÃ£o de <a>) */
 }
 
 
@@ -367,7 +379,7 @@ br {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .hero-card .logo {
@@ -414,7 +426,7 @@ br {
     font-weight: 700;
     font-size: 1.1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -426,9 +438,9 @@ br {
     background: var(--joy-500);
     color: var(--black-900);
     /* subtle interactive transition */
-    transition: transform 180ms cubic-bezier(.2,.8,.2,1),
-                box-shadow 180ms cubic-bezier(.2,.8,.2,1),
-                background-color 180ms ease;
+    transition: transform 180ms cubic-bezier(.2, .8, .2, 1),
+        box-shadow 180ms cubic-bezier(.2, .8, .2, 1),
+        background-color 180ms ease;
     will-change: transform, box-shadow;
     transform: translateZ(0);
 }
@@ -450,11 +462,12 @@ br {
 }
 
 .btn.primary:focus-visible {
-    outline: 3px solid rgba(255,218,3,0.28);
+    outline: 3px solid rgba(255, 218, 3, 0.28);
     outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .btn.primary,
     .btn.primary:hover,
     .btn.primary:focus,
@@ -470,11 +483,11 @@ br {
     justify-content: center;
     background: var(--blue-700);
     color: var(--white-100);
-    margin-bottom: 3rem;
+    margin-top: 16px;
     /* subtle interactive transition similar to primary */
-    transition: transform 180ms cubic-bezier(.2,.8,.2,1),
-                box-shadow 180ms cubic-bezier(.2,.8,.2,1),
-                background-color 180ms ease;
+    transition: transform 180ms cubic-bezier(.2, .8, .2, 1),
+        box-shadow 180ms cubic-bezier(.2, .8, .2, 1),
+        background-color 180ms ease;
     will-change: transform, box-shadow;
     transform: translateZ(0);
 }
@@ -493,7 +506,7 @@ br {
 }
 
 .btn.secondary:focus-visible {
-    outline: 3px solid rgba(64,105,170,0.18);
+    outline: 3px solid rgba(64, 105, 170, 0.18);
     outline-offset: 4px;
 }
 
@@ -502,9 +515,9 @@ br {
     color: var(--black-700);
     margin-bottom: 3rem;
     /* subtle interactive transition similar to primary */
-    transition: transform 180ms cubic-bezier(.2,.8,.2,1),
-                box-shadow 180ms cubic-bezier(.2,.8,.2,1),
-                background-color 180ms ease;
+    transition: transform 180ms cubic-bezier(.2, .8, .2, 1),
+        box-shadow 180ms cubic-bezier(.2, .8, .2, 1),
+        background-color 180ms ease;
     will-change: transform, box-shadow;
     transform: translateZ(0);
 }
@@ -522,11 +535,12 @@ br {
 }
 
 .btn.tertiary:focus-visible {
-    outline: 3px solid rgba(64,105,170,0.18);
+    outline: 3px solid rgba(64, 105, 170, 0.18);
     outline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .btn.secondary,
     .btn.secondary:hover,
     .btn.secondary:focus,
@@ -584,7 +598,7 @@ br {
     justify-content: center;
     margin: 1rem 0rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .cta-card-content {
@@ -611,7 +625,7 @@ br {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 16px;
 }
 
 .cta-card-desc {
@@ -639,6 +653,8 @@ br {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    align-content: center;
     flex-direction: column;
     width: 100%;
 }
@@ -684,7 +700,7 @@ br {
     flex-direction: column;
     text-align: left;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .cta-last-bottom-card h4 {
@@ -710,18 +726,18 @@ br {
 }
 
 .about {
-  padding: 2rem 1rem;
+    padding: 2rem 1rem;
 }
 
 .about-content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-title {
-  text-align: center;
-  margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 /* Mobile layout for about section */
@@ -866,44 +882,78 @@ br {
 
 .services-bottom h1 {
     font-family: var(--font-body);
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: var(--black-900);
     font-weight: 700;
-    margin: 16px 0 0 0;
+    margin: 0;
     text-align: center;
 }
 
 .services-bottom h2 {
     font-family: var(--font-display);
-    font-size: 2.75rem;
+    font-size: 4.25rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0;
     font-style: italic;
     text-align: center;
+
 }
 
 .services-bottom p {
     font-family: var(--font-body);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: var(--black-700);
-    max-width: 750px;
+    max-width: 550px;
     text-align: center;
+    margin-top: 16px;
+}
+
+.services-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.services-bottom li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1;
+  height: 40px;
+}
+
+.services-bottom span {
+    position: relative;
+    transform: translateY(-10%);
+}
+
+.services-bottom img {
+  height: 0.9em; /* 90% da altura da linha de texto */
+  width: auto;   /* mantém proporção do SVG */
+  display: block;
 }
 
 .services-bottom .btn {
     margin: auto;
     max-width: 600px;
+    margin-top: 16px;
 }
 
 .comparison-card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .card-image {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .who-we-help {
@@ -923,7 +973,7 @@ br {
 
 .who-we-help-left h1 {
     font-family: var(--font-display);
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 0 0 12px 0;
@@ -951,7 +1001,7 @@ br {
     padding: 1rem 2rem 4rem 2rem;
     margin-top: -3rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .who-we-help-content h4 {
@@ -979,19 +1029,24 @@ br {
 }
 
 .testimonials-carousel {
-        display: flex;
-        gap: 2rem;
-        scroll-snap-type: x mandatory;
-        padding: 2rem 0;
-        -webkit-overflow-scrolling: touch;
-        overflow-x: auto;
-        scrollbar-width: none; /* Firefox */
-        -ms-overflow-style: none; /* IE/Edge */
-    }
+    display: flex;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
 
-    .testimonials-carousel::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }.testimonials h1 {
+.testimonials-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.testimonials h1 {
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-style: italic;
@@ -1018,7 +1073,7 @@ br {
     margin: 0 auto;
     height: auto;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-                0 1px 2px rgba(0, 0, 0, 0.08);
+        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .testimonials-card h3 {
@@ -1108,7 +1163,7 @@ br {
     font-size: 1.5rem;
     color: var(--black-700);
     max-width: 600px;
-    margin: 2rem auto 2rem;
+    margin: 32px auto 16px;
     width: 100%;
 }
 
@@ -1182,7 +1237,7 @@ br {
     justify-content: center;
 }
 
-.footer-certifications { 
+.footer-certifications {
     flex: 4;
     display: flex;
     flex-direction: row;
@@ -1291,7 +1346,8 @@ br {
     .main-nav a:focus {
         /* stronger color and slightly larger text for emphasis */
         color: var(--black-900);
-        font-size: 15px; /* small, non-disruptive increase */
+        font-size: 15px;
+        /* small, non-disruptive increase */
         font-weight: 700;
         /* tiny extra letter spacing to keep it airy */
         letter-spacing: 0.3px;
@@ -1312,7 +1368,7 @@ br {
         align-items: center;
         margin-bottom: 6rem;
     }
- 
+
     .hero-content {
         max-width: none;
         width: 50vw;
@@ -1320,7 +1376,7 @@ br {
         justify-content: start;
         text-align: start;
         align-content: center;
-        
+
     }
 
     .card-image {
@@ -1359,7 +1415,7 @@ br {
     .hero-card h1 {
         font-size: 2.75rem;
         text-align: left;
-    }   
+    }
 
     .hero-media .card-image {
         max-height: none;
@@ -1452,14 +1508,14 @@ br {
         justify-content: center;
         align-items: start;
         flex-direction: row;
-        gap: 6rem;
+        gap: 72px;
         width: 100%;
-        padding: 2rem 6rem 0rem 6rem;
+        padding: 2rem 2rem 2rem 2rem;
         margin: 3rem 0rem;
     }
 
     .cta-last-content {
-        margin: 6rem 0rem;
+        margin: auto 0rem;
         align-items: start;
     }
 
@@ -1471,17 +1527,17 @@ br {
 
     .cta-last-title {
         font-family: var(--font-display);
-        font-size: 6rem;
+        font-size: 8rem;
         color: var(--black-900);
         font-weight: 700;
-        margin: 0;
+        margin: auto;
         text-align: left;
     }
 
     .cta-last-bottom {
         flex-direction: row;
     }
-    
+
     .cta-last-bottom-card h4 {
         font-size: 2rem;
     }
@@ -1510,7 +1566,7 @@ br {
         white-space: nowrap;
     }
 
-    .about-row .marquee > a {
+    .about-row .marquee>a {
         flex: 0 0 auto;
     }
 
@@ -1529,13 +1585,23 @@ br {
 
     /* marquee animations (mobile) */
     @keyframes marquee-left-to-right {
-        from { transform: translateX(-50%); }
-        to   { transform: translateX(0%); }
+        from {
+            transform: translateX(-50%);
+        }
+
+        to {
+            transform: translateX(0%);
+        }
     }
 
     @keyframes marquee-right-to-left {
-        from { transform: translateX(0%); }
-        to   { transform: translateX(-50%); }
+        from {
+            transform: translateX(0%);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
     }
 
     .marquee--ltr {
@@ -1608,7 +1674,15 @@ br {
     .services-content-content p {
         font-size: 1.1rem;
     }
+    .services-bottom ul {
+        gap: 32px;
+    }
 
+    .services-bottom li {
+        gap: 8px;
+        font-size: 1.5rem;
+    }
+    
     .comparison-container {
         display: flex;
         flex-direction: row;
@@ -1660,6 +1734,7 @@ br {
     .testimonials-card {
         flex: 0 0 60vw;
     }
+
     .testimonials-card p {
         width: 100%;
     }
@@ -1705,7 +1780,7 @@ br {
         width: 70%;
     }
 
-    .footer-certifications { 
+    .footer-certifications {
         justify-content: end;
         gap: 32px;
     }
@@ -1723,7 +1798,7 @@ br {
     }
 
     .footer-email {
-        font-size: 1.1rem;  
+        font-size: 1.1rem;
     }
 
     /* Make tertiary CTA much larger on desktop without affecting other buttons */
@@ -1731,7 +1806,7 @@ br {
         padding: 1.25rem 2.5rem;
         font-size: 1.75rem;
         border-radius: 45px;
-        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         max-width: 620px;
         display: inline-block;
         margin-top: 3rem;
