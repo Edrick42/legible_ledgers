@@ -517,42 +517,6 @@
           <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member - Legible Ledgers" />
         </div>
       </div>
-
-      <script>
-        if (window.location.pathname.includes("sitemap")) {
-          const sitemapLink = document.createElement("link");
-          sitemapLink.rel = "sitemap";
-          sitemapLink.type = "application/xml";
-          sitemapLink.title = "Legible Ledgers Sitemap";
-          sitemapLink.href = "https://www.legibleledgers.biz/sitemap";
-          document.head.appendChild(sitemapLink);
-
-          const metaRobots = document.createElement("meta");
-          metaRobots.name = "robots";
-          metaRobots.content = "index, follow";
-          document.head.appendChild(metaRobots);
-
-          const schema = {
-            "@context": "https://schema.org",
-            "@type": "DataFeed",
-            "name": "Legible Ledgers Sitemap",
-            "dataFeedElement": [
-              { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/" },
-              { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Services" },
-              { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Testimonials" },
-              { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Contact" },
-              { "@type": "DataFeedItem", "url": "https://calendly.com/legibleledgers/clarity-call" },
-              { "@type": "DataFeedItem", "url": "https://www.instagram.com/legibleledgers/" },
-              { "@type": "DataFeedItem", "url": "https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" }
-            ]
-          };
-
-          const script = document.createElement("script");
-          script.type = "application/ld+json";
-          script.textContent = JSON.stringify(schema);
-          document.head.appendChild(script);
-        }
-      </script>
     </footer>
 
   </div>
@@ -586,6 +550,41 @@
       link.href = "assets/favicon/favicon.svg?v=3";
       document.head.appendChild(link);
     });
+  </script>
+  <script>
+    if (window.location.pathname.includes("sitemap")) {
+      const sitemapLink = document.createElement("link");
+      sitemapLink.rel = "sitemap";
+      sitemapLink.type = "application/xml";
+      sitemapLink.title = "Legible Ledgers Sitemap";
+      sitemapLink.href = "https://www.legibleledgers.biz/sitemap";
+      document.head.appendChild(sitemapLink);
+
+      const metaRobots = document.createElement("meta");
+      metaRobots.name = "robots";
+      metaRobots.content = "index, follow";
+      document.head.appendChild(metaRobots);
+
+      const schema = {
+        "@context": "https://schema.org",
+        "@type": "DataFeed",
+        "name": "Legible Ledgers Sitemap",
+        "dataFeedElement": [
+          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/" },
+          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Services" },
+          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Testimonials" },
+          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Contact" },
+          { "@type": "DataFeedItem", "url": "https://calendly.com/legibleledgers/clarity-call" },
+          { "@type": "DataFeedItem", "url": "https://www.instagram.com/legibleledgers/" },
+          { "@type": "DataFeedItem", "url": "https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" }
+        ]
+      };
+
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    }
   </script>
 
 </body>
