@@ -1,73 +1,66 @@
 <!doctype html>
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Legible Ledgers — Bookkeeping</title>
-  <meta name="description"
-    content="Legible Ledgers helps business owners clean up and organize QuickBooks Online files. Transform financial chaos into clarity and confidence.">
-  <meta name="keywords"
-    content="bookkeeping, QuickBooks cleanup, accounting services, financial clarity, Legible Ledgers">
+  <title>Legible Ledgers — Bookkeeping Clarity for Service-Based Businesses</title>
+  <meta name="description" content="Transform financial chaos into clarity. Legible Ledgers specializes in QuickBooks Online cleanup and bookkeeping organization for service-based business owners.">
+  <meta name="keywords" content="bookkeeping, QuickBooks cleanup, accounting services, financial clarity, Legible Ledgers, QuickBooks Online cleanup, small business bookkeeping, accounting help USA">
   <meta name="author" content="Legible Ledgers Bookkeeping">
+
+  <!-- Open Graph / Social Metadata -->
   <meta property="og:title" content="Legible Ledgers — Specialists in QuickBooks Online Cleanup">
-  <meta property="og:description"
-    content="Transform financial chaos into clarity. Bookkeeping cleanup and organization for service-based business owners. Untangle - Clarify - Empower!">
+  <meta property="og:description" content="Transform financial chaos into clarity. Bookkeeping cleanup and organization for service-based business owners. Untangle - Clarify - Empower!">
   <meta property="og:image" content="https://www.legibleledgers.biz/assets/logo/logo-legible-ledgers-title.svg">
   <meta property="og:url" content="https://www.legibleledgers.biz/">
+  <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles/styles.css">
-  <!-- Lexend from Google Fonts (body text) -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
-  <!-- Platypi is a display font — add locally or via webfont provider. See README for instructions. -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
-
-  <link rel="manifest" href="assets/favicon/site.webmanifest" />
-  <!-- include system scripts, page meta, and header code injection -->
-  {squarespace-headers}
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
-  <!-- Calendly embed -->
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- Calendly Widget -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "Organization",
     "name": "Legible Ledgers Bookkeeping",
     "url": "https://www.legibleledgers.biz/",
+    "logo": "https://www.legibleledgers.biz/assets/logo/logo-legible-ledgers-title.svg",
     "description": "Specialists in QuickBooks Online Cleanup and bookkeeping clarity for service-based businesses.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Legible Ledgers",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.legibleledgers.biz/assets/logo/logo-legible-ledgers-title.svg"
-      }
-    },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.legibleledgers.biz/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
+    "sameAs": [
+      "https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/",
+      "https://www.instagram.com/legibleledgers/"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@legibleledgers.biz",
+      "contactType": "Customer Support"
     }
   }
   </script>
 
+  <!-- Custom Sitemap reference for Search Engines -->
+  <meta name="sitemap" content="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap.xml" />
+  <link rel="sitemap" type="application/xml" href="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap.xml" title="Legible Ledgers Custom Sitemap">
+
+  {squarespace-headers}
 </head>
 
 <body id="{squarespace.page-id}" class="{squarespace.page-classes}">
@@ -90,11 +83,11 @@
           <!--a href="#process">Our Process</a-->
           <a href="#testimonials">Testimonials</a>
           <a href="#contact">Contact Us</a>
-          <a href="https://www.instagram.com/legibleledgers/" target="_blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" />
           </a>
-          <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" aria-label="LinkedIn">
-            <img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" style="margin-left: -32px" />
+          <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" />
           </a>
         </nav>
 
@@ -131,7 +124,7 @@
         <div class="container hero-grid">
           <div class="hero-media">
             <div class="card-image" role="img" aria-label="Illustration">
-              <img src="assets/images/legible-ledgers.webp" alt="Legible Ledgers Illustration 01" />
+              <img src="assets/images/legible-ledgers.webp" alt="Illustration showing Legible Ledgers concept of clarity in bookkeeping" />
             </div>
           </div>
 
@@ -147,14 +140,9 @@
               cleanup and organization services that transform
               financial chaos into clear, actionable insights.
             </p>
-            <div id="calendly-badge-container">
-              <!-- Your badge widget will be injected here -->
-            </div>
 
             <!-- Seu botão -->
-            <a class="btn primary clarity-call-btn"">
-              Book a Clarity Call — it’s free
-            </a>
+            <a class="btn primary clarity-call-btn" role="button" aria-label="Book a Clarity Call with Legible Ledgers">Book a Clarity Call — it’s free</a>
 
           </div>
         </div>
@@ -516,12 +504,8 @@
           <a class="footer-email" href="mailto:hello@legibleledgers.biz">hello@legibleledgers.biz</a>
 
           <div class="footer-social-icons">
-            <a href="https://www.instagram.com/legibleledgers/" target="_blank" aria-label="Instagram">
-              <img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" />
-            </a>
-            <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" aria-label="LinkedIn">
-              <img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" />
-            </a>
+            <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" /></a>
+            <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" /></a>
           </div>
         </div>
 
