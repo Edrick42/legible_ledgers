@@ -57,8 +57,8 @@
   </script>
 
   <!-- Custom Sitemap reference for Search Engines -->
-  <meta name="sitemap" content="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap.xml" />
-  <link rel="sitemap" type="application/xml" href="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap.xml" title="Legible Ledgers Custom Sitemap">
+  <meta name="sitemap" content="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap" />
+  <link rel="sitemap" type="application/xml" href="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap" title="Legible Ledgers Custom Sitemap">
 
   {squarespace-headers}
 </head>
