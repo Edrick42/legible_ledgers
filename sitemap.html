@@ -1,31 +1,45 @@
 <!-- ===========================
-LEGIBLE LEDGERS - PSEUDO SITEMAP PAGE
+LEGIBLE LEDGERS - PSEUDO SITEMAP PAGE (versão invisível para bots)
 =========================== -->
 
-<!-- Cabeçalho semântico para bots -->
-<link rel="sitemap" 
-      type="application/xml" 
-      title="Legible Ledgers Sitemap" 
-      href="https://www.legibleledgers.biz/sitemap" />
+<!-- Cabeçalho invisível para bots -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // adiciona link rel="sitemap"
+  const sitemapLink = document.createElement("link");
+  sitemapLink.rel = "sitemap";
+  sitemapLink.type = "application/xml";
+  sitemapLink.title = "Legible Ledgers Sitemap";
+  sitemapLink.href = "https://www.legibleledgers.biz/sitemap";
+  document.head.appendChild(sitemapLink);
 
-<meta name="robots" content="index, follow">
+  // adiciona meta robots
+  const metaRobots = document.createElement("meta");
+  metaRobots.name = "robots";
+  metaRobots.content = "index, follow";
+  document.head.appendChild(metaRobots);
 
-<!-- Schema JSON-LD indicando as URLs como um DataFeed -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "DataFeed",
-  "name": "Legible Ledgers Sitemap",
-  "dataFeedElement": [
-    { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/" },
-    { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Services" },
-    { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Testimonials" },
-    { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Contact" },
-    { "@type": "DataFeedItem", "url": "https://calendly.com/legibleledgers/clarity-call" },
-    { "@type": "DataFeedItem", "url": "https://www.instagram.com/legibleledgers/" },
-    { "@type": "DataFeedItem", "url": "https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" }
-  ]
-}
+  // adiciona schema JSON-LD dinamicamente
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "DataFeed",
+    "name": "Legible Ledgers Sitemap",
+    "dataFeedElement": [
+      { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/" },
+      { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Services" },
+      { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Testimonials" },
+      { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Contact" },
+      { "@type": "DataFeedItem", "url": "https://calendly.com/legibleledgers/clarity-call" },
+      { "@type": "DataFeedItem", "url": "https://www.instagram.com/legibleledgers/" },
+      { "@type": "DataFeedItem", "url": "https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" }
+    ]
+  };
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+});
 </script>
 
 <!-- Exibição “visual” do XML -->
