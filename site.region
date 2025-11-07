@@ -1,18 +1,22 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <title>Legible Ledgers — Bookkeeping Clarity for Service-Based Businesses</title>
-  <meta name="description" content="Transform financial chaos into clarity. Legible Ledgers specializes in QuickBooks Online cleanup and bookkeeping organization for service-based business owners.">
-  <meta name="keywords" content="bookkeeping, QuickBooks cleanup, accounting services, financial clarity, Legible Ledgers, QuickBooks Online cleanup, small business bookkeeping, accounting help USA">
+  <meta name="description"
+    content="Transform financial chaos into clarity. Legible Ledgers specializes in QuickBooks Online cleanup and bookkeeping organization for service-based business owners.">
+  <meta name="keywords"
+    content="bookkeeping, QuickBooks cleanup, accounting services, financial clarity, Legible Ledgers, QuickBooks Online cleanup, small business bookkeeping, accounting help USA">
   <meta name="author" content="Legible Ledgers Bookkeeping">
 
   <!-- Open Graph / Social Metadata -->
   <meta property="og:title" content="Legible Ledgers — Specialists in QuickBooks Online Cleanup">
-  <meta property="og:description" content="Transform financial chaos into clarity. Bookkeeping cleanup and organization for service-based business owners. Untangle - Clarify - Empower!">
+  <meta property="og:description"
+    content="Transform financial chaos into clarity. Bookkeeping cleanup and organization for service-based business owners. Untangle - Clarify - Empower!">
   <meta property="og:image" content="https://www.legibleledgers.biz/assets/logo/logo-legible-ledgers-title.svg">
   <meta property="og:url" content="https://www.legibleledgers.biz/">
   <meta property="og:type" content="website">
@@ -26,7 +30,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/styles.css">
@@ -58,10 +64,14 @@
 
   <!-- Custom Sitemap reference for Search Engines -->
   <meta name="sitemap" content="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap" />
-  <link rel="sitemap" type="application/xml" href="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap" title="Legible Ledgers Custom Sitemap">
+  <link rel="sitemap" type="application/xml"
+    href="https://raw.githubusercontent.com/Edrick42/legible_ledgers/main/sitemap"
+    title="Legible Ledgers Custom Sitemap">
 
   <!-- Custom Sitemap Reference -->
-  <link rel="sitemap" type="application/xml" title="Legible Ledgers Sitemap" href="https://edrick42.github.io/legible_ledgers/custom-sitemap.xml" />
+  <link rel="sitemap" type="application/xml" title="Legible Ledgers Sitemap"
+    href="https://edrick42.github.io/legible_ledgers/custom-sitemap.xml" />
+
 
   {squarespace-headers}
 </head>
@@ -82,14 +92,15 @@
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#">Home</a>
           <!--a href="#about">About Us</a-->
-          <a href="#services">Services</a>
+          <a href="#Services">Services</a>
           <!--a href="#process">Our Process</a-->
-          <a href="#testimonials">Testimonials</a>
-          <a href="#contact">Contact Us</a>
+          <a href="#Testimonials">Testimonials</a>
+          <a href="#Contact">Contact Us</a>
           <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" />
           </a>
-          <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" rel="noopener"
+            aria-label="LinkedIn">
             <img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" />
           </a>
         </nav>
@@ -104,16 +115,17 @@
           <nav class="mobile-nav-inner" aria-label="Mobile navigation">
             <a href="#">Home</a>
             <!--a href="#about">About Us</a-->
-            <a href="#services">Services</a>
+            <a href="#Services">Services</a>
             <!--a href="#process">Our Process</a-->
-            <a href="#testimonials">Testimonials</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#Testimonials">Testimonials</a>
+            <a href="#Contact">Contact Us</a>
             <div class="mobile-menu-social-icons">
               <a href="https://www.instagram.com/legibleledgers/" target="_blank" aria-label="Instagram">
                 <img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" />
               </a>
-              <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" aria-label="LinkedIn">
-                <img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn"/>
+              <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
+                aria-label="LinkedIn">
+                <img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" />
               </a>
             </div>
           </nav>
@@ -123,11 +135,12 @@
     </header>
 
     <main class="content-container" role="main" data-content-field="main-content">
-      <section class="hero" id="hero">
+      <section class="hero" id="Hero">
         <div class="container hero-grid">
           <div class="hero-media">
             <div class="card-image" role="img" aria-label="Illustration">
-              <img src="assets/images/legible-ledgers.webp" alt="Illustration showing Legible Ledgers concept of clarity in bookkeeping" />
+              <img src="assets/images/legible-ledgers.webp"
+                alt="Illustration showing Legible Ledgers concept of clarity in bookkeeping" />
             </div>
           </div>
 
@@ -136,7 +149,7 @@
             <p class="lead">
               For established service-based business owners
               overwhelmed by chaotic QuickBooks Online
-              files. 
+              files.
             </p>
             <p class="lead">
               Legible Ledgers provides specialized
@@ -145,17 +158,18 @@
             </p>
 
             <!-- Seu botão -->
-            <a class="btn primary clarity-call-btn" role="button" aria-label="Book a Clarity Call with Legible Ledgers">Book a Clarity Call — it’s free</a>
+            <a class="btn primary clarity-call-btn" role="button"
+              aria-label="Book a Clarity Call with Legible Ledgers">Book a Clarity Call — it’s free</a>
 
           </div>
         </div>
 
         <div class=" hero-card">
-              <div class="logo">
-                <img src="assets/logo/logo-legible-ledgers.svg" alt="Legible Ledgers Logo" />
-              </div>
-              <h1>We empower our clients by magnifying their results through clarity.</h1>
+          <div class="logo">
+            <img src="assets/logo/logo-legible-ledgers.svg" alt="Legible Ledgers Logo" />
           </div>
+          <h1>We empower our clients by magnifying their results through clarity.</h1>
+        </div>
       </section>
 
       <section class="cta">
@@ -263,7 +277,7 @@
 
       </section>
 
-      <section class="about" id="services">
+      <section class="about" id="Services">
         <div class="about-content">
           <h2 class="about-title">You can count on <i>Legible Ledgers</i> for...</h2>
           <div class="about-row">
@@ -403,7 +417,7 @@
             </div>
       </section>
 
-      <section class="testimonials" id="testimonials">
+      <section class="testimonials" id="Testimonials">
         <h1>The Clarity Seekers</h1>
         <p>Thousands of business owners have already turned their financial chaos into confidence.</p>
         <div class="testimonials-carousel">
@@ -448,7 +462,7 @@
         </div>
       </section>
 
-      <section class="contact-us" id="contact">
+      <section class="contact-us" id="Contact">
         <div class="contact-us-card-img" role="img" aria-label="Illustration">
           <img src="assets/illustration/legible-ledgers-illustration-13.svg" alt="Legible Ledgers Illustration 02" />
         </div>
@@ -507,8 +521,10 @@
           <a class="footer-email" href="mailto:hello@legibleledgers.biz">hello@legibleledgers.biz</a>
 
           <div class="footer-social-icons">
-            <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" /></a>
-            <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" /></a>
+            <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
+              aria-label="Instagram"><img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" /></a>
+            <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" rel="noopener"
+              aria-label="LinkedIn"><img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" /></a>
           </div>
         </div>
 
@@ -517,8 +533,17 @@
           <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member - Legible Ledgers" />
         </div>
       </div>
-    </footer>
 
+      <div class="footer-sitemap">
+        <button id="toggleSitemap" class="footer-sitemap-toggle">
+          View Sitemap
+        </button>
+
+        <div id="footerSitemapContent" class="footer-sitemap-content">
+          <ul id="footerSitemapList"></ul>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="scripts/script.js"></script>
@@ -551,42 +576,133 @@
       document.head.appendChild(link);
     });
   </script>
-  <script>
-    if (window.location.pathname.includes("sitemap")) {
-      const sitemapLink = document.createElement("link");
-      sitemapLink.rel = "sitemap";
-      sitemapLink.type = "application/xml";
-      sitemapLink.title = "Legible Ledgers Sitemap";
-      sitemapLink.href = "https://www.legibleledgers.biz/sitemap";
-      document.head.appendChild(sitemapLink);
 
-      const metaRobots = document.createElement("meta");
-      metaRobots.name = "robots";
-      metaRobots.content = "index, follow";
-      document.head.appendChild(metaRobots);
+  <!-- SEU XML EMBUTIDO -->
+  <script type="text/xml" id="custom-sitemap">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-      const schema = {
-        "@context": "https://schema.org",
-        "@type": "DataFeed",
-        "name": "Legible Ledgers Sitemap",
-        "dataFeedElement": [
-          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/" },
-          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Services" },
-          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Testimonials" },
-          { "@type": "DataFeedItem", "url": "https://www.legibleledgers.biz/#Contact" },
-          { "@type": "DataFeedItem", "url": "https://calendly.com/legibleledgers/clarity-call" },
-          { "@type": "DataFeedItem", "url": "https://www.instagram.com/legibleledgers/" },
-          { "@type": "DataFeedItem", "url": "https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" }
-        ]
-      };
+  <!-- Home -->
+  <url>
+    <loc>https://www.legibleledgers.biz/</loc>
+    <lastmod>2025-11-06</lastmod>
+    <priority>1.0</priority>
+    <changefreq>monthly</changefreq>
+  </url>
 
-      const script = document.createElement("script");
-      script.type = "application/ld+json";
-      script.textContent = JSON.stringify(schema);
-      document.head.appendChild(script);
-    }
+  <!-- Services Section -->
+  <url>
+    <loc>https://www.legibleledgers.biz/#Services</loc>
+    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Testimonials -->
+  <url>
+    <loc>https://www.legibleledgers.biz/#Testimonials</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://www.legibleledgers.biz/#Contact</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- External Calendly Link -->
+  <url>
+    <loc>https://calendly.com/legibleledgers/clarity-call</loc>
+    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+  <!-- Social Links -->
+  <url>
+    <loc>https://www.instagram.com/legibleledgers/</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/</loc>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
   </script>
 
+  <!-- SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggleBtn = document.getElementById('toggleSitemap');
+      const sitemapContent = document.getElementById('footerSitemapContent');
+      const sitemapList = document.getElementById('footerSitemapList');
+
+      // Lê o XML embutido
+      const xmlText = document.getElementById('custom-sitemap').textContent.trim();
+      const xml = new window.DOMParser().parseFromString(xmlText, 'text/xml');
+      const urls = xml.querySelectorAll('url');
+
+      const pages = [];
+      urls.forEach(urlNode => {
+        const loc = urlNode.querySelector('loc')?.textContent || '';
+        const priority = urlNode.querySelector('priority')?.textContent || '0';
+
+        // Gera título legível (remove domínio, hashtags e barras)
+        let title = loc.replace('https://www.legibleledgers.biz/', '')
+          .replace(/[#/]/g, ' ')
+          .trim() || 'Home';
+
+        pages.push({ href: loc, title, priority: parseFloat(priority) });
+      });
+
+      // Organiza por prioridade
+      pages.sort((a, b) => b.priority - a.priority);
+
+      // Gera a lista HTML
+      let html = '';
+      pages.forEach(page => {
+        // Ícones personalizados para redes sociais
+        if (page.href.includes('instagram.com')) {
+          html += `
+        <li class="social-icon">
+          <a href="${page.href}" target="_blank" aria-label="Instagram">
+            <img src="assets/icons/instagram-legible-ledgers.svg" alt="Instagram" />
+          </a>
+        </li>`;
+        } else if (page.href.includes('linkedin.com')) {
+          html += `
+        <li class="social-icon">
+          <a href="${page.href}" target="_blank" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin-legible-ledgers.svg" alt="LinkedIn" />
+          </a>
+        </li>`;
+        } else if (page.href.includes('calendly.com')) {
+          html += `
+        <li class="social-icon">
+          <a href="${page.href}" target="_blank" aria-label="Calendar">
+            <img src="assets/icons/calendar-legible-ledgers.svg" alt="Calendar" />
+          </a>
+        </li>`;
+        } else {
+          html += `<li><a href="${page.href}">${page.title}</a></li>`;
+        }
+      });
+
+      sitemapList.innerHTML = html;
+
+      // Mostrar/ocultar sitemap
+      toggleBtn.addEventListener('click', () => {
+        sitemapContent.classList.toggle('open');
+        toggleBtn.textContent = sitemapContent.classList.contains('open')
+          ? 'Hide Sitemap'
+          : 'View Sitemap';
+      });
+    });
+  </script>
 </body>
 
 </html>
