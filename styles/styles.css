@@ -740,6 +740,10 @@ br {
     margin-bottom: 2rem;
 }
 
+.about-row .btn {
+    margin: 4px;
+}
+
 /* Mobile layout for about section */
 @media (max-width: 899px) {
     .about-row {
