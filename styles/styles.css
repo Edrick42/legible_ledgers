@@ -97,6 +97,7 @@ h4,
 h5,
 h6 {
     line-height: 1.15;
+    letter-spacing: -1px;
 }
 
 p {
@@ -423,6 +424,7 @@ br {
     padding: 1rem 1.5rem;
     border-radius: 35px;
     text-decoration: none;
+    letter-spacing: 0.5px;
     font-weight: 700;
     font-size: 1.1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
@@ -432,7 +434,7 @@ br {
 
 .btn.primary {
     margin: 32px 0px;
-    max-width: 370px;
+    max-width: 450px;
     text-align: center;
     justify-content: center;
     background: var(--joy-500);
@@ -1311,7 +1313,7 @@ br {
 /* Desktop breakpoint */
 @media (min-width:1024px) {
     .btn.primary {
-        max-width: 270px
+        max-width: 300px
     }
 
     .btn {
