@@ -201,7 +201,7 @@ br {
     display: block;
     width: 24px;
     height: 24px;
-    margin-right: 12px;
+    margin-right: -16px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
