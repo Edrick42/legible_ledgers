@@ -32,22 +32,4 @@
     <changefreq>monthly</changefreq>
   </url>
 
-  <!-- External Calendly Link -->
-  <url>
-    <loc>https://calendly.com/legibleledgers/clarity-call</loc>
-    <priority>0.5</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-
-  <!-- Social Links -->
-  <url>
-    <loc>https://www.instagram.com/legibleledgers/</loc>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/</loc>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>
