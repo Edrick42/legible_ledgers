@@ -1,0 +1,823 @@
+/* Black Friday landing styles for Legible Ledgers
+   Place in: /styles/blackfriday.css
+   Depends only on web-safe fonts + your Google fonts already loaded site-wide.
+*/
+
+/* ==========================
+   DESIGN TOKENS
+   ========================== */
+:root {
+    /* Primary palette - Joyful Yellow */
+    --joy-500: #FFDA03;
+    /* accent */
+    --joy-400: #ffe05f;
+    --joy-300: #ffeda1;
+    --joy-200: #fff6d2;
+
+    /* Neutrals */
+    --white-000: #FFFFFF;
+    --white-100: #F4F4F4;
+    --black-400: #666666;
+    --black-900: #1A1A1A;
+    --black-700: #333333;
+
+    /* Secondary palettes (use sparingly) */
+    --blue-700: #4069AA;
+    --blue-500: #5B86D0;
+    --blue-400: #A9C6F0;
+    --blue-300: #D0DEF2;
+
+    --green-600: #6FC35F;
+    --green-300: #B0D4AC;
+    --green-200: #D7EBD5;
+
+    --red-700: #CA532D;
+    --red-300: #F0B7A4;
+    --red-200: #F6DDD4;
+
+    /* Layout tokens */
+    --container-max: 1200px;
+    --radius-lg: 36px;
+    --radius-md: 18px;
+
+    /* Escala de espaçamento baseada em 8px */
+    --space-1: 0.5rem;  /* 8px */
+    --space-2: 1rem;    /* 16px */
+    --space-3: 1.5rem;  /* 24px */
+    --space-4: 2rem;    /* 32px */
+    --space-5: 3rem;    /* 48px */
+
+    /* Tipografia fluida */
+    --font-size-base: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+    --font-size-lg: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+    --font-size-xl: clamp(2rem, 3vw + 1rem, 3rem);
+}
+
+/* Font stacks */
+:root {
+    --font-display: 'Platypi', 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* ---------------------------------------------------------
+   Black Friday theme tokens (overrides for dark landing)
+   --------------------------------------------------------- */
+:root {
+    --bg-900: #0b0b0c;
+    /* page background */
+    --text-100: #FFFFFF;
+    /* primary text */
+    --text-muted: #CFCFCF;
+    /* secondary text */
+    --accent: var(--joy-500);
+    /* yellow accent */
+    --black-400: #666666;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+/* Header - mobile first */
+/* Header */
+.site-header {
+    background: var(--black-900);
+    padding: 1rem 1rem 0rem 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 100;
+}
+
+.site-header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--joy-500);
+    border-radius: 0 0 45px 45px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100%
+}
+
+.brand-link {
+    display: inline-block;
+    /* permite tamanho natural do conteÃºdo */
+    position: relative;
+    z-index: 10;
+    /* garante que fique acima de outros elementos */
+    cursor: pointer;
+    text-decoration: none;
+    /* remove sublinhado (caso padrÃ£o de <a>) */
+}
+
+.logo {
+    width: 15rem;
+    /* ajuste o tamanho conforme necessÃ¡rio */
+    height: 3rem;
+    background-size: contain;
+    /* mantÃ©m proporÃ§Ã£o */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.main-nav a {
+    color: var(--white-100);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-nav a img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: -16px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.main-nav a:hover img {
+    transform: scale(1.2);
+}
+
+.main-nav {
+    display: none
+}
+
+/* Mobile menu toggle (hidden on desktop) */
+.menu-toggle {
+    display: flex;
+    background: transparent;
+    border: 0;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-toggle .hamburger {
+    width: 22px;
+    height: 2px;
+    background: var(--black-900);
+    display: block;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--black-900);
+}
+
+.menu-toggle .hamburger::before {
+    top: -7px
+}
+
+.menu-toggle .hamburger::after {
+    top: 7px
+}
+
+/* Mobile nav panel */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 320px;
+    max-width: 90%;
+    background: var(--joy-500);
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
+    transform: translateX(110%);
+    transition: transform 320ms ease;
+    z-index: 1200;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-nav.open {
+    transform: translateX(0)
+}
+
+.mobile-nav-inner a {
+    display: block;
+    padding: 12px 0;
+    color: var(--white-100);
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+}
+
+.mobile-menu-social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 12px 0;
+}
+
+.mobile-menu-social-icons a img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    transition: filter 0.3s, transform 0.2s;
+}
+
+.mobile-menu-social-icons img {
+    display: block;
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+    z-index: 1100;
+}
+
+.mobile-nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto
+}
+
+
+/* ==========================
+   BASE
+   ========================== */
+* {
+    box-sizing: border-box
+}
+
+html {
+    font-size: 16px
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--black-900);
+    color: var(--white-100);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================
+   BLACK FRIDAY THEME OVERRIDES
+   Dark background, white/yellow text, icon inversion, and awesomeicon fallbacks
+   ========================== */
+
+/* Links and nav */
+a,
+a:visited {
+    color: var(--text-100);
+}
+
+a:hover,
+a:focus {
+    color: var(--accent);
+}
+
+.main-nav a {
+    color: var(--text-100);
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    color: var(--accent);
+}
+
+/* Header */
+.site-header {
+    background: transparent;
+}
+
+.site-header.fixed {
+    background: var(--accent);
+    color: #111;
+}
+
+/* Menu / hamburger */
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    background: var(--text-100);
+}
+
+/* Mobile nav */
+.mobile-nav {
+    background: var(--black-900);
+}
+
+.mobile-nav-inner a {
+    color: var(--text-100);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-primary {
+    background: var(--accent);
+    color: var(--black-900);
+}
+
+.btn-secondary,
+.btn-secondary {
+    background: transparent;
+    color: var(--accent);
+    border-color: rgba(255, 218, 3, 0.15);
+}
+
+/* Countdown */
+.countdown-segment {
+    background: var(--black-700);
+    color: var(--text-100);
+}
+
+/* Invert small icons for dark background */
+.main-nav a img,
+.mobile-menu-social-icons img,
+.footer-social-icons img {
+    filter: brightness(0) invert(1);
+}
+
+/* Awesomeicon fallback rules: if the font is available these classes will use it; otherwise the inline SVG fallback will display */
+.awesomeicon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    color: var(--text-100);
+}
+
+.awesomeicon.instagram {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect x='3' y='3' width='18' height='18' rx='5' stroke='currentColor' fill='none' stroke-width='2'/><circle cx='12' cy='12' r='3' fill='currentColor'/><circle cx='17.5' cy='6.5' r='1' fill='currentColor'/></svg>");
+}
+
+.awesomeicon.linkedin {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M4 3.5C4 2.67 4.67 2 5.5 2S7 2.67 7 3.5 6.33 5 5.5 5 4 4.33 4 3.5zM3 8h4v12H3zM9 8h3.6v1.6h.05c.5-.95 1.75-1.95 3.6-1.95 3.85 0 4.55 2.5 4.55 5.75V20H17v-5.25c0-1.25-.02-2.85-1.75-2.85-1.75 0-2.02 1.37-2.02 2.75V20H9z'/></svg>");
+}
+
+/* Make headings stand out on dark background */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-100)
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ==========================
+   HERO
+   ========================== */
+.hero {
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.6rem);
+    margin: 0;
+    color: var(--white-000);
+    line-height: 1.02;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.hero h2 {
+    font-size: 1.50rem;
+    color: var(--white-100);
+    margin: 0;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.hero h2 spam {
+    color: var(--joy-500);
+}
+
+.hero p {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-top: 0;
+    color: var(--white-100);
+    text-align: center;
+    margin-top: 64px;
+}
+
+.hero p spam {
+    color: var(--joy-500);
+    font-weight: 700;
+}
+
+.hero p.date {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0;
+    color: var(--white-100);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* pain points list */
+.pain-points ul {
+    margin: 1rem 0;
+    padding-left: 1.25rem;
+    color: var(--white-100);
+    line-height: 1.6;
+}
+
+.pain-points li {
+    margin-bottom: .5rem
+}
+
+/* offer box */
+.offer-box {
+    margin-top: 32px;
+    margin-bottom: 80px;
+    background: var(--joy-500);
+    border-radius: 20px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.offer-box > a,
+.offer-box > #countdown {
+  flex: 0 0 100%;
+}
+
+.offer-box-title {
+    flex: 3;
+    flex-wrap: wrap;
+    padding: 16px 16px 16px 16px;
+}
+
+.offer-box-title spam {
+    font-style: italic;
+}
+
+.offer-box h3 {
+    margin: 0px;
+    margin-top: -1rem;
+    margin-bottom: 24px;
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--black-900);
+    line-height: 1.1;
+}
+
+.offer-box p {
+    margin: 0;
+    margin-top: -16px;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--black-900);
+    font-weight: 600;
+    text-align: left;
+    width: 90%;
+    line-height: 1.3;
+}
+
+.offer-box .sub-description {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-top: 16px;
+    width: 50%;
+    color: var(--black-900);
+    font-weight: 400;
+}
+
+.offer-box span {
+    font-weight: 700;
+    color: var(--red-700);
+}
+
+.offer-box-description {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 16px 16px 16px 16px;
+    font-size: 1.25rem;
+    align-content: space-between;
+}
+
+.offer-box-description p {
+    flex: 1;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0px;
+    width: 100%;
+    color: var(--bg-900);
+    margin-bottom: 16px;
+}
+
+.offer-box .btn {
+    margin-top: 24px;
+}
+
+
+/* CTA button */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.4rem;
+    border-radius: 40px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+}
+
+.btn-primary {
+    background: var(--black-900);
+    color: var(--white-000);
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12)
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--black-900);
+    border: 2px solid var(--black-900);
+}
+
+/* countdown */
+.countdown-timer {
+    margin-top: .75rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.countdown-segment {
+    background: var(--joy-500);
+    border-color: var(--black-900);
+    border-style: solid;
+    color: var(--black-900);
+    font-family: var(--font-body);
+    padding: .6rem .9rem;
+    border-radius: 32px;
+    min-width: 72px;
+    text-align: center;
+    flex: 1;
+}
+
+.countdown-segment small {
+    display: block;
+    font-size: 0.75rem;
+    opacity: .85
+}
+
+.countdown-segment strong {
+    display: block;
+    font-size: 1.25rem
+}
+
+/* ==========================
+   PROBLEM / SOLUTION / BENEFITS
+   ========================== */
+section {
+    padding: 2rem 0
+}
+
+.problem .statements h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    color: var(--black-900);
+}
+
+.solution .benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.solution .benefits li {
+    background: var(--white-100);
+    padding: 1rem;
+    border-radius: 12px;
+    list-style: none;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================
+   SERVICES CARDS
+   ========================== */
+.services .service-card {
+    background: var(--white-100);
+    border-radius: 18px;
+    padding: 1rem;
+    margin: 0.75rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.services .service-card h3 {
+    margin: 0 0 .25rem 0
+}
+
+.services .service-card p {
+    margin: 0
+}
+
+/* ==========================
+   HOW IT WORKS / STEPS
+   ========================== */
+.steps ol {
+    padding-left: 1.25rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ==========================
+   FINAL CTA
+   ========================== */
+.final-cta {
+    background: linear-gradient(180deg, var(--joy-500), var(--joy-400));
+    color: var(--black-900);
+    text-align: center;
+    padding: 2.5rem 0;
+    border-radius: 20px;
+    margin: 2rem 1rem;
+}
+
+.final-cta h2 {
+    margin: 0 0 0.5rem 0;
+    font-family: var(--font-display);
+    font-size: 2rem
+}
+
+.final-cta p {
+    margin: 0 0 1rem 0;
+    font-weight: 700
+}
+
+/* ==========================
+   UTILITY / responsiveness
+   ========================== */
+@media (min-width:900px) {
+    .hero .inner {
+        flex-direction: row;
+        gap: 2rem;
+        align-items: flex-start
+    }
+
+    .hero .left {
+        flex: 1
+    }
+
+    .hero .right {
+        flex: 0 0 420px
+    }
+
+    .offer-box {
+        position: sticky;
+        top: calc(6rem)
+    }
+}
+
+@media (max-width:899px) {
+    .countdown-segment {
+        min-width: 64px
+    }
+
+    .hero {
+        padding: 1.25rem 0
+    }
+}
+
+
+/* Desktop breakpoint */
+@media (min-width:1024px) {
+    .btn.primary {
+        max-width: 300px
+    }
+
+    .btn {
+        font-size: 2rem;
+    }
+
+    .site-header {
+        padding: 2rem 0;
+    }
+
+    .container {
+        padding: 0;
+        margin: 0rem 6vw;
+    }
+
+    .header-inner {
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .main-nav a {
+        margin-left: 20px;
+        /* subtle hover transition for desktop nav */
+        transition: color 160ms ease, font-size 160ms ease, letter-spacing 160ms ease, font-weight 160ms ease;
+        font-size: 14px;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+        /* stronger color and slightly larger text for emphasis */
+        color: var(--joy-500);
+        font-size: 15px;
+        /* small, non-disruptive increase */
+        font-weight: 700;
+        /* tiny extra letter spacing to keep it airy */
+        letter-spacing: 0.3px;
+    }
+}
