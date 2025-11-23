@@ -61,6 +61,17 @@
     --font-body: 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 
+/* Make headings stand out on dark background */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    color: var(--text-100)
+}
+
 body {
     margin: 0;
 }
@@ -271,12 +282,13 @@ ul {
 }
 
 .hero h2 {
+    font-family: var(--font-display);
     font-size: 1.25rem;
     color: var(--white-100);
     margin: 0 auto 8px auto;
     font-weight: 700;
     text-align: center;
-    width: 60%;
+    width: 80%;
 }
 
 .hero h2 span {
@@ -284,15 +296,16 @@ ul {
 }
 
 .hero p {
+    font-family: var(--font-body);
     font-size: 1.125rem;
     font-weight: 400;
-    margin-top: 0;
     color: var(--white-100);
     text-align: center;
     margin-top: 64px;
+    padding: 0rem 2rem;
 }
 
-.hero p spam {
+.hero p span {
     color: var(--joy-500);
     font-weight: 700;
 }
@@ -304,6 +317,17 @@ ul {
     color: var(--white-100);
     text-align: center;
     margin-bottom: 32px;
+}
+
+.offer-box {
+    padding: 1rem 0rem;
+    background: var(--joy-500);
+}
+
+.offer-box-title {
+    color: var(--black-900);
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* ===== Put all desktop rules inside this media query ===== */
@@ -525,16 +549,6 @@ ul {
         background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='currentColor' d='M4 3.5C4 2.67 4.67 2 5.5 2S7 2.67 7 3.5 6.33 5 5.5 5 4 4.33 4 3.5zM3 8h4v12H3zM9 8h3.6v1.6h.05c.5-.95 1.75-1.95 3.6-1.95 3.85 0 4.55 2.5 4.55 5.75V20H17v-5.25c0-1.25-.02-2.85-1.75-2.85-1.75 0-2.02 1.37-2.02 2.75V20H9z'/></svg>");
     }
 
-    /* Make headings stand out on dark background */
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: var(--text-100)
-    }
-
     .container {
         width: 100%;
         max-width: var(--container-max);
@@ -562,7 +576,7 @@ ul {
 
     .hero h1 {
         font-family: var(--font-display);
-        font-size: clamp(3rem, 4vw, 3.6rem);
+        font-size: clamp(3.75rem, 4vw, 3.6rem);
         margin: 0;
         color: var(--white-000);
         line-height: 1.02;
@@ -577,7 +591,7 @@ ul {
         margin: 0;
         font-weight: 700;
         text-align: center;
-        margin-bottom: 8px;
+        margin: 0px auto 8px auto;
     }
 
     .hero h2 span {
@@ -587,10 +601,10 @@ ul {
     .hero p {
         font-size: 1.125rem;
         font-weight: 400;
-        margin-top: 0;
         color: var(--white-100);
         text-align: center;
         margin-top: 64px;
+        padding: 0rem;
     }
 
     .hero p span {
@@ -644,6 +658,7 @@ ul {
         flex: 3;
         flex-wrap: wrap;
         padding: 16px 16px 16px 16px;
+        text-align: left;
     }
 
     .offer-box h3 {
@@ -700,7 +715,6 @@ ul {
         text-align: left;
         margin: 0px;
         width: 100%;
-        color: var(--bg-900);
         margin-bottom: 16px;
     }
 
