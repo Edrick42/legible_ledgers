@@ -106,9 +106,9 @@
                 <br>
                 <span> And you don’t need to continue operating in the dark. </span>
             </p>
-            
-            <a href="#cta" id="btn-mobile" class="btn btn-primary mobile">BOOK MY DIAGNOSTIC REVIEW</a>
-            
+
+            <a href="#cta" id="btn-mobile" class="btn btn-primary mobile clarity-call-btn">BOOK MY DIAGNOSTIC REVIEW</a>
+
             <div class="offer-box">
                 <div class="offer-box-title">
                     <h3>This week only</h3>
@@ -126,7 +126,8 @@
                     </div>
                 </div>
 
-                <a href="#cta" id="btn-desktop" class="btn btn-primary desktop">BOOK MY DIAGNOSTIC REVIEW</a>
+                <a href="#cta" id="btn-desktop" class="btn btn-primary desktop clarity-call-btn">BOOK MY DIAGNOSTIC
+                    REVIEW</a>
             </div>
         </div>
     </section>
@@ -161,7 +162,7 @@
                 <strong> led by a Certified QuickBooks ProAdvisor.</strong>
             </h5>
         </div>
-        <a href="#cta" id="btn-mobile" class="btn btn-secondary">GET THE DIAGNOSTIC FOR $399</a>
+        <a href="#cta" id="btn-mobile" class="btn btn-secondary clarity-call-btn">GET THE DIAGNOSTIC FOR $399</a>
     </section>
 
     <div id="diagnostic-desktop" class="book-your-diagnostic-review">
@@ -179,7 +180,7 @@
         <div class="title">
             <h2>What’s Included?</h2>
             <p>100% human-led. <br> No automated shortcuts.</p>
-            <a href="#cta" id="btn-desktop" class="btn btn-secondary">GET THE DIAGNOSTIC FOR $399</a>
+            <a href="#cta" id="btn-desktop" class="btn btn-secondary clarity-call-btn">GET THE DIAGNOSTIC FOR $399</a>
         </div>
         <div class="included-details">
             <ul class="included-list">
@@ -193,7 +194,7 @@
                 <li><strong>✓</strong> Delivery within 3–5 business days</li>
             </ul>
         </div>
-        <a href="#cta" id="btn-mobile" class="btn btn-secondary">GET THE DIAGNOSTIC FOR $399</a>
+        <a href="#cta" id="btn-mobile" class="btn btn-secondary clarity-call-btn">GET THE DIAGNOSTIC FOR $399</a>
     </section>
 
     <!-- WHY -->
@@ -399,42 +400,64 @@
     <!-- final -->
     <section class="final-cta">
         <h2>Offer Ends Friday, <span>November 28th</span></h2>
-        <h4><strong>Clarity isn’t optional,</strong> it’s the foundation of 
-        every strategic decision you’ll make next year</h4>
+        <h4><strong>Clarity isn’t optional,</strong> it’s the foundation of
+            every strategic decision you’ll make next year</h4>
         <a href="#cta" class="btn btn-secondary">Start a stronger 2026 today</a>
     </section>
 
 
     <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <div class="footer-brand">
-            <img src="assets/logo/logo-legible-ledgers-title-horizontal.svg" alt="Legible Ledgers — bookkeeping cleanup & QuickBooks specialists logo"
-              class="footer-logo" loading="lazy">
-          </div>
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <img src="assets/logo/logo-legible-ledgers-title-horizontal.svg"
+                        alt="Legible Ledgers — bookkeeping cleanup & QuickBooks specialists logo" class="footer-logo"
+                        loading="lazy">
+                </div>
 
-          <p class="footer-tag">Specialists in QuickBooks Online Cleanup</p>
-          <p>Legible Ledgers 2025 © All Rights Reserved</p>
+                <p class="footer-tag">Specialists in QuickBooks Online Cleanup</p>
+                <p>Legible Ledgers 2025 © All Rights Reserved</p>
 
-          <h4 class="footer-info-title">Information</h4>
-          <a class="footer-email" href="mailto:hello@legibleledgers.biz">hello@legibleledgers.biz</a>
+                <h4 class="footer-info-title">Information</h4>
+                <a class="footer-email" href="mailto:hello@legibleledgers.biz">hello@legibleledgers.biz</a>
 
-          <div class="footer-social-icons">
-            <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
-              aria-label="Instagram"><img src="assets/icons/instagram-legible-ledgers.svg" alt="Legible Ledgers on Instagram" loading="lazy"></a>
-            <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank" rel="noopener"
-              aria-label="LinkedIn"><img src="assets/icons/linkedin-legible-ledgers.svg" alt="Legible Ledgers on LinkedIn" loading="lazy"></a>
-          </div>
+                <div class="footer-social-icons">
+                    <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
+                        aria-label="Instagram"><img src="assets/icons/instagram-legible-ledgers.svg"
+                            alt="Legible Ledgers on Instagram" loading="lazy"></a>
+                    <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
+                        rel="noopener" aria-label="LinkedIn"><img src="assets/icons/linkedin-legible-ledgers.svg"
+                            alt="Legible Ledgers on LinkedIn" loading="lazy"></a>
+                </div>
+            </div>
+
+            <div class="footer-certifications">
+                <img src="assets/images/quick-books-legible-ledgers.png"
+                    alt="QuickBooks Certified badge — Legible Ledgers" loading="lazy">
+                <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member badge — Legible Ledgers"
+                    loading="lazy">
+            </div>
         </div>
-
-        <div class="footer-certifications">
-          <img src="assets/images/quick-books-legible-ledgers.png" alt="QuickBooks Certified badge — Legible Ledgers" loading="lazy">
-          <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member badge — Legible Ledgers" loading="lazy">
-        </div>
-      </div>
     </footer>
 
     <script src="/scripts/blackfriday.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleciona todos os botões com a classe .clarity-call-btn
+            const buttons = document.querySelectorAll(".clarity-call-btn");
+
+            buttons.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    Calendly.initPopupWidget({
+                        url: "https://calendly.com/legibleledgers/clarity-call"
+                    });
+                    return false;
+                });
+            });
+        });
+    </script>
+
     <script>
         // FAQ toggle: accessible expand/collapse
         (function () {

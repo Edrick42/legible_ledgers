@@ -72,6 +72,59 @@ h6 {
     color: var(--text-100)
 }
 
+.btn {
+    display: flex;
+    padding: 1.5rem 1.75rem;
+    border-radius: 45px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.08);
+    font-family: var(--font-body);
+
+    /* center button content (text + icons) */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn.primary {
+    margin: 32px 0px;
+    max-width: 450px;
+    text-align: center;
+    justify-content: center;
+    background: var(--joy-500);
+    color: var(--black-900);
+    /* subtle interactive transition */
+    transition: transform 180ms cubic-bezier(.2, .8, .2, 1),
+        box-shadow 180ms cubic-bezier(.2, .8, .2, 1),
+        background-color 180ms ease;
+    will-change: transform, box-shadow;
+    transform: translateZ(0);
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+    transition: all 0.2s ease;
+    background: var(--joy-400);
+    transform: scale(1.045) translateY(-2px);
+    cursor: pointer;
+}
+
+.btn.primary:active {
+    /* gentle press feedback */
+    transform: scale(0.985);
+    transition-duration: 360ms;
+}
+
+.btn.primary:focus-visible {
+    outline: 3px solid rgba(255, 218, 3, 0.28);
+    outline-offset: 4px;
+}
+
 .btn-primary,
 .btn-primary {
     background: var(--joy-500);
@@ -82,21 +135,6 @@ h6 {
 .btn-secondary {
     background: transparent;
     color: var(--joy-500);
-}
-
-.btn {
-    font-family: var(--font-body);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.9rem 1.4rem;
-    border-radius: 40px;
-    font-weight: 800;
-    text-decoration: none;
-    cursor: pointer;
-    border: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
 .btn-primary {
@@ -115,7 +153,6 @@ h6 {
     color: var(--black-900);
     border: 2px solid var(--black-900);
 }
-
 
 body {
     margin: 0;
@@ -158,8 +195,8 @@ ul {
 }
 
 .logo {
-    width: 12.5rem;
-    height: 2.5rem;
+    width: 25rem;
+    height: 5rem;
 }
 
 .logo img {
@@ -199,16 +236,16 @@ ul {
     display: flex;
     background: transparent;
     border: 0;
-    width: 48px;
-    height: 48px;
+    width: 80px;
+    height: 96px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
 
 .menu-toggle .hamburger {
-    width: 22px;
-    height: 2px;
+    width: 88px;
+    height: 6px;
     background: var(--white-000);
     display: block;
     position: relative;
@@ -221,16 +258,16 @@ ul {
     position: absolute;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 6px;
     background: var(--white-000);
 }
 
 .menu-toggle .hamburger::before {
-    top: -7px
+    top: -17px
 }
 
 .menu-toggle .hamburger::after {
-    top: 7px
+    top: 17px
 }
 
 /* Mobile nav panel */
@@ -259,11 +296,11 @@ ul {
 .mobile-nav-inner a {
     display: block;
     padding: 12px 0;
-    color: var(--white-100);
+    color: var(--black-900);
     text-decoration: none;
     font-weight: 700;
     font-family: var(--font-body);
-    font-size: 1.25rem;
+    font-size: 2.5rem;
 }
 
 .mobile-menu-social-icons {
@@ -275,8 +312,8 @@ ul {
 
 .mobile-menu-social-icons a img {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
     margin-right: 12px;
     transition: filter 0.3s, transform 0.2s;
 }
@@ -400,7 +437,7 @@ ul {
     color: var(--black-900);
     max-width: 80%;
     margin: 64px auto 128px;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .offer-box>a,
@@ -1158,8 +1195,8 @@ ul {
 
 .footer-certifications img {
     flex: 1;
-    max-width: 180px;
-    height: 220px;
+    max-width: 280px;
+    height: 320px;
     object-fit: contain;
 }
 
@@ -1172,6 +1209,7 @@ ul {
 .footer-left p {
     margin: 0;
     font-size: 1.5rem;
+    font-family: var(--font-body);
 }
 
 .footer-left .footer-tag {
@@ -1191,8 +1229,8 @@ ul {
 
 .footer-left a img {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
     transition: filter 0.3s, transform 0.2s;
     margin-right: 12px;
 }
@@ -1208,6 +1246,7 @@ ul {
     text-decoration: none;
     font-weight: 600;
     font-size: 1.5rem;
+    font-family: var(--font-body);
 }
 
 .footer-copy {
@@ -1682,7 +1721,7 @@ ul {
 
     .book-your-diagnostic-review {
         background: var(--black-900);
-        display: flex;
+        display: block;
         flex-direction: column;
         align-items: center;
     }
