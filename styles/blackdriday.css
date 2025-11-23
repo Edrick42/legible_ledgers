@@ -72,6 +72,51 @@ h6 {
     color: var(--text-100)
 }
 
+.btn-primary,
+.btn-primary {
+    background: var(--joy-500);
+    color: var(--black-900);
+}
+
+.btn-secondary,
+.btn-secondary {
+    background: transparent;
+    color: var(--joy-500);
+}
+
+.btn {
+    font-family: var(--font-body);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9rem 1.4rem;
+    border-radius: 40px;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.btn-primary {
+    background: var(--black-900);
+    color: var(--white-000);
+    transition: transform .16s ease, box-shadow .16s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--black-900);
+    border: 2px solid var(--black-900);
+}
+
+
 body {
     margin: 0;
 }
@@ -257,7 +302,7 @@ ul {
 
 .hero {
     background-color: var(--black-900);
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 0;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -273,7 +318,7 @@ ul {
 
 .hero h1 {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 2vw, 2rem);
+    font-size: clamp(2.5rem, 2vw, 3rem);
     margin: 0;
     color: var(--white-000);
     line-height: 1.2;
@@ -301,7 +346,7 @@ ul {
     font-weight: 400;
     color: var(--white-100);
     text-align: center;
-    margin-top: 64px;
+    margin-top: 128px;
     padding: 0rem 2rem;
 }
 
@@ -328,6 +373,294 @@ ul {
     color: var(--black-900);
     font-size: 2rem;
     text-align: center;
+}
+
+#btn-mobile {
+    display: flex;
+}
+
+#btn-desktop {
+    display: none;
+}
+
+/* offer box */
+.offer-box {
+    margin-top: 32px;
+    background: var(--joy-500);
+    border-radius: 20px 20px 0 0;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.hero .container .btn {
+    background-color: var(--joy-500);
+    color: var(--black-900);
+    max-width: 300px;
+    margin: 64px auto;
+}
+
+.offer-box>a,
+.offer-box>#countdown {
+    flex: 0 0 100%;
+}
+
+.offer-box-title {
+    flex: 3;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.offer-box h3 {
+    margin: 0px;
+    margin-bottom: 24px;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--black-900);
+    line-height: 1.1;
+    text-align: center;
+}
+
+.offer-box p {
+    margin: 0;
+    margin-top: -16px;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--black-900);
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.offer-box p span {
+    font-weight: 700;
+    color: var(--red-700);
+}
+
+.offer-box .sub-description {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-top: 16px;
+    color: var(--black-900);
+    font-weight: 400;
+}
+
+.offer-box span {
+    font-weight: 700;
+    color: var(--red-700);
+}
+
+.offer-box-description {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.25rem;
+    margin-top: 64px;
+}
+
+.offer-box-description p {
+    flex: 1;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 16px;
+    width: 100%;
+    padding: 0;
+}
+
+.offer-box .btn {
+    margin-top: 24px;
+}
+
+/* Countdown */
+.countdown-segment {
+    background: var(--black-700);
+    color: var(--text-100);
+}
+
+.offer-box>a,
+.offer-box>#countdown {
+    flex: 0 0 100%;
+}
+
+/* countdown */
+.countdown-timer {
+    margin-top: .75rem;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.countdown-segment {
+    background: var(--joy-500);
+    border-color: var(--black-900);
+    border-style: solid;
+    color: var(--black-900);
+    font-family: var(--font-body);
+    padding: .6rem .9rem;
+    border-radius: 32px;
+    min-width: 52px;
+    text-align: center;
+    flex: 1;
+}
+
+.countdown-segment small {
+    display: block;
+    font-size: 0.75rem;
+    opacity: .85
+}
+
+.countdown-segment strong {
+    display: block;
+    font-size: 1.25rem
+}
+
+#diagnostic-mobile {
+    display: flex;
+    flex-direction: column;
+}
+
+#diagnostic-desktop {
+    display: none;
+}
+
+.book-your-diagnostic-review h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--black-900);
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+.diagnostic {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.diagnostic .title {
+    flex: 2;
+}
+
+.diagnostic h2 {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--black-900);
+}
+
+.diagnostic h4 {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 2rem 0 0;
+    color: var(--black-900);
+}
+
+.diagnostic h4 span {
+    font-weight: 600;
+}
+
+.diagnostic .description {
+    flex: 2;
+    font-size: 1.4rem;
+    font-family: var(--font-body);
+    color: var(--black-700);
+    margin: -1rem 0;
+}
+
+.diagnostic .description h5 {
+    font-size: 1.25rem;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    text-align: center;
+    margin: 4rem -1rem 2rem;
+}
+
+.what-is-included {
+    background: var(--joy-500);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+
+.what-is-included .title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.what-is-included h2 {
+    flex: 1;
+    font-family: var(--font-display);
+    color: var(--black-900);
+    font-size: 4.5rem;
+    width: 100%;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.what-is-included p {
+    flex: 1;
+    font-size: 1.25rem;
+    font-family: var(--font-body);
+    color: var(--black-900);
+    font-weight: 500;
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 56px;
+
+}
+
+.what-is-included .btn {
+    flex: 1;
+    margin-top: 32px;
+    border: none;
+    background-color: var(--black-900);
+    font-size: 1.25rem;
+    color: var(--white-000);
+    max-height: 60px;
+}
+
+.what-is-included .btn:hover {
+    background-color: var(--joy-400);
+    color: var(--black-900);
+}
+
+.what-is-included .included-details {
+    flex: 1;
+    font-size: 1.25rem;
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--black-900);
+    margin: auto 0;
+    padding: 0 1.5rem;
+}
+
+.what-is-included .included-details img {
+    position: absolute;
+    right: 9rem;
+    width: 400px;
+    height: 400px;
+    vertical-align: middle;
+}
+
+.what-is-included .included-list li {
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.what-is-included .included-list li strong {
+    margin-left: -1.5rem;
+    font-weight: 700;
 }
 
 /* ===== Put all desktop rules inside this media query ===== */
@@ -503,25 +836,6 @@ ul {
         color: var(--text-100);
     }
 
-    /* Buttons */
-    .btn-primary,
-    .btn-primary {
-        background: var(--accent);
-        color: var(--black-900);
-    }
-
-    .btn-secondary,
-    .btn-secondary {
-        background: transparent;
-        color: var(--accent);
-        border-color: rgba(255, 218, 3, 0.15);
-    }
-
-    /* Countdown */
-    .countdown-segment {
-        background: var(--black-700);
-        color: var(--text-100);
-    }
 
     /* Invert small icons for dark background */
     .main-nav a img,
@@ -633,6 +947,13 @@ ul {
         margin-bottom: .5rem
     }
 
+    .hero .container .btn {
+        max-width: 100%;
+        background-color: var(--black-900);
+        color: var(--white-000);
+        margin: 32px 0 0 0;
+    }
+
     /* offer box */
     .offer-box {
         margin-top: 32px;
@@ -647,11 +968,6 @@ ul {
         border: 1px solid rgba(0, 0, 0, 0.03);
         flex-wrap: wrap;
         align-content: space-between;
-    }
-
-    .offer-box>a,
-    .offer-box>#countdown {
-        flex: 0 0 100%;
     }
 
     .offer-box-title {
@@ -669,6 +985,7 @@ ul {
         font-size: 4rem;
         color: var(--black-900);
         line-height: 1.1;
+        text-align: left;
     }
 
     .offer-box p {
@@ -697,6 +1014,11 @@ ul {
         color: var(--red-700);
     }
 
+    .offer-box p span {
+        font-weight: 700;
+        color: var(--red-700);
+    }
+
     .offer-box-description {
         flex: 2;
         display: flex;
@@ -705,6 +1027,7 @@ ul {
         padding: 16px 16px 16px 16px;
         font-size: 1.25rem;
         align-content: space-between;
+        margin: 0;
     }
 
     .offer-box-description p {
@@ -722,77 +1045,25 @@ ul {
         margin-top: 24px;
     }
 
-
-    /* CTA button */
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0.9rem 1.4rem;
-        border-radius: 40px;
-        font-weight: 800;
-        text-decoration: none;
-        cursor: pointer;
-        border: 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-            0 1px 2px rgba(0, 0, 0, 0.08);
+    #btn-mobile {
+        display: none;
     }
 
-    .btn-primary {
-        background: var(--black-900);
-        color: var(--white-000);
-        transition: transform .16s ease, box-shadow .16s ease;
-    }
-
-    .btn-primary:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
-    }
-
-    .btn-secondary {
-        background: transparent;
-        color: var(--black-900);
-        border: 2px solid var(--black-900);
-    }
-
-    /* countdown */
-    .countdown-timer {
-        margin-top: .75rem;
+    #btn-desktop {
         display: flex;
-        gap: .5rem;
-        align-items: center;
-        flex-wrap: wrap;
     }
 
-    .countdown-segment {
-        background: var(--joy-500);
-        border-color: var(--black-900);
-        border-style: solid;
-        color: var(--black-900);
-        font-family: var(--font-body);
-        padding: .6rem .9rem;
-        border-radius: 32px;
-        min-width: 72px;
-        text-align: center;
-        flex: 1;
-    }
-
-    .countdown-segment small {
-        display: block;
-        font-size: 0.75rem;
-        opacity: .85
-    }
-
-    .countdown-segment strong {
-        display: block;
-        font-size: 1.25rem
-    }
-
-    /* ==========================
-   diagnostic / SOLUTION / BENEFITS
-   ========================== */
     section {
         padding: 0rem 9rem;
+    }
+
+    #diagnostic-mobile {
+        display: none;
+    }
+
+    #diagnostic-desktop {
+        display: block;
+        margin-bottom: 2rem;
     }
 
     .diagnostic {
@@ -839,13 +1110,20 @@ ul {
         font-family: var(--font-display);
         font-style: italic;
         font-weight: 400;
-
+        text-align: left;
     }
 
-    .book-your-diaagnostic-review h2 {
+    .book-your-diagnostic-review {
+        background: var(--black-900);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .book-your-diagnostic-review h2 {
         font-family: var(--font-display);
         font-size: 3rem;
-        margin: 4rem 0 -2rem 0;
+        margin: 4rem 0 0 0;
         color: var(--joy-500);
         text-align: center;
     }
