@@ -318,19 +318,20 @@ ul {
 
 .hero h1 {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 2vw, 3rem);
+    font-size: clamp(4.5rem, 2vw, 4.75rem);
     margin: 0;
     color: var(--white-000);
     line-height: 1.2;
     text-align: center;
-    margin-bottom: 16px;
+    margin-top: 64px;
+    margin-bottom: 32px;
 }
 
 .hero h2 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     color: var(--white-100);
-    margin: 0 auto 8px auto;
+    margin: 0 auto 16px auto;
     font-weight: 700;
     text-align: center;
     width: 80%;
@@ -340,28 +341,28 @@ ul {
     color: var(--joy-500);
 }
 
+.hero p.date {
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-top: 0;
+    color: var(--white-100);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
 .hero p {
     font-family: var(--font-body);
-    font-size: 1.125rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: var(--white-100);
     text-align: center;
-    margin-top: 128px;
+    margin-top: 328px;
     padding: 0rem 2rem;
 }
 
 .hero p span {
     color: var(--joy-500);
     font-weight: 700;
-}
-
-.hero p.date {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-top: 0;
-    color: var(--white-100);
-    text-align: center;
-    margin-bottom: 32px;
 }
 
 .offer-box {
@@ -388,7 +389,7 @@ ul {
     margin-top: 32px;
     background: var(--joy-500);
     border-radius: 20px 20px 0 0;
-    padding: 32px 16px;
+    padding: 32px 16px 64px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -397,8 +398,9 @@ ul {
 .hero .container .btn {
     background-color: var(--joy-500);
     color: var(--black-900);
-    max-width: 300px;
-    margin: 64px auto;
+    max-width: 80%;
+    margin: 64px auto 128px;
+    font-size: 2rem;
 }
 
 .offer-box>a,
@@ -413,10 +415,9 @@ ul {
 }
 
 .offer-box h3 {
-    margin: 0px;
-    margin-bottom: 24px;
+    margin: 32px auto;
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 5rem;
     color: var(--black-900);
     line-height: 1.1;
     text-align: center;
@@ -424,9 +425,8 @@ ul {
 
 .offer-box p {
     margin: 0;
-    margin-top: -16px;
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: var(--black-900);
     font-weight: 600;
     line-height: 1.3;
@@ -440,8 +440,8 @@ ul {
 
 .offer-box .sub-description {
     font-family: var(--font-body);
-    font-size: 1.1rem;
-    margin-top: 16px;
+    font-size: 2rem;
+    margin-top: 64px;
     color: var(--black-900);
     font-weight: 400;
 }
@@ -456,18 +456,17 @@ ul {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 1.25rem;
-    margin-top: 64px;
+    font-size: 3rem;
+    margin-top: 128px;
 }
 
 .offer-box-description p {
     flex: 1;
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-align: center;
-    margin: 0px;
-    margin-bottom: 16px;
+    margin: 32px 0px 32px;
     width: 100%;
     padding: 0;
 }
@@ -511,13 +510,13 @@ ul {
 
 .countdown-segment small {
     display: block;
-    font-size: 0.75rem;
+    font-size: 1.75rem;
     opacity: .85
 }
 
 .countdown-segment strong {
     display: block;
-    font-size: 1.25rem
+    font-size: 4rem
 }
 
 #diagnostic-mobile {
@@ -531,17 +530,17 @@ ul {
 
 .book-your-diagnostic-review h2 {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 5rem;
     color: var(--black-900);
     text-align: center;
-    margin: 2rem 1rem;
+    margin: 4rem 0rem 2rem;
 }
 
 .diagnostic {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2rem 2rem;
 }
 
 .diagnostic .title {
@@ -550,14 +549,14 @@ ul {
 
 .diagnostic h2 {
     font-family: var(--font-display);
-    font-size: 2.5rem;
-    margin: 0;
+    font-size: 5rem;
+    margin: 4rem 0rem 2rem;
     color: var(--black-900);
 }
 
 .diagnostic h4 {
     font-family: var(--font-body);
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin: 2rem 0 0;
     color: var(--black-900);
@@ -569,26 +568,36 @@ ul {
 
 .diagnostic .description {
     flex: 2;
-    font-size: 1.4rem;
+    font-size: 2.5rem;
     font-family: var(--font-body);
     color: var(--black-700);
     margin: -1rem 0;
 }
 
 .diagnostic .description h5 {
-    font-size: 1.25rem;
+    font-size: 2.5rem;
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 400;
-    text-align: center;
-    margin: 4rem -1rem 2rem;
+    text-align: left;
+    margin: 4rem 0rem 2rem;
+}
+
+.diagnostic .btn {
+    margin-top: 24px;
+    border: none;
+    background-color: var(--black-900);
+    color: var(--white-000);
+    max-height: 60px;
+    font-size: 2rem;
+    margin: 32px auto 64px;
 }
 
 .what-is-included {
     background: var(--joy-500);
     display: flex;
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding: 6rem 2rem;
 }
 
 .what-is-included .title {
@@ -606,18 +615,16 @@ ul {
     width: 100%;
     margin: 0;
     line-height: 1.1;
+    text-align: left;
 }
 
 .what-is-included p {
     flex: 1;
-    font-size: 1.25rem;
+    font-size: 3rem;
     font-family: var(--font-body);
     color: var(--black-900);
     font-weight: 500;
-    margin: 0;
-    margin-top: 16px;
-    margin-bottom: 56px;
-
+    margin: 32px 0 128px;
 }
 
 .what-is-included .btn {
@@ -625,7 +632,7 @@ ul {
     margin-top: 32px;
     border: none;
     background-color: var(--black-900);
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: var(--white-000);
     max-height: 60px;
 }
@@ -637,12 +644,13 @@ ul {
 
 .what-is-included .included-details {
     flex: 1;
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-family: var(--font-body);
     line-height: 1.6;
     color: var(--black-900);
     margin: auto 0;
     padding: 0 1.5rem;
+    font-weight: 500;
 }
 
 .what-is-included .included-details img {
@@ -654,7 +662,7 @@ ul {
 }
 
 .what-is-included .included-list li {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     line-height: 1.2;
 }
 
@@ -668,13 +676,13 @@ ul {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    padding: 2rem 1rem 0rem 1rem;
+    padding: 6rem 1rem 6rem 1rem;
 }
 
 .why h2 {
     flex: 1;
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     margin: 0;
     color: var(--black-900);
     text-align: center;
@@ -685,12 +693,12 @@ ul {
 .why h4 {
     flex: 1;
     font-family: var(--font-body);
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     font-weight: 500;
     color: var(--black-700);
     width: 100%;
     text-align: center;
-    margin-bottom: 64px;
+    margin-bottom: 128px;
 }
 
 .why .why-details {
@@ -703,7 +711,7 @@ ul {
 
 .why .why-details h5 {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: var(--black-900);
     text-align: center;
     margin: 16px 0;
@@ -714,11 +722,11 @@ ul {
     flex: 1;
     border: none;
     background-color: var(--joy-500);
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: var(--black-900);
     max-height: 60px;
     max-width: 600px;
-    margin: 48px auto;
+    margin: 64px auto 0;
 }
 
 .unlock {
@@ -731,8 +739,7 @@ ul {
     flex-direction: column;
     gap: 1rem;
     background-color: var(--joy-500);
-    padding: 2rem 2rem;
-    border-radius: var(--radius-md);
+    padding: 4rem 2rem;
 }
 
 .unlock .title {
@@ -741,7 +748,7 @@ ul {
 
 .unlock h2 {
     font-family: var(--font-display);
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     color: var(--black-900);
     margin: 0;
     margin-bottom: 32px;
@@ -750,7 +757,7 @@ ul {
 
 .unlock h4 {
     font-family: var(--font-body);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 400;
     margin: 0.5rem 0;
     color: var(--black-700);
@@ -764,14 +771,15 @@ ul {
 
 .unlock .description {
     flex: 2;
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     font-family: var(--font-body);
     line-height: 1.6;
     color: var(--black-900);
+    margin-top: 64px;
 }
 
 .unlock .description h5 {
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     font-family: var(--font-display);
     font-style: italic;
     font-weight: 600;
@@ -785,7 +793,7 @@ ul {
     background-color: var(--black-900);
     color: var(--white-000);
     max-height: 60px;
-    font-size: 1.24rem;
+    font-size: 2rem;
     margin: 0 auto;
 }
 
@@ -797,43 +805,414 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-    gap: 2rem;
+    padding: 6rem 0rem;
 }
 
-.how .step-card {
+.how .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.how .container h2 {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    margin: 0;
+    color: var(--black-900);
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.2;
+}
+
+.how .container h4 {
+    font-family: var(--font-body);
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--black-700);
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 64px;
+}
+
+.how .container-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.how .container-card .step-card {
     flex: 1;
     background: var(--blue-300);
     border-radius: 24px;
-    height: 550px;
+    width: 80%;
+    height: 650px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    text-align: left;
+    margin: 0 auto;
+    text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
         0 1px 2px rgba(0, 0, 0, 0.08);
 }
 
-.how .step-card h4 {
+.how .container-card .step-card h4 {
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 4rem;
+    line-height: 1.2;
     color: var(--black-900);
     font-weight: 600;
     margin: 0 0 12px 0;
 }
 
-.how .step-card p {
+.how .container-card .step-card p {
     font-family: var(--font-body);
     color: var(--black-700);
-    font-size: 1.5rem;
+    font-size: 2.25rem;
     display: block;
-    margin-top: 0rem;
+    margin: 16px auto 32px;
+    width: 80%;
 }
 
-.step-card-image {
+.how .container-card .step-card-image {
     position: relative;
     width: auto;
     height: auto;
+}
+
+.how .btn {
+    flex: 1;
+    border: none;
+    background-color: var(--blue-700);
+    font-size: 2rem;
+    color: var(--white-000);
+    max-height: 60px;
+    margin: 48px auto;
+}
+
+.testimonials {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-carousel {
+    display: flex;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    padding: 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.testimonials h2 {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
+
+.testimonials h5 {
+    font-family: var(--font-body);
+    font-size: 2.25rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 16px auto 0 auto;
+    color: var(--black-700);
+}
+
+.testimonials p {
+    font-family: var(--font-body);
+    font-size: 2.25rem;
+    font-style: italic;
+    text-align: center;
+    margin: 64px auto 32px auto;
+}
+
+.testimonials-card {
+    flex: 0 0 100vw;
+    /* ocupa ~90% da largura da tela */
+    background: var(--white-100);
+    border-radius: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    padding: 2rem;
+    scroll-snap-align: center;
+    margin: 64px auto;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.testimonials-card h3 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--black-900);
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+}
+
+.testimonials-card h4 {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    color: var(--black-400);
+    font-weight: 500;
+    margin: 0.5rem 0 1.5rem 0;
+    text-align: left;
+    opacity: 0.3;
+}
+
+.testimonials-card p {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    color: var(--black-700);
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+}
+
+.testimonials-carousel::-webkit-scrollbar {
+    height: 8px;
+    background: var(--joy-300);
+}
+
+.testimonials-carousel::-webkit-scrollbar-thumb {
+    background: var(--joy-500);
+    border-radius: 4px;
+}
+
+.final-cta {
+    background-color: var(--white-000);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.final-cta h2 {
+    margin: 0 0 0.5rem 0;
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    color: var(--black-900);
+    line-height: 1.2;
+    margin-bottom: 64px;
+}
+
+.final-cta h2 span {
+    color: var(--joy-500);
+}
+
+.final-cta h4 {
+    margin: 0 0 2rem 0;
+    font-family: var(--font-body);
+    font-size: 2rem;
+    color: var(--black-700);
+    font-weight: 400;
+    width: 95%;
+}
+
+.final-cta .btn {
+    margin-top: 64px;
+    border: none;
+    background-color: var(--joy-500);
+    font-size: 2rem;
+    color: var(--black-900);
+    max-height: 80px;
+    margin-bottom: 64px;
+}
+
+/* ==========================
+     FAQ styles (collapsible)
+     ========================== */
+.faq {
+    margin-top: 32px;
+    padding: 6rem 2rem;
+}
+
+.faq h2 {
+    margin: 0 0 1rem 0;
+    font-family: var(--font-display);
+    color: var(--text-100);
+    font-size: 5rem;
+}
+
+.faq-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 0.75rem 0
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    color: var(--text-100);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+
+.faq-question:focus {
+    outline: 2px solid rgba(255, 218, 3, 0.3);
+    outline-offset: 4px
+}
+
+.faq-question::after {
+    content: '▾';
+    margin-left: 12px;
+    transition: transform .22s ease
+}
+
+.faq-question[aria-expanded="true"]::after {
+    transform: rotate(180deg)
+}
+
+.faq-answer {
+    font-family: var(--font-body);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .32s ease, opacity .24s ease;
+    padding: 0 0;
+    opacity: 0;
+    color: var(--text-100);
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+.faq-answer.open {
+    max-height: 800px;
+    padding-top: 0.5rem;
+    opacity: 1
+}
+
+.faq-answer p {
+    margin: 0.4rem 0 0 0
+}
+
+.disclaimer {
+    margin-top: 128px;
+    padding: 0;
+}
+
+.disclaimer p {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    color: var(--black-700);
+    text-align: left;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--joy-500);
+    padding: 40px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    width: 100%;
+    max-width: 100%;
+}
+
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    max-width: 100%;
+    padding: 1rem 2rem 4rem;
+}
+
+.footer-left {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-content: center;
+    justify-content: center;
+}
+
+.footer-certifications {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.footer-certifications img {
+    flex: 1;
+    max-width: 180px;
+    height: 220px;
+    object-fit: contain;
+}
+
+.footer-logo {
+    width: 90vw;
+    height: auto;
+    display: block
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.footer-left .footer-tag {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--black-900);
+    margin: 0;
+    width: 100%;
+}
+
+.footer-social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.footer-left a img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: filter 0.3s, transform 0.2s;
+    margin-right: 12px;
+}
+
+.footer-info-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin: 0
+}
+
+.footer-email {
+    color: var(--black-900);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.footer-copy {
+    color: var(--black-700);
+    margin-top: 8px
 }
 
 /* ===== Put all desktop rules inside this media query ===== */
@@ -1108,6 +1487,17 @@ ul {
         margin-bottom: 32px;
     }
 
+    .countdown-segment small {
+        display: block;
+        font-size: 0.75rem;
+        opacity: .85
+    }
+
+    .countdown-segment strong {
+        display: block;
+        font-size: 1rem
+    }
+
     /* pain points list */
     .pain-points ul {
         margin: 1rem 0;
@@ -1228,6 +1618,10 @@ ul {
 
     section {
         padding: 0rem 9rem;
+    }
+
+    .diagnostic {
+        padding: 2rem 9rem;
     }
 
     #diagnostic-mobile {
@@ -1507,6 +1901,7 @@ ul {
     }
 
     .how {
+        margin: 0;
         background-color: var(--white-000);
         display: flex;
         flex-direction: column;
@@ -1556,7 +1951,8 @@ ul {
         flex: 1;
         background: var(--joy-200);
         border-radius: 24px;
-        height: 550px;
+        height: 650px;
+        width: 100%;
         padding: 2rem;
         display: flex;
         flex-direction: column;
@@ -1861,12 +2257,15 @@ ul {
 
     .disclaimer {
         padding: 4rem 9rem;
+        margin-top: 16px;
     }
 
     .disclaimer p {
         width: 50%;
+        font-size: 1.5rem;
+        color: var(--white-000);
+        text-align: left;
     }
-
     /* Footer */
     .site-footer {
         background: var(--joy-500);
