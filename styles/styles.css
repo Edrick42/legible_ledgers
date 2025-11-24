@@ -242,6 +242,46 @@ br {
     display: none
 }
 
+/* Highlight only the Black Friday menu items */
+.main-nav a.nav-blackfriday {
+    background: var(--black-900);
+    color: var(--white-000);
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.main-nav a.nav-blackfriday:hover,
+.main-nav a.nav-blackfriday:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+    text-decoration: none;
+}
+.main-nav a.nav-blackfriday[aria-current="page"] {
+    outline: 2px solid var(--joy-500);
+    outline-offset: 4px;
+}
+
+/* Mobile menu variant: full-width stacked button-style */
+.mobile-nav-inner a.nav-blackfriday {
+    display: block;
+    background: var(--black-900);
+    color: var(--white-000);
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mobile-nav-inner a.nav-blackfriday:focus,
+.mobile-nav-inner a.nav-blackfriday:hover {
+    background: #000000;
+}
+
 /* Mobile menu toggle (hidden on desktop) */
 .menu-toggle {
     display: flex;
@@ -425,6 +465,174 @@ br {
     margin: 0;
     text-align: center;
 }
+
+/* BEGIN: Black Friday hero styles (scoped to .blackfriday-hero) */
+.blackfriday-hero {
+    background-color: var(--black-900);
+    padding: 2.5rem 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.blackfriday-hero .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.blackfriday-hero h1 {
+    font-family: var(--font-display);
+    /* smaller mobile heading */
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    margin: 0;
+    color: var(--white-000);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.blackfriday-hero h2 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--white-100);
+    margin: 0 auto 12px auto;
+    font-weight: 700;
+    text-align: center;
+    width: 90%;
+}
+
+.blackfriday-hero h2 span {
+    color: var(--joy-500);
+}
+
+.blackfriday-hero p.date {
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-top: 0;
+    color: var(--white-100);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.blackfriday-hero p {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--white-100);
+    text-align: center;
+    margin-top: 4rem;
+    padding: 0rem 1rem;
+}
+
+.blackfriday-hero p span {
+    color: var(--joy-500);
+    font-weight: 700;
+}
+
+.blackfriday-hero .offer-box {
+    padding: 1rem 0rem;
+    background: var(--joy-500);
+}
+
+#bf-btn-mobile {
+    display: flex;
+}
+
+#bf-btn-desktop {
+    display: none;
+}
+
+.blackfriday-hero .offer-box {
+    background: var(--joy-500);
+    border-radius: 20px 20px 0 0;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.blackfriday-hero .container .btn {
+    background-color: var(--joy-500);
+    color: var(--black-900);
+    max-width: 80%;
+    margin: 2rem auto;
+}
+
+.blackfriday-hero .offer-box > a,
+.blackfriday-hero .offer-box > #countdown {
+    flex: 0 0 100%;
+}
+
+.blackfriday-hero .offer-box-title {
+    flex: 3;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.blackfriday-hero .offer-box h3 {
+    margin: 16px auto;
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    color: var(--black-900);
+    line-height: 1.1;
+    text-align: center;
+}
+
+.blackfriday-hero .offer-box p {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--black-900);
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.blackfriday-hero .offer-box p span {
+    font-weight: 700;
+    color: var(--red-700);
+}
+
+.blackfriday-hero .offer-box .sub-description {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-top: 24px;
+    color: var(--black-900);
+    font-weight: 400;
+}
+
+.blackfriday-hero .offer-box span {
+    font-weight: 700;
+    color: var(--red-700);
+}
+
+.blackfriday-hero .offer-box-description {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.blackfriday-hero .offer-box-description p {
+    flex: 1;
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-align: center;
+    margin: 12px 0px 12px;
+    width: 100%;
+    padding: 0;
+}
+
+.blackfriday-hero .offer-box .btn {
+    margin-top: 24px;
+}
+/* END: Black Friday hero styles (scoped) */
 
 .calendly-badge-widget {
     flex: 1;
@@ -1351,6 +1559,118 @@ br {
 
 /* Desktop breakpoint */
 @media (min-width:1024px) {
+    /* offer box */
+    .blackfriday-hero .container {
+        padding: 2rem 8rem 0rem;
+    }
+
+    .blackfriday-hero .offer-box {
+        margin-top: 32px;
+        margin-bottom: 80px;
+        background: var(--joy-500);
+        border-radius: 20px;
+        padding: 1.25rem;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .blackfriday-hero .container .btn {
+        max-width: 100%;
+        background-color: var(--black-900);
+        color: var(--white-000);
+        margin: 32px 0 0 0;
+        justify-content: center;
+        font-size: 1.5rem;
+    }
+
+    .blackfriday-hero .offer-box-title {
+        flex: 3;
+        flex-wrap: wrap;
+        padding: 16px 16px 16px 16px;
+        text-align: left;
+    }
+
+    .blackfriday-hero .offer-box h3 {
+        margin: 0px;
+        margin-top: -1rem;
+        margin-bottom: 24px;
+        font-family: var(--font-display);
+        font-size: 4rem;
+        color: var(--black-900);
+        line-height: 1.1;
+        text-align: left;
+    }
+
+    .blackfriday-hero .offer-box p {
+        margin: 0;
+        margin-top: -16px;
+        font-family: var(--font-display);
+        font-size: 2.5rem;
+        color: var(--black-900);
+        font-weight: 600;
+        text-align: left;
+        width: 90%;
+        line-height: 1.3;
+    }
+
+    .blackfriday-hero .offer-box .sub-description {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        margin-top: 16px;
+        width: 100%;
+        color: var(--black-900);
+        font-weight: 400;
+    }
+
+    .blackfriday-hero .offer-box span {
+        font-weight: 700;
+        color: var(--red-700);
+    }
+
+    .blackfriday-hero .offer-box p span {
+        font-weight: 700;
+        color: var(--red-700);
+    }
+
+    .blackfriday-hero .offer-box-description {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 16px 16px 16px 16px;
+        font-size: 1.25rem;
+        align-content: space-between;
+        margin: 0;
+    }
+
+    .blackfriday-hero .offer-box-description p {
+        flex: 1;
+        font-family: var(--font-display);
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .blackfriday-hero .offer-box .btn {
+        margin-top: 24px;
+    }
+
+    #bf-btn-mobile {
+        display: none;
+    }
+
+    #bf-btn-desktop {
+        display: flex;
+    }
+
     .btn.primary {
         max-width: 300px
     }
