@@ -49,7 +49,7 @@
         <div class="container header-inner">
             <div class="brand">
                 <div class="logo">
-                    <a href="javascript:void(0)" href="#hero" class="brand-link" aria-label="Go to top">
+                    <a href="#hero" class="brand-link" aria-label="Go to top">
                         <img src="assets/logo/logo-legible-ledgers-title-horizontal-ligth.svg"
                             alt="Legible Ledgers — bookkeeping cleanup & QuickBooks specialists logo" class="logo"
                             loading="lazy">
@@ -57,15 +57,15 @@
                 </div>
             </div>
             <nav class="main-nav" aria-label="Main navigation">
-                <a href="javascript:void(0)" href="#">Home</a>
+                <a href="#">Home</a>
                 <!--a href="#about">About Us</a-->
-                <a href="javascript:void(0)" href="/blackfriday.html">Back Friday</a>
-                <a href="javascript:void(0)" href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
+                <a href="/blackfriday.html">Back Friday</a>
+                <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
                     aria-label="Instagram">
                     <img src="assets/icons/instagram-legible-ledgers.svg" alt="Legible Ledgers on Instagram"
                         loading="lazy">
                 </a>
-                <a href="javascript:void(0)" href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
+                <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
                     rel="noopener" aria-label="LinkedIn">
                     <img src="assets/icons/linkedin-legible-ledgers.svg" alt="Legible Ledgers on LinkedIn"
                         loading="lazy">
@@ -80,14 +80,14 @@
             <!-- Mobile nav panel (slides from right) -->
             <div id="mobile-menu" class="mobile-nav" aria-hidden="true">
                 <nav class="mobile-nav-inner" aria-label="Mobile navigation">
-                    <a href="javascript:void(0)" href="#">Home</a>
-                    <a href="javascript:void(0)" href="/blackfriday.html">Back Friday</a>
+                    <a href="#">Home</a>
+                    <a href="/blackfriday.html">Back Friday</a>
                     <div class="mobile-menu-social-icons">
-                        <a href="javascript:void(0)" href="https://www.instagram.com/legibleledgers/" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/legibleledgers/" target="_blank" aria-label="Instagram">
                             <img src="assets/icons/instagram-legible-ledgers.svg" alt="Legible Ledgers on Instagram"
                                 loading="lazy">
                         </a>
-                        <a href="javascript:void(0)" href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
+                        <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
                             aria-label="LinkedIn">
                             <img src="assets/icons/linkedin-legible-ledgers.svg" alt="Legible Ledgers on LinkedIn"
                                 loading="lazy">
@@ -423,13 +423,13 @@
                 <p>Legible Ledgers 2025 © All Rights Reserved</p>
 
                 <h4 class="footer-info-title">Information</h4>
-                <a href="javascript:void(0)" class="footer-email" href="mailto:hello@legibleledgers.biz">hello@legibleledgers.biz</a>
+                <a class="footer-email" href="mailto:hello@legibleledgers.biz">hello@legibleledgers.biz</a>
 
                 <div class="footer-social-icons">
-                    <a href="javascript:void(0)" href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
+                    <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
                         aria-label="Instagram"><img src="assets/icons/instagram-legible-ledgers.svg"
                             alt="Legible Ledgers on Instagram" loading="lazy"></a>
-                    <a href="javascript:void(0)" href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
+                    <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
                         rel="noopener" aria-label="LinkedIn"><img src="assets/icons/linkedin-legible-ledgers.svg"
                             alt="Legible Ledgers on LinkedIn" loading="lazy"></a>
                 </div>
@@ -447,40 +447,17 @@
     <script src="/scripts/blackfriday.js" defer></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const CALENDLY_URL = 'https://calendly.com/legibleledgers/clarity-call';
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleciona todos os botões com a classe .clarity-call-btn
+            const buttons = document.querySelectorAll(".clarity-call-btn");
 
-            function openCalendly(e) {
-                if (e && typeof e.preventDefault === 'function') e.preventDefault();
-                if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
-                    try {
-                        Calendly.initPopupWidget({ url: CALENDLY_URL });
-                    } catch (err) {
-                        window.open(CALENDLY_URL, '_blank', 'noopener');
-                    }
-                } else {
-                    window.open(CALENDLY_URL, '_blank', 'noopener');
-                }
-                return false;
-            }
-
-            // Select CTA elements: .btn, native buttons, and any element already marked .clarity-call-btn
-            const ctas = Array.from(document.querySelectorAll('.btn, button, .clarity-call-btn'));
-
-            ctas.forEach(el => {
-                // attach click
-                el.addEventListener('click', openCalendly);
-
-                // if it's an anchor without href, make it keyboard-accessible
-                if (el.tagName && el.tagName.toLowerCase() === 'a' && !el.hasAttribute('href')) {
-                    el.setAttribute('role', 'button');
-                    el.setAttribute('tabindex', '0');
-                    el.addEventListener('keydown', function (ev) {
-                        if (ev.key === 'Enter' || ev.key === ' ') {
-                            openCalendly(ev);
-                        }
+            buttons.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    Calendly.initPopupWidget({
+                        url: "https://calendly.com/legibleledgers/clarity-call"
                     });
-                }
+                    return false;
+                });
             });
         });
     </script>
