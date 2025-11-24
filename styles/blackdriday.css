@@ -89,6 +89,7 @@ h6 {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1rem !important;
 }
 
 .btn.primary {
@@ -281,7 +282,7 @@ ul {
     top: 0;
     right: 0;
     height: 100vh;
-    width: 320px;
+    width: 85%;
     max-width: 90%;
     background: var(--joy-500);
     box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
@@ -305,7 +306,7 @@ ul {
     text-decoration: none;
     font-weight: 700;
     font-family: var(--font-body);
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
 .mobile-menu-social-icons {
@@ -317,8 +318,8 @@ ul {
 
 .mobile-menu-social-icons a img {
     display: block;
-    width: 56px;
-    height: 56px;
+    width: 34px;
+    height: 34px;
     margin-right: 12px;
     transition: filter 0.3s, transform 0.2s;
 }
@@ -457,7 +458,7 @@ ul {
 .offer-box h3 {
     margin: 16px auto;
     font-family: var(--font-display);
-    font-size: 2rem;
+    font-size: 2.25rem;
     color: var(--black-900);
     line-height: 1.1;
     text-align: center;
@@ -590,7 +591,7 @@ ul {
 
 .diagnostic h2 {
     font-family: var(--font-display);
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     margin: 1rem 0rem 1rem;
     color: var(--black-900);
 }
@@ -621,7 +622,7 @@ ul {
     font-style: italic;
     font-weight: 400;
     text-align: left;
-    margin: 4rem 0rem 2rem;
+    margin: 4rem 0rem 1rem;
 }
 
 .diagnostic .btn {
@@ -651,7 +652,7 @@ ul {
     flex: 1;
     font-family: var(--font-display);
     color: var(--black-900);
-    font-size: 2rem;
+    font-size: 2.25rem;
     width: 100%;
     margin: 0;
     line-height: 1.1;
@@ -720,8 +721,7 @@ ul {
 .why h2 {
     flex: 1;
     font-family: var(--font-display);
-    font-size: 1.75rem;
-    margin: 0;
+    font-size: 3rem;
     color: var(--black-900);
     text-align: center;
     margin-bottom: 8px;
@@ -785,7 +785,7 @@ ul {
 
 .unlock h2 {
     font-family: var(--font-display);
-    font-size: 1.75rem;
+    font-size: 2.25rem;
     color: var(--black-900);
     margin: 0;
     margin-bottom: 32px;
