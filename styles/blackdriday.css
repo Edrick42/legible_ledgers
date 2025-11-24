@@ -284,9 +284,9 @@ ul {
 }
 
 .menu-toggle .hamburger {
-    width: 44px;
+    width: 22px;
     height: 2px;
-    background: var(--white-000);
+    background: var(--black-900);
     display: block;
     position: relative;
     margin-right: 1rem;
@@ -299,15 +299,15 @@ ul {
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--white-000);
+    background: var(--black-900);
 }
 
 .menu-toggle .hamburger::before {
-    top: -8px
+    top: -7px
 }
 
 .menu-toggle .hamburger::after {
-    top: 8px
+    top: 7px
 }
 
 /* Mobile nav panel */

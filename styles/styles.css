@@ -454,7 +454,7 @@ br {
     text-decoration: none;
     letter-spacing: 0.5px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
         0 1px 2px rgba(0, 0, 0, 0.08);
 }
@@ -981,6 +981,7 @@ br {
 }
 
 .comparison-card {
+    font-size: 1.25rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
         0 1px 2px rgba(0, 0, 0, 0.08);
 }
