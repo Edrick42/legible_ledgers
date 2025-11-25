@@ -565,6 +565,9 @@ br {
     max-width: 90%;
     margin: 2rem auto;
     text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .blackfriday-hero .offer-box > a,
