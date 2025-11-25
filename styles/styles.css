@@ -556,6 +556,7 @@ br {
 
 .blackfriday-hero .container {
     margin: 0;
+    padding: 0 1rem;
 }
 
 .blackfriday-hero .container .btn {
