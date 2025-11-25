@@ -286,7 +286,7 @@ ul {
 .menu-toggle .hamburger {
     width: 22px;
     height: 2px;
-    background: var(--black-900);
+    background: var(--white-000);
     display: block;
     position: relative;
     margin-right: 1rem;
@@ -299,7 +299,7 @@ ul {
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--black-900);
+    background: var(--white-000);
 }
 
 .menu-toggle .hamburger::before {
