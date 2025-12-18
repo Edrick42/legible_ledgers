@@ -1133,7 +1133,7 @@ br {
 
 .services-bottom h1 {
     font-family: var(--font-body);
-    font-size: 4rem;
+    font-size: 2.75rem;
     color: var(--black-900);
     font-weight: 700;
     margin: 0;
@@ -1142,7 +1142,7 @@ br {
 
 .services-bottom h2 {
     font-family: var(--font-display);
-    font-size: 4.25rem;
+    font-size: 3rem;
     color: var(--black-900);
     font-weight: 600;
     margin: 0;
@@ -1284,7 +1284,7 @@ br {
     display: flex;
     gap: 2rem;
     scroll-snap-type: x mandatory;
-    padding: 2rem 0;
+    padding: 0;
     -webkit-overflow-scrolling: touch;
     overflow-x: auto;
     scrollbar-width: none;
@@ -1299,6 +1299,7 @@ br {
 }
 
 .testimonials h1 {
+    font-size: 2.5rem;
     margin: 0;
     margin-top: 4rem;
     margin-bottom: 1rem;
@@ -2106,6 +2107,14 @@ br {
         gap: 8px;
         font-size: 1.5rem;
     }
+
+    .services-bottom h1 {
+        font-size: 4rem;
+    }
+
+    .services-bottom h2 {
+        font-size: 4.25rem;
+    }
     
     .comparison-container {
         display: flex;
@@ -2149,6 +2158,7 @@ br {
     }
 
     .testimonials h1 {
+        font-size: 3.2rem;
         margin: 0;
         margin-top: 2rem;
         padding: 2rem 5rem 0rem;
@@ -2156,7 +2166,8 @@ br {
 
     .testimonials p {
         margin: 0;
-        width: 50%;
+        margin-top: 1rem;
+        width: 40%;
     }
 
     .testimonials-card {
@@ -2193,6 +2204,11 @@ br {
 
     .testimonial-btn.next {
     right: -64px;
+    }
+ 
+     
+    .testimonials-carousel {
+        padding: 2rem 0;
     }
 
     .contact-us {
