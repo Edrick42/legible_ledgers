@@ -1402,7 +1402,7 @@ br {
   font-size: 1rem;
   cursor: pointer;
 
-  display: grid;
+  display: none;
   place-items: center;
 
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -2180,6 +2180,7 @@ br {
     }
 
     .testimonial-btn {
+        display: grid;
         width: 56px;
         height: 56px;
         font-size: 2rem;
