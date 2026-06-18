@@ -1,10 +1,15 @@
-// Small enhancements: smooth scroll for internal links and focus-visible class polyfill
+/* Home page behavior: fixed header on scroll, testimonials carousel,
+   Calendly CTA wiring, favicon initialization. Shared mobile-menu / smooth-scroll
+   logic lives in common.js. */
 (function () {
-  // Header fixed on scroll
+  'use strict';
+
+  /* ---------- Fixed header on scroll ---------- */
   const header = document.querySelector('.site-header');
-  const scrollThreshold = 100; // pixels scrolled before header becomes fixed
+  const scrollThreshold = 100;
 
   function checkScroll() {
+    if (!header) return;
     if (window.scrollY > scrollThreshold) {
       header.classList.add('fixed');
     } else {
@@ -13,126 +18,48 @@
   }
 
   window.addEventListener('scroll', checkScroll);
-  checkScroll(); // Check initial scroll position
-  // Smooth scroll for anchor links with header offset and reduced-motion support
-  function scrollToElementWithOffset(target, smooth = true) {
-    if (!target) return;
-    const headerHeight = header ? header.offsetHeight : 0;
-    const gap = 8; // small gap so content isn't flush against header
-    const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - gap;
+  checkScroll();
 
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (prefersReduced) {
-      window.scrollTo(0, Math.round(top));
-    } else {
-      window.scrollTo({ top: Math.round(top), behavior: smooth ? 'smooth' : 'auto' });
+  /* ---------- Testimonials carousel ---------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    const carousel = document.querySelector('.testimonials-carousel');
+    const nextBtn = document.querySelector('.testimonial-btn.next');
+    const prevBtn = document.querySelector('.testimonial-btn.prev');
+    if (!carousel || !nextBtn || !prevBtn) return;
+
+    function scrollToNext(direction) {
+      const card = carousel.querySelector('.testimonials-card');
+      if (!card) return;
+      const gap = parseInt(getComputedStyle(carousel).gap, 10) || 0;
+      const scrollAmount = card.offsetWidth + gap;
+      carousel.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
     }
 
-    try {
-      target.focus({ preventScroll: true });
-    } catch (err) {
-      // some elements may not accept focus
-    }
-  }
-
-  document.addEventListener('click', function (e) {
-    const a = e.target.closest('a[href^="#"]');
-    if (!a) return;
-    const href = a.getAttribute('href');
-    if (!href || href === '#') return;
-
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-
-      // close mobile menu if open
-      if (mobileMenu && mobileMenu.classList.contains('open')) closeMobileMenu();
-
-      // perform scroll with header offset
-      scrollToElementWithOffset(target, true);
-
-      // update URL hash without jumping
-      history.replaceState(null, '', href);
-    }
+    nextBtn.addEventListener('click', function () { scrollToNext(1); });
+    prevBtn.addEventListener('click', function () { scrollToNext(-1); });
   });
 
-  // If page loaded with a hash (direct link), scroll to it after initial layout
-  window.addEventListener('load', function () {
-    if (location.hash) {
-      const target = document.querySelector(location.hash);
-      // delay slightly to allow any layout changes
-      setTimeout(function () {
-        scrollToElementWithOffset(target, false);
-      }, 40);
-    }
-  });
+  /* ---------- Calendly CTA buttons ---------- */
+  document.addEventListener('DOMContentLoaded', function () {
+    const ctas = document.querySelectorAll('.clarity-call-btn');
+    if (!ctas.length) return;
 
-  // Basic focus-visible: add class when using keyboard
-  function handleFirstTab(e) {
-    if (e.key === 'Tab') {
-      document.body.classList.add('using-keyboard');
-      window.removeEventListener('keydown', handleFirstTab);
-    }
-  }
-  window.addEventListener('keydown', handleFirstTab);
+    const calendlyUrl = 'https://calendly.com/legibleledgers/clarity-call';
 
-  // Mobile menu toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileOverlay = document.querySelector('.mobile-nav-overlay');
-
-  function openMobileMenu() {
-    menuToggle.setAttribute('aria-expanded', 'true');
-    mobileMenu.classList.add('open');
-    mobileMenu.setAttribute('aria-hidden', 'false');
-    mobileOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMobileMenu() {
-    menuToggle.setAttribute('aria-expanded', 'false');
-    mobileMenu.classList.remove('open');
-    mobileMenu.setAttribute('aria-hidden', 'true');
-    mobileOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-    menuToggle.focus();
-  }
-
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function () {
-      const open = menuToggle.getAttribute('aria-expanded') === 'true';
-      if (open) closeMobileMenu(); else openMobileMenu();
+    ctas.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        try {
+          if (window.Calendly && typeof window.Calendly.initPopupWidget === 'function') {
+            window.Calendly.initPopupWidget({ url: calendlyUrl });
+          } else {
+            window.open(calendlyUrl, '_blank', 'noopener');
+          }
+        } catch (err) {
+          window.open(calendlyUrl, '_blank', 'noopener');
+        }
+      });
     });
-  }
-
-  if (mobileOverlay) {
-    mobileOverlay.addEventListener('click', closeMobileMenu);
-  }
-
-  // close on escape
-  window.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      if (mobileMenu && mobileMenu.classList.contains('open')) closeMobileMenu();
-    }
   });
+
 })();
-
-document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector(".testimonials-carousel");
-  const nextBtn = document.querySelector(".testimonial-btn.next");
-  const prevBtn = document.querySelector(".testimonial-btn.prev");
-
-  function scrollToNext(direction = 1) {
-    const card = carousel.querySelector(".testimonials-card");
-    const gap = parseInt(getComputedStyle(carousel).gap) || 0;
-    const scrollAmount = card.offsetWidth + gap;
-
-    carousel.scrollBy({
-      left: scrollAmount * direction,
-      behavior: "smooth"
-    });
-  }
-
-  nextBtn.addEventListener("click", () => scrollToNext(1));
-  prevBtn.addEventListener("click", () => scrollToNext(-1));
-});

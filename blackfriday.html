@@ -4,12 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Legible Ledgers Week 2025 – Black Friday Offers</title>
-    <meta name="description"
-        content="Black Friday bookkeeping offers. Save $1,150 on QuickBooks Cleanup, Diagnostic Review, and Monthly Bookkeeping.">
-
-    <!-- Link your main CSS here -->
-    <link rel="stylesheet" href="styles.css">
     <title>Black Friday Bookkeeping Deals | Legible Ledgers</title>
     <meta name="description"
         content="Black Friday bookkeeping deals from Legible Ledgers. Save big on QuickBooks Cleanup and monthly bookkeeping packages. Limited-time offers for small business owners." />
@@ -29,6 +23,11 @@
     <meta name="twitter:description"
         content="Limited-time Black Friday bookkeeping offers. Clean up your books and save." />
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg?v=3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,8 +39,9 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
-    <link rel="stylesheet" href="./styles/blackdriday.css">
-
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/blackfriday.css">
 </head>
 
 <body>
@@ -58,7 +58,6 @@
             </div>
             <nav class="main-nav" aria-label="Main navigation">
                 <a href="index.html">Home</a>
-                <!--a href="#about">About Us</a-->
                 <a href="blackfriday.html" class="nav-blackfriday" aria-current="page">Black Friday</a>
                 <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener"
                     aria-label="Instagram">
@@ -74,7 +73,7 @@
 
             <!-- Mobile menu toggle -->
             <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <spam class="hamburger" aria-hidden="true"></spam>
+                <span class="hamburger" aria-hidden="true"></span>
             </button>
 
             <!-- Mobile nav panel (slides from right) -->
@@ -83,12 +82,12 @@
                     <a href="index.html">Home</a>
                     <a href="blackfriday.html" class="nav-blackfriday" aria-current="page">Black Friday</a>
                     <div class="mobile-menu-social-icons">
-                        <a href="https://www.instagram.com/legibleledgers/" target="_blank" aria-label="Instagram">
+                        <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener" aria-label="Instagram">
                             <img src="assets/icons/instagram-legible-ledgers.svg" alt="Legible Ledgers on Instagram"
                                 loading="lazy">
                         </a>
                         <a href="https://www.linkedin.com/company/legible-ledgers-bookkeeping-llc/" target="_blank"
-                            aria-label="LinkedIn">
+                            rel="noopener" aria-label="LinkedIn">
                             <img src="assets/icons/linkedin-legible-ledgers.svg" alt="Legible Ledgers on LinkedIn"
                                 loading="lazy">
                         </a>
@@ -138,12 +137,10 @@
 
     <div id="diagnostic-mobile" class="book-your-diagnostic-review">
         <h2>Book your diagnostic review</h2>
-        <!-- Calendly inline widget begin -->
+        <!-- Calendly inline widget -->
         <div class="calendly-inline-widget"
             data-url="https://calendly.com/legibleledgers/clarity-call?background_color=ffffff&primary_color=1A1A1A"
             style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
     </div>
 
     <!-- Diagnostic  -->
@@ -171,12 +168,10 @@
 
     <div id="diagnostic-desktop" class="book-your-diagnostic-review">
         <h2>Book your diagnostic review</h2>
-        <!-- Calendly inline widget begin -->
+        <!-- Calendly inline widget -->
         <div class="calendly-inline-widget"
             data-url="https://calendly.com/legibleledgers/clarity-call?background_color=ffffff&primary_color=1A1A1A"
             style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
     </div>
 
     <!-- What’s Included -->
@@ -335,12 +330,10 @@
 
     <div class="book-your-diagnostic-review">
         <h2>Start My Diagnostic!</h2>
-        <!-- Calendly inline widget begin -->
+        <!-- Calendly inline widget -->
         <div class="calendly-inline-widget"
             data-url="https://calendly.com/legibleledgers/clarity-call?background_color=ffffff&primary_color=1A1A1A"
             style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
     </div>
 
     <!-- FAQ -->
@@ -436,60 +429,22 @@
             </div>
 
             <div class="footer-certifications">
-                <img src="assets/images/quick-books-legible-ledgers.png"
-                    alt="QuickBooks Certified badge — Legible Ledgers" loading="lazy">
-                <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member badge — Legible Ledgers"
-                    loading="lazy">
+                <picture>
+                    <source srcset="assets/images/quick-books-legible-ledgers.webp" type="image/webp">
+                    <img src="assets/images/quick-books-legible-ledgers.png"
+                        alt="QuickBooks Certified badge — Legible Ledgers" loading="lazy" width="120" height="160">
+                </picture>
+                <picture>
+                    <source srcset="assets/images/aipb-legible-ledgers.webp" type="image/webp">
+                    <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member badge — Legible Ledgers"
+                        loading="lazy" width="120" height="160">
+                </picture>
             </div>
         </div>
     </footer>
 
-    <script src="/scripts/blackfriday.js" defer></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Seleciona todos os botões com a classe .clarity-call-btn
-            const buttons = document.querySelectorAll(".clarity-call-btn");
-
-            buttons.forEach((btn) => {
-                btn.addEventListener("click", function () {
-                    Calendly.initPopupWidget({
-                        url: "https://calendly.com/legibleledgers/clarity-call"
-                    });
-                    return false;
-                });
-            });
-        });
-    </script>
-
-    <script>
-        // FAQ toggle: accessible expand/collapse
-        (function () {
-            document.addEventListener('DOMContentLoaded', function () {
-                const buttons = Array.from(document.querySelectorAll('.faq-question'));
-                buttons.forEach(btn => {
-                    const id = btn.getAttribute('aria-controls');
-                    const answer = document.getElementById(id);
-                    if (!answer) return;
-                    // initialize collapsed
-                    answer.classList.remove('open');
-                    btn.setAttribute('aria-expanded', 'false');
-
-                    btn.addEventListener('click', function () {
-                        const expanded = btn.getAttribute('aria-expanded') === 'true';
-                        if (expanded) {
-                            btn.setAttribute('aria-expanded', 'false');
-                            answer.classList.remove('open');
-                        } else {
-                            btn.setAttribute('aria-expanded', 'true');
-                            answer.classList.add('open');
-                        }
-                    });
-                    // allow toggle via Enter/Space by default since button element handles it
-                });
-            });
-        })();
-    </script>
+    <script src="scripts/common.js" defer></script>
+    <script src="scripts/blackfriday.js" defer></script>
 </body>
 
 </html>

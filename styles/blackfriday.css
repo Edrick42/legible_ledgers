@@ -1,98 +1,8 @@
-/* Black Friday landing styles for Legible Ledgers
-   Place in: /styles/blackfriday.css
-   Depends only on web-safe fonts + your Google fonts already loaded site-wide.
-*/
-
-/* ==========================
-   DESIGN TOKENS
-   ========================== */
-:root {
-    /* Primary palette - Joyful Yellow */
-    --joy-500: #FFDA03;
-    /* accent */
-    --joy-400: #ffe05f;
-    --joy-300: #ffeda1;
-    --joy-200: #fff6d2;
-
-    /* Neutrals */
-    --white-000: #FFFFFF;
-    --white-100: #F4F4F4;
-    --black-400: #666666;
-    --black-900: #1A1A1A;
-    --black-700: #333333;
-
-    /* Secondary palettes (use sparingly) */
-    --blue-700: #4069AA;
-    --blue-500: #5B86D0;
-    --blue-400: #A9C6F0;
-    --blue-300: #D0DEF2;
-
-    --green-600: #6FC35F;
-    --green-300: #B0D4AC;
-    --green-200: #D7EBD5;
-
-    --red-700: #CA532D;
-    --red-300: #F0B7A4;
-    --red-200: #F6DDD4;
-
-    /* Layout tokens */
-    --container-max: 1200px;
-    --radius-lg: 36px;
-    --radius-md: 18px;
-
-    /* Escala de espaçamento baseada em 8px */
-    --space-1: 0.5rem;
-    /* 8px */
-    --space-2: 1rem;
-    /* 16px */
-    --space-3: 1.5rem;
-    /* 24px */
-    --space-4: 2rem;
-    /* 32px */
-    --space-5: 3rem;
-    /* 48px */
-
-    /* Tipografia fluida */
-    --font-size-base: clamp(1rem, 1vw + 0.5rem, 1.125rem);
-    --font-size-lg: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
-    --font-size-xl: clamp(2rem, 3vw + 1rem, 3rem);
-
-    --font-display: 'Platypi', 'Georgia', 'Times New Roman', serif;
-    --font-body: 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-}
-
-
-html {
-    height: 100%;
-    scroll-padding-top: 5rem;
-    /* Compensar a altura do header fixo */
-    scroll-behavior: smooth;
-}
-
-body {
-    height: 100%;
-    margin: 0;
-    font-family: var(--font-body);
-    color: var(--black-900);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-section {
-    width: 100%;
-    /* ocupa toda a largura do pai (normalmente a tela) */
-    /* use percentuais em vez de 100vw para evitar overflow causado pela barra de rolagem */
-    max-width: 100%;
-    /* permitir que a section expanda verticalmente com o conteÃºdo */
-    /* overflow-x: hidden;  impede filhos de â€œvazarâ€ lateralmente */
-    /* overflow-y: visible; garante que nÃ£o apareÃ§a scroll interno vertical */
-    box-sizing: border-box;
-    /* padding nÃ£o aumenta a largura total */
-}
-
-section * {
-    max-width: 100%;
-    box-sizing: border-box;
-}
+/* =========================================================
+   BLACK FRIDAY LANDING — page-specific styles.
+   Design tokens, resets, base typography, and shared utilities
+   live in common.css and load before this file.
+   ========================================================= */
 
 /* Make headings stand out on dark background */
 h1,
@@ -107,32 +17,24 @@ h6 {
 
 .btn {
     display: flex;
-    /* mobile-first button sizing: match main site proportions */
     padding: 1rem 1rem;
     border-radius: 35px;
     text-decoration: none;
     letter-spacing: 0.5px;
     font-weight: 700;
-    /* use the design token for base font-size (mobile-friendly) */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
     font-family: var(--font-body);
-
-    /* center button content (text + icons) */
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1rem !important;
+    font-size: 1rem;
 }
 
 .btn.primary {
     margin: 32px 0px;
     max-width: 450px;
-    text-align: center;
-    justify-content: center;
     background: var(--joy-500);
     color: var(--black-900);
-    /* subtle interactive transition */
     transition: transform 180ms cubic-bezier(.2, .8, .2, 1),
         box-shadow 180ms cubic-bezier(.2, .8, .2, 1),
         background-color 180ms ease;
@@ -142,7 +44,7 @@ h6 {
 
 .btn.primary:hover,
 .btn.primary:focus {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+    box-shadow: var(--shadow-md);
     transition: all 0.2s ease;
     background: var(--joy-400);
     transform: scale(1.045) translateY(-2px);
@@ -150,7 +52,6 @@ h6 {
 }
 
 .btn.primary:active {
-    /* gentle press feedback */
     transform: scale(0.985);
     transition-duration: 360ms;
 }
@@ -160,43 +61,21 @@ h6 {
     outline-offset: 4px;
 }
 
-.btn-primary,
-.btn-primary {
-    background: var(--joy-500);
-    color: var(--black-900);
-}
-
-.btn-secondary,
-.btn-secondary {
-    background: transparent;
-    color: var(--joy-500);
-}
-
 .btn-primary {
     background: var(--black-900);
     color: var(--white-000);
-    transition: transform .16s ease, box-shadow .16s ease;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-secondary {
     background: transparent;
     color: var(--black-900);
     border: 2px solid var(--black-900);
-}
-
-body {
-    margin: 0;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
 }
 
 .site-header {
@@ -224,13 +103,13 @@ ul {
 
 .brand-link {
     display: inline-block;
-    /* permite tamanho natural do conteÃºdo */
+    /* permite tamanho natural do conteúdo */
     position: relative;
     z-index: 10;
     /* garante que fique acima de outros elementos */
     cursor: pointer;
     text-decoration: none;
-    /* remove sublinhado (caso padrÃ£o de <a>) */
+    /* remove sublinhado (caso padrão de <a>) */
 }
 
 .logo {
@@ -310,27 +189,9 @@ ul {
     top: 7px
 }
 
-/* Mobile nav panel */
+/* Mobile nav panel — width is page-specific (70% on Black Friday) */
 .mobile-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
     width: 70%;
-    max-width: 90%;
-    background: var(--joy-500);
-    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
-    transform: translateX(110%);
-    transition: transform 320ms ease;
-    z-index: 1200;
-    padding: 48px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.mobile-nav.open {
-    transform: translateX(0)
 }
 
 .mobile-nav-inner a {
@@ -343,38 +204,11 @@ ul {
     font-size: 1.5rem;
 }
 
-.mobile-menu-social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding: 12px 0;
-}
-
 .mobile-menu-social-icons a img {
-    display: block;
     width: 34px;
     height: 34px;
     margin-right: 12px;
     transition: filter 0.3s, transform 0.2s;
-}
-
-.mobile-menu-social-icons img {
-    display: block;
-}
-
-.mobile-nav-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 220ms ease;
-    z-index: 1100;
-}
-
-.mobile-nav-overlay.open {
-    opacity: 1;
-    pointer-events: auto
 }
 
 .hero {
@@ -924,8 +758,7 @@ ul {
     flex-direction: column;
     margin: 0 auto;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .how .container-card .step-card h4 {
@@ -1022,8 +855,7 @@ ul {
     scroll-snap-align: center;
     margin: 1rem auto;
     height: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .testimonials-card h3 {
@@ -1098,7 +930,6 @@ ul {
     border: none;
     background-color: var(--joy-500);
     color: var(--black-900);
-    max-height: 0rem 0rem 2rem;
     margin: 2rem 0rem;
 }
 
@@ -1304,7 +1135,7 @@ ul {
         right: 0;
         background: var(--joy-500);
         border-radius: 0 0 45px 45px;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-header);
     }
 
     .header-inner {
@@ -1323,21 +1154,21 @@ ul {
 
     .brand-link {
         display: inline-block;
-        /* permite tamanho natural do conteÃºdo */
+        /* permite tamanho natural do conteúdo */
         position: relative;
         z-index: 10;
         /* garante que fique acima de outros elementos */
         cursor: pointer;
         text-decoration: none;
-        /* remove sublinhado (caso padrÃ£o de <a>) */
+        /* remove sublinhado (caso padrão de <a>) */
     }
 
     .logo {
         width: 15rem;
-        /* ajuste o tamanho conforme necessÃ¡rio */
+        /* ajuste o tamanho conforme necessário */
         height: 3rem;
         background-size: contain;
-        /* mantÃ©m proporÃ§Ã£o */
+        /* mantém proporção */
         display: flex;
         justify-content: center;
         align-items: center;

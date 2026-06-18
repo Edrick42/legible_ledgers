@@ -1,144 +1,12 @@
 /* =========================================================
-   DESIGN TOKENS E FONTES
+   HOME PAGE — page-specific styles.
+   Design tokens, resets, base typography, and shared utilities
+   live in common.css and load before this file.
    ========================================================= */
-:root {
-    /* Primary palette - Joyful Yellow */
-    --joy-500: #FFDA03;
-    /* accent */
-    --joy-400: #ffe05f;
-    --joy-300: #ffeda1;
-    --joy-200: #fff6d2;
-
-    /* Neutrals */
-    --white-000: #FFFFFF;
-    --white-100: #F4F4F4;
-    --black-400: #666666;
-    --black-900: #1A1A1A;
-    --black-700: #333333;
-
-    /* Secondary palettes (use sparingly) */
-    --blue-700: #4069AA;
-    --blue-500: #5B86D0;
-    --blue-400: #A9C6F0;
-    --blue-300: #D0DEF2;
-
-    --green-600: #6FC35F;
-    --green-300: #B0D4AC;
-    --green-200: #D7EBD5;
-
-    --red-700: #CA532D;
-    --red-300: #F0B7A4;
-    --red-200: #F6DDD4;
-
-    /* Layout tokens */
-    --container-max: 1200px;
-    --radius-lg: 36px;
-    --radius-md: 18px;
-
-    /* Escala de espaçamento baseada em 8px */
-    --space-1: 0.5rem;  /* 8px */
-    --space-2: 1rem;    /* 16px */
-    --space-3: 1.5rem;  /* 24px */
-    --space-4: 2rem;    /* 32px */
-    --space-5: 3rem;    /* 48px */
-
-    /* Tipografia fluida */
-    --font-size-base: clamp(1rem, 1vw + 0.5rem, 1.125rem);
-    --font-size-lg: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
-    --font-size-xl: clamp(2rem, 3vw + 1rem, 3rem);
-}
-
-html {
-  font-size: 16px; /* base desktop */
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 14px; /* tudo diminui proporcionalmente */
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 12px;
-  }
-}
-
-/* Font stacks */
-:root {
-    --font-display: 'Platypi', 'Georgia', 'Times New Roman', serif;
-    --font-body: 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-}
-
-/* =========================================================
-   GLOBALS
-   ========================================================= */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    height: 100%;
-    scroll-padding-top: 5rem;
-    /* Compensar a altura do header fixo */
-    scroll-behavior: smooth;
-}
-
-body {
-    height: 100%;
-    margin: 0;
-    font-family: var(--font-body);
-    color: var(--black-900);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-section {
-    width: 100%;
-    /* ocupa toda a largura do pai (normalmente a tela) */
-    /* use percentuais em vez de 100vw para evitar overflow causado pela barra de rolagem */
-    max-width: 100%;
-    /* permitir que a section expanda verticalmente com o conteÃºdo */
-    /* overflow-x: hidden;  impede filhos de â€œvazarâ€ lateralmente */
-    /* overflow-y: visible; garante que nÃ£o apareÃ§a scroll interno vertical */
-    box-sizing: border-box;
-    /* padding nÃ£o aumenta a largura total */
-}
-
-section * {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-.container {
-    margin: 0rem auto 1rem auto;
-}
 
 .card-image {
     border-radius: 36px;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    line-height: 1.15;
-    letter-spacing: -1px;
-}
-
-p {
-    line-height: 1.5;
-}
-
-br {
-    display: block;
-    margin-bottom: 1rem;
-    /* controla o “tamanho” do salto */
-    content: "";
-}
-
 /* =========================================================
    HEADER
    ========================================================= */
@@ -159,7 +27,7 @@ br {
     right: 0;
     background: var(--joy-500);
     border-radius: 0 0 45px 45px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-header);
 }
 
 .header-inner {
@@ -178,22 +46,22 @@ br {
 
 .brand-link {
     display: inline-block;
-    /* permite tamanho natural do conteÃºdo */
+    /* permite tamanho natural do conteúdo */
     position: relative;
     z-index: 10;
     /* garante que fique acima de outros elementos */
     cursor: pointer;
     text-decoration: none;
-    /* remove sublinhado (caso padrÃ£o de <a>) */
+    /* remove sublinhado (caso padrão de <a>) */
 }
 
 
 .logo {
     width: 15rem;
-    /* ajuste o tamanho conforme necessÃ¡rio */
+    /* ajuste o tamanho conforme necessário */
     height: 3rem;
     background-size: contain;
-    /* mantÃ©m proporÃ§Ã£o */
+    /* mantém proporção */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,7 +120,7 @@ br {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    box-shadow: var(--shadow-lg);
     transition: transform 160ms ease, box-shadow 160ms ease;
 }
 .main-nav a.nav-blackfriday:hover,
@@ -321,27 +189,9 @@ br {
     top: 7px
 }
 
-/* Mobile nav panel */
+/* Mobile nav panel — width is home-specific (320px fixed) */
 .mobile-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
     width: 320px;
-    max-width: 90%;
-    background: var(--joy-500);
-    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
-    transform: translateX(110%);
-    transition: transform 320ms ease;
-    z-index: 1200;
-    padding: 48px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.mobile-nav.open {
-    transform: translateX(0)
 }
 
 .mobile-nav-inner a {
@@ -354,38 +204,11 @@ br {
     font-size: 1.25rem;
 }
 
-.mobile-menu-social-icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    padding: 12px 0;
-}
-
 .mobile-menu-social-icons a img {
-    display: block;
     width: 32px;
     height: 32px;
     margin-right: 12px;
     transition: filter 0.3s, transform 0.2s;
-}
-
-.mobile-menu-social-icons img {
-    display: block;
-}
-
-.mobile-nav-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 220ms ease;
-    z-index: 1100;
-}
-
-.mobile-nav-overlay.open {
-    opacity: 1;
-    pointer-events: auto
 }
 
 /* =========================================================
@@ -447,8 +270,7 @@ br {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .hero-card .logo {
@@ -643,11 +465,6 @@ br {
 }
 /* END: Black Friday hero styles (scoped) */
 
-.calendly-badge-widget {
-    flex: 1;
-    position: relative !important;
-}
-
 .display {
     font-family: var(--font-display);
     font-size: 3rem;
@@ -672,8 +489,7 @@ br {
     letter-spacing: 0.5px;
     font-weight: 700;
     font-size: 1.2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 
@@ -695,7 +511,7 @@ br {
 
 .btn.primary:hover,
 .btn.primary:focus {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+    box-shadow: var(--shadow-md);
     transition: all 0.2s ease;
     background: var(--joy-400);
     transform: scale(1.045) translateY(-2px);
@@ -799,18 +615,6 @@ br {
     }
 }
 
-/* Utility: visually hidden */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0
-}
-
 .cta {
     text-align: center;
     padding: 1rem;
@@ -845,8 +649,7 @@ br {
     align-items: center;
     justify-content: center;
     margin: 1rem 0rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .cta-card-content {
@@ -947,8 +750,7 @@ br {
     display: flex;
     flex-direction: column;
     text-align: left;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .cta-last-bottom-card h4 {
@@ -1037,6 +839,126 @@ br {
     .about-row .marquee a.btn:nth-child(n+5) {
         display: none;
     }
+}
+
+/* =========================================================
+   OUR SERVICES — detailed service cards
+   ========================================================= */
+.our-services {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.our-services-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.our-services-title {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--black-900);
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
+}
+
+.our-services-intro {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--black-700);
+    margin: 0;
+}
+
+.our-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.service-card {
+    border-radius: 32px;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.service-card--joy-500 { background-color: var(--joy-500); }
+.service-card--joy-400 { background-color: var(--joy-400); }
+.service-card--joy-300 { background-color: var(--joy-300); }
+.service-card--joy-200 { background-color: var(--joy-200); }
+
+.service-card-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--black-900);
+    margin: 0;
+    line-height: 1.15;
+}
+
+.service-card-tagline {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--black-700);
+    margin: 0;
+}
+
+.service-card-lead {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--black-900);
+    margin: 0.5rem 0 0;
+}
+
+.service-card p {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--black-900);
+    margin: 0;
+}
+
+.service-card-list-title {
+    font-family: var(--font-body);
+    font-weight: 700;
+    margin-top: 0.5rem !important;
+}
+
+.service-card-list {
+    margin: 0 0 0.5rem 1rem;
+    padding: 0;
+    list-style: disc;
+    font-family: var(--font-body);
+    color: var(--black-900);
+}
+
+.service-card-list li {
+    margin: 0.25rem 0;
+    line-height: 1.4;
+}
+
+.service-card-footer {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: var(--black-700);
+    margin-top: 0.5rem !important;
+}
+
+.service-card .btn.primary {
+    margin: 1rem 0 0;
+    background: var(--black-900);
+    color: var(--white-000);
+    align-self: flex-start;
+}
+
+.service-card .btn.primary:hover,
+.service-card .btn.primary:focus {
+    background: var(--black-700);
 }
 
 .services {
@@ -1199,13 +1121,22 @@ br {
 
 .comparison-card {
     font-size: 1.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    border-radius: 24px;
+    max-width: 90%;
+    box-shadow: var(--shadow-sm);
+}
+
+.comparison-card--positive {
+    background-color: var(--green-200);
+}
+
+.comparison-card--negative {
+    background-color: var(--red-200);
 }
 
 .card-image {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .who-we-help {
@@ -1252,8 +1183,24 @@ br {
     border-radius: 32px;
     padding: 1rem 2rem 4rem 2rem;
     margin-top: -3rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
+}
+
+.who-we-help-content--joy-500 {
+    background-color: var(--joy-500);
+}
+
+.who-we-help-content--joy-400 {
+    background-color: var(--joy-400);
+}
+
+.who-we-help-content--joy-300 {
+    background-color: var(--joy-300);
+}
+
+.who-we-help-content--joy-200 {
+    background-color: var(--joy-200);
+    padding-bottom: 2rem;
 }
 
 .who-we-help-content h4 {
@@ -1340,8 +1287,7 @@ br {
     scroll-snap-align: center;
     margin: 1rem auto;
     height: auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-sm);
 }
 
 .testimonials-card h3 {
@@ -1615,6 +1561,31 @@ br {
 
 /* Desktop breakpoint */
 @media (min-width:1024px) {
+    /* our services: 2 columns side-by-side */
+    .our-services {
+        padding: 4rem 2rem;
+        gap: 3rem;
+    }
+
+    .our-services-title {
+        font-size: 4rem;
+    }
+
+    .our-services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: var(--container-max);
+        margin: 0 auto;
+    }
+
+    .service-card {
+        padding: 2.5rem;
+    }
+
+    .service-card-title {
+        font-size: 2.5rem;
+    }
+
     /* offer box */
     .blackfriday-hero .container {
         padding: 2rem 8rem 0rem;

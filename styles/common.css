@@ -1,0 +1,215 @@
+/* =========================================================
+   COMMON — Design tokens, resets, base typography, utilities
+   Shared between index.html and blackfriday.html.
+   ========================================================= */
+
+:root {
+    /* Primary palette - Joyful Yellow */
+    --joy-500: #FFDA03; /* accent */
+    --joy-400: #ffe05f;
+    --joy-300: #ffeda1;
+    --joy-200: #fff6d2;
+
+    /* Neutrals */
+    --white-000: #FFFFFF;
+    --white-100: #F4F4F4;
+    --black-400: #666666;
+    --black-700: #333333;
+    --black-900: #1A1A1A;
+
+    /* Secondary palettes (use sparingly) */
+    --blue-700: #4069AA;
+    --blue-500: #5B86D0;
+    --blue-400: #A9C6F0;
+    --blue-300: #D0DEF2;
+
+    --green-600: #6FC35F;
+    --green-300: #B0D4AC;
+    --green-200: #D7EBD5;
+
+    --red-700: #CA532D;
+    --red-300: #F0B7A4;
+    --red-200: #F6DDD4;
+
+    /* Semantic aliases (used by blackfriday styles) */
+    --text-100: var(--white-100);
+    --accent: var(--joy-500);
+    --yellow-500: var(--joy-500);
+
+    /* Layout tokens */
+    --container-max: 1200px;
+    --radius-lg: 36px;
+    --radius-md: 18px;
+
+    /* 8px-based spacing scale */
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 3rem;
+
+    /* Fluid typography */
+    --font-size-base: clamp(1rem, 1vw + 0.5rem, 1.125rem);
+    --font-size-lg: clamp(1.25rem, 1.5vw + 0.5rem, 1.75rem);
+    --font-size-xl: clamp(2rem, 3vw + 1rem, 3rem);
+
+    /* Shadows (extracted from 30+ repetitions) */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.20);
+    --shadow-lg: 0 6px 18px rgba(0, 0, 0, 0.18);
+    --shadow-header: 0 2px 12px rgba(0, 0, 0, 0.10);
+    --shadow-side: -8px 0 24px rgba(0, 0, 0, 0.12);
+
+    /* Transitions */
+    --transition-fast: 160ms ease;
+    --transition-base: 220ms ease;
+    --transition-slow: 320ms ease;
+
+    /* Font stacks */
+    --font-display: 'Platypi', 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Lexend', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--black-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Lock scroll while mobile menu is open (replaces inline body.style.overflow) */
+body.menu-open {
+    overflow: hidden;
+}
+
+section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+section * {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* =========================================================
+   BASE TYPOGRAPHY
+   ========================================================= */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15;
+    letter-spacing: -1px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+br {
+    display: block;
+    margin-bottom: 1rem;
+    content: "";
+}
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+.container {
+    margin: 0 auto 1rem auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* =========================================================
+   MOBILE NAV — structural rules shared between pages
+   (theme colors stay in each page's stylesheet)
+   ========================================================= */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 90%;
+    background: var(--joy-500);
+    box-shadow: var(--shadow-side);
+    transform: translateX(110%);
+    transition: transform var(--transition-slow);
+    z-index: 1200;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.mobile-nav.open {
+    transform: translateX(0);
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-base);
+    z-index: 1100;
+}
+
+.mobile-nav-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-menu-social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 12px 0;
+}
+
+.mobile-menu-social-icons img {
+    display: block;
+}

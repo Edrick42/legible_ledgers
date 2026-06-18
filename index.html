@@ -11,11 +11,6 @@
   <meta name="description"
     content="Transform financial chaos into clarity. Legible Ledgers specializes in QuickBooks Online cleanup and bookkeeping organization for service-based business owners.">
   <meta name="author" content="Legible Ledgers Bookkeeping">
-  <meta property="og:site_name" content="Legible Ledgers">
-  <meta property="og:locale" content="en_US">
-  <!--meta name="keywords"
-    content="bookkeeping, QuickBooks cleanup, accounting services, financial clarity, Legible Ledgers, QuickBooks Online cleanup, small business bookkeeping, accounting help USA"-->
-  <meta name="author" content="Legible Ledgers Bookkeeping">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.legibleledgers.biz/">
@@ -41,7 +36,7 @@
   <meta name="robots" content="index, follow">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg?v=3" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
@@ -53,6 +48,7 @@
     rel="stylesheet">
 
   <!-- Styles -->
+  <link rel="stylesheet" href="styles/common.css">
   <link rel="stylesheet" href="styles/styles.css">
 
   <!-- Calendly Widget -->
@@ -90,12 +86,9 @@
         </div>
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#">Home</a>
-          <!--a href="#about">About Us</a-->
           <a href="#services">Services</a>
-          <!--a href="#process">Our Process</a-->
           <a href="#testimonials">Testimonials</a>
           <a href="#contact">Contact Us</a>
-          <!--a href="blackfriday.html" class="nav-blackfriday">Black Friday</a-->
           <a href="https://www.instagram.com/legibleledgers/" target="_blank" rel="noopener" aria-label="Instagram">
             <img src="assets/icons/instagram-legible-ledgers.svg" alt="Legible Ledgers on Instagram" loading="lazy">
           </a>
@@ -114,12 +107,9 @@
         <div id="mobile-menu" class="mobile-nav" aria-hidden="true">
           <nav class="mobile-nav-inner" aria-label="Mobile navigation">
             <a href="#">Home</a>
-            <!--a href="#about">About Us</a-->
             <a href="#services">Services</a>
-            <!--a href="#process">Our Process</a-->
             <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact Us</a>
-            <!--a href="blackfriday.html" class="nav-blackfriday">Black Friday</a-->
             <div class="mobile-menu-social-icons">
               <a href="https://www.instagram.com/legibleledgers/" target="_blank" aria-label="Instagram">
                 <img src="assets/icons/instagram-legible-ledgers.svg" alt="Legible Ledgers on Instagram" loading="lazy">
@@ -134,39 +124,6 @@
         <div class="mobile-nav-overlay" tabindex="-1" aria-hidden="true"></div>
       </div>
     </header>
-
-    <!-- BEGIN: Temporary Black Friday hero (copied from blackfriday.html) -->
-    <!--section class="hero blackfriday-hero">
-      <div class="container">
-        <h1>LEGIBLE LEDGERS WEEK 2025</h1>
-        <h2>Enter 2026 With <span>Absolute Financial Clarity</span></h2>
-        <p class="date">November 23rd–28th</p>
-        <p>If you're heading into tax season unsure whether your numbers are accurate, you’re not alone.
-          <br>
-          <span> And you don’t need to continue operating in the dark. </span>
-        </p>
-
-        <a href="javascript:void(0)" id="bf-btn-mobile" class="btn btn-primary mobile clarity-call-btn">BOOK MY DIAGNOSTIC REVIEW</a>
-
-        <div class="offer-box">
-          <div class="offer-box-title">
-            <h3>This week only</h3>
-            <p>Secure your Diagnostic Review for <span>$399</span></p>
-          </div>
-          <div class="offer-box-description">
-            <p>Messy books lead to: <br>
-              <strong>Stress, missed deductions, and <i> costly surprises.</i></strong>
-            </p>
-            <p class="sub-description">Unlock $1,000 in service credits for Cleanup & Monthly Bookkeeping.</p>
-            <div id="countdown" class="countdown-timer">
-            </div>
-          </div>
-
-          <a href="javascript:void(0)" id="bf-btn-desktop" class="btn btn-primary desktop clarity-call-btn">BOOK MY DIAGNOSTIC REVIEW</a>
-        </div>
-      </div>
-    </section-->
-    <!-- END: Temporary Black Friday hero -->
 
     <main class="content-container" role="main" data-content-field="main-content">
       <section class="hero" id="hero">
@@ -193,12 +150,12 @@
 
             <!-- Seu botão -->
             <a class="btn primary clarity-call-btn" role="button"
-              aria-label="Book a Clarity Call with Legible Ledgers">Book a Clarity Call — it’s free</a>
+              aria-label="Book a Clarity Call with Legible Ledgers" href="#contact">Book a Clarity Call — it’s free</a>
 
           </div>
         </div>
 
-        <div class=" hero-card">
+        <div class="hero-card">
           <div class="logo">
             <img src="assets/logo/logo-legible-ledgers.svg" alt="Legible Ledgers logo — bookkeeping clarity"
               loading="lazy">
@@ -278,7 +235,7 @@
             <p class="cta-last-body">
               Because when your books are clear, your choices and your opportunities become even clearer.
             </p>
-            <a class="btn secondary clarity-call-btn">
+            <a class="btn secondary clarity-call-btn" href="#contact">
               Book a Clarity Call — it’s free
             </a>
           </div>
@@ -322,43 +279,144 @@
           <h2 class="about-title">You can count on <i>Legible Ledgers</i> for...</h2>
           <div class="about-row">
             <div class="marquee marquee--ltr" aria-hidden="false">
-              <a class="btn primary clarity-call-btn">Quickbooks Cleanup</a>
-              <a class="btn primary clarity-call-btn">Cash Flow Insights</a>
-              <a class="btn primary clarity-call-btn">Report Optimization</a>
-              <a class="btn primary clarity-call-btn">Account Reconciliation</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Quickbooks Cleanup</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Cash Flow Insights</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Report Optimization</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Account Reconciliation</a>
               <!-- duplicated for seamless looping -->
-              <a class="btn primary clarity-call-btn">Quickbooks Cleanup</a>
-              <a class="btn primary clarity-call-btn">Cash Flow Insights</a>
-              <a class="btn primary clarity-call-btn">Report Optimization</a>
-              <a class="btn primary clarity-call-btn">Account Reconciliation</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Quickbooks Cleanup</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Cash Flow Insights</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Report Optimization</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Account Reconciliation</a>
             </div>
           </div>
           <div class="about-row">
             <div class="marquee marquee--rtl" aria-hidden="false">
-              <a class="btn primary clarity-call-btn">CPA Readiness</a>
-              <a class="btn primary clarity-call-btn">Financial Clarity Sessions</a>
-              <a class="btn primary clarity-call-btn">Process bills payments</a>
-              <a class="btn primary clarity-call-btn">Ongoing Support</a>
+              <a class="btn primary clarity-call-btn" href="#contact">CPA Readiness</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Financial Clarity Sessions</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Process bills payments</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Ongoing Support</a>
               <!-- duplicated for seamless looping -->
-              <a class="btn primary clarity-call-btn">CPA Readiness</a>
-              <a class="btn primary clarity-call-btn">Financial Clarity Sessions</a>
-              <a class="btn primary clarity-call-btn">Process bills payments</a>
-              <a class="btn primary clarity-call-btn">Ongoing Support</a>
+              <a class="btn primary clarity-call-btn" href="#contact">CPA Readiness</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Financial Clarity Sessions</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Process bills payments</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Ongoing Support</a>
             </div>
           </div>
           <div class="about-row">
             <div class="marquee marquee--ltr" aria-hidden="false">
-              <a class="btn primary clarity-call-btn">Monthly journal entries</a>
-              <a class="btn primary clarity-call-btn">Chart Of Accounts Structuring</a>
-              <a class="btn primary clarity-call-btn">Payroll</a>
-              <a class="btn primary clarity-call-btn">Client Profitability Analysis</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Monthly journal entries</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Chart Of Accounts Structuring</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Payroll</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Client Profitability Analysis</a>
               <!-- duplicated for seamless looping -->
-              <a class="btn primary clarity-call-btn">Monthly journal entries</a>
-              <a class="btn primary clarity-call-btn">Chart Of Accounts Structuring</a>
-              <a class="btn primary clarity-call-btn">Payroll</a>
-              <a class="btn primary clarity-call-btn">Client Profitability Analysis</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Monthly journal entries</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Chart Of Accounts Structuring</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Payroll</a>
+              <a class="btn primary clarity-call-btn" href="#contact">Client Profitability Analysis</a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="our-services" id="our-services">
+        <div class="our-services-header">
+          <h2 class="our-services-title">Our Services</h2>
+          <p class="our-services-intro">
+            At Legible Ledgers, we transform financial chaos into clarity. Whether you need strategic
+            oversight or foundational organization, our services are designed to support your business at
+            every stage of growth.
+          </p>
+        </div>
+
+        <div class="our-services-grid">
+          <article class="service-card service-card--joy-500">
+            <h3 class="service-card-title">Fractional CFO Services</h3>
+            <p class="service-card-tagline">Strategic Financial Leadership — Without the Full-Time Cost</p>
+            <p class="service-card-lead">For growing businesses that need financial direction, not just reports.</p>
+            <p>
+              Our Fractional CFO service provides executive-level financial strategy on a flexible basis.
+              We go beyond bookkeeping to help you make informed, forward-thinking decisions.
+            </p>
+            <p class="service-card-list-title">What’s included:</p>
+            <ul class="service-card-list">
+              <li>Cash flow forecasting and management</li>
+              <li>Budget creation and monitoring</li>
+              <li>Financial KPI analysis</li>
+              <li>Profitability and margin analysis</li>
+              <li>Strategic planning support</li>
+              <li>Investor-ready reporting</li>
+              <li>Financial decision advisory</li>
+            </ul>
+            <p class="service-card-footer">
+              This is for founders who want clarity, control, and confident growth.
+            </p>
+            <a class="btn primary clarity-call-btn" href="#contact" role="button">Book a Clarity Call</a>
+          </article>
+
+          <article class="service-card service-card--joy-400">
+            <h3 class="service-card-title">Assessment</h3>
+            <p class="service-card-tagline">Understand Where You Stand — Before You Scale</p>
+            <p class="service-card-lead">Before you build, you need visibility.</p>
+            <p>
+              Our Financial Assessment is a deep diagnostic of your current financial structure.
+              We identify gaps, inefficiencies, risks, and opportunities.
+            </p>
+            <p class="service-card-list-title">What we analyze:</p>
+            <ul class="service-card-list">
+              <li>Bookkeeping accuracy</li>
+              <li>Chart of accounts structure</li>
+              <li>Cash flow patterns</li>
+              <li>Expense categorization</li>
+              <li>Financial reporting quality</li>
+              <li>Compliance risks</li>
+            </ul>
+            <p class="service-card-footer">
+              You receive a detailed report with actionable recommendations and a roadmap for improvement.
+              Perfect for businesses that feel “off” but don’t know why.
+            </p>
+            <a class="btn primary clarity-call-btn" href="#contact" role="button">Book a Clarity Call</a>
+          </article>
+
+          <article class="service-card service-card--joy-300">
+            <h3 class="service-card-title">Monthly Bookkeeping</h3>
+            <p class="service-card-tagline">Consistent, Clean, Reliable Financial Records</p>
+            <p class="service-card-lead">Strong businesses are built on accurate numbers.</p>
+            <p>
+              We manage your monthly bookkeeping with precision and structure, ensuring your financial
+              records are always up to date and decision-ready.
+            </p>
+            <p class="service-card-list-title">Services include:</p>
+            <ul class="service-card-list">
+              <li>Transaction categorization</li>
+              <li>Bank and credit card reconciliations</li>
+              <li>Monthly financial statements</li>
+              <li>Accounts payable &amp; receivable tracking</li>
+              <li>Expense management</li>
+              <li>Ongoing financial clarity</li>
+            </ul>
+            <p class="service-card-footer">No surprises. No confusion. Just organized, reliable data.</p>
+            <a class="btn primary clarity-call-btn" href="#contact" role="button">Book a Clarity Call</a>
+          </article>
+
+          <article class="service-card service-card--joy-200">
+            <h3 class="service-card-title">One-Time Cleanup</h3>
+            <p class="service-card-tagline">Fix the Past. Reset the Foundation.</p>
+            <p class="service-card-lead">
+              Our One-Time Cleanup service corrects and reorganizes your historical financial data so you
+              can move forward with confidence.
+            </p>
+            <p class="service-card-list-title">What we do:</p>
+            <ul class="service-card-list">
+              <li>Reconcile past months (or years)</li>
+              <li>Correct miscategorized transactions</li>
+              <li>Resolve discrepancies</li>
+              <li>Update financial statements</li>
+              <li>Bring accounts current</li>
+            </ul>
+            <p class="service-card-footer">This is your financial reset — a clean slate to build from.</p>
+            <a class="btn primary clarity-call-btn" href="#contact" role="button">Book a Clarity Call</a>
+          </article>
         </div>
       </section>
 
@@ -368,8 +426,7 @@
             <h2>How Legible Ledgers compares</h2>
             <h1>with traditional bookkeeping?</h1>
             <div class="comparison-container">
-              <div class="comparison-card"
-                style="background-color: var(--green-200); padding: 2rem; border-radius: 24px; max-width: 90%;">
+              <div class="comparison-card comparison-card--positive">
                 <h3>With Legible Ledgers</h3>
                 <ul class="feature-list">
                   <li><strong>Focus</strong><br>Fixes, cleans, and rebuilds your books with precision.</li>
@@ -383,8 +440,7 @@
                 </ul>
               </div>
 
-              <div class="comparison-card"
-                style="background-color: var(--red-200); padding: 2rem; border-radius: 24px; max-width: 90%;">
+              <div class="comparison-card comparison-card--negative">
                 <h3>Without Legible Ledgers</h3>
                 <ul class="feature-list">
                   <li><strong>Focus</strong><br>Keeps things as they are, even if they’re wrong.</li>
@@ -424,13 +480,13 @@
             <li><img src="assets/icons/circle-info-legible-ledgers.svg" alt="Icon: Explained — bookkeeping services"
                 loading="lazy"><span>Explained</span></li>
           </ul>
-          <a class="btn primary clarity-call-btn"">
-              Book a Clarity Call — it’s free
+          <a class="btn primary clarity-call-btn" href="#contact" role="button">
+            Book a Clarity Call — it’s free
           </a>
         </div>
       </section>
 
-      <section class=" who-we-help">
+      <section class="who-we-help">
             <div class="who-we-help-left">
               <h1>Who we help?</h1>
               <div class="who-we-help-card-img" role="img" aria-label="Illustration">
@@ -440,27 +496,26 @@
             </div>
 
             <div class="who-we-help-right">
-              <div class="who-we-help-content" style="background-color: var(--joy-500);">
+              <div class="who-we-help-content who-we-help-content--joy-500">
                 <h4>Service-Based Business Owners</h4>
                 <p>From marketing agencies to consultants and contractors, if you sell expertise, not products, we help
                   you
                   get your numbers in order.
                   Gain full visibility into your finances so you can make confident decisions that drive growth.</p>
               </div>
-              <div class="who-we-help-content" style="background-color: var(--joy-400);">
+              <div class="who-we-help-content who-we-help-content--joy-400">
                 <h4>Creative Agencies & Studios</h4>
                 <p>For the visionaries juggling clients, invoices, and projects. We untangle the financial side so you
                   can
                   focus on creativity and results.</p>
               </div>
-              <div class="who-we-help-content" style="background-color: var(--joy-300);">
+              <div class="who-we-help-content who-we-help-content--joy-300">
                 <h4>Consultants & Coaches</h4>
                 <p>Whether you’re managing retainers or project-based work, we bring structure and clarity to your
                   accounts,
                   turning confusion into confidence.</p>
               </div>
-              <div class="who-we-help-content"
-                style="background-color: var(--joy-200); padding-bottom: 2rem !important;">
+              <div class="who-we-help-content who-we-help-content--joy-200">
                 <h4>Independent Contractors & Freelancers</h4>
                 <p>You handle the work, we handle the numbers.
                   Stay compliant, organized, and stress-free with clean, accurate books that reflect your hard-earned
@@ -563,32 +618,12 @@
           <p>
             <strong>True financial confidence starts with understanding your numbers.</strong>
           </p>
-          <!--a class="btn tertiary" href="https://calendly.com/legibleledgers/clarity-call" target="_blank"
-            rel="noopener noreferrer">Book a clarity call — it’s free</a-->
 
-          <!-- Calendly inline widget begin -->
+          <!-- Calendly inline widget -->
           <div class="calendly-inline-widget"
             data-url="https://calendly.com/legibleledgers/clarity-call?background_color=ffffff&primary_color=1A1A1A"
             style="min-width:320px;height:700px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          <!-- Calendly inline widget end -->
-
-          <!--div class="contact-form">
-          <h3 class="contact-form-title">I want to get my books back in order</h3>
-          <form action="#" method="POST" class="clarity-form">
-            <div class="form-group">
-              <input type="text" id="name" name="name" placeholder="Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="business-email" name="business-email" placeholder="Business Email" required>
-            </div>
-            <div class="form-group">
-              <input type="text" id="company" name="company" placeholder="Company name" required>
-            </div>
-            <a class="btn primary" href="#contact">Talk to us</a>
-          </form>
         </div>
-      </div-->
       </section>
     </main>
 
@@ -618,41 +653,23 @@
         </div>
 
         <div class="footer-certifications">
-          <img src="assets/images/quick-books-legible-ledgers.png" alt="QuickBooks Certified badge — Legible Ledgers"
-            loading="lazy">
-          <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member badge — Legible Ledgers" loading="lazy">
+          <picture>
+            <source srcset="assets/images/quick-books-legible-ledgers.webp" type="image/webp">
+            <img src="assets/images/quick-books-legible-ledgers.png" alt="QuickBooks Certified badge — Legible Ledgers"
+              loading="lazy" width="180" height="220">
+          </picture>
+          <picture>
+            <source srcset="assets/images/aipb-legible-ledgers.webp" type="image/webp">
+            <img src="assets/images/aipb-legible-ledgers.png" alt="AIPB Member badge — Legible Ledgers"
+              loading="lazy" width="180" height="220">
+          </picture>
         </div>
       </div>
     </footer>
   </div>
 
-  <script src="scripts/script.js"></script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      // Seleciona todos os botões com a classe .clarity-call-btn
-      const buttons = document.querySelectorAll(".clarity-call-btn");
-
-      buttons.forEach((btn) => {
-        btn.addEventListener("click", function () {
-          Calendly.initPopupWidget({
-            url: "https://calendly.com/legibleledgers/clarity-call"
-          });
-          return false;
-        });
-      });
-    });
-  </script>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const link = document.createElement("link");
-      link.rel = "icon";
-      link.type = "image/svg+xml";
-      link.href = "assets/favicon/favicon.svg?v=3";
-      document.head.appendChild(link);
-    });
-  </script>
+  <script src="scripts/common.js" defer></script>
+  <script src="scripts/script.js" defer></script>
 </body>
 
 </html>
